@@ -29,7 +29,7 @@ a {
 .main-navigation {
 	clear: both;
 	display: block;
-	width: 100%;
+	max-width: 100%;
 
 	ul {
 		display: none;
@@ -127,5 +127,62 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+
+.site-header {
+	align-items: center;
+	// background: #d1d1d1;
+	display: flex;
+	justify-content: space-between;
+	height: 4rem;
+	margin-bottom: 2rem;
+	width: 100%;
+
+	.site-branding {
+		height: 50px;
+		width: 130px;
+		
+		.logo {
+			background:
+				url('../../assets/images/evans-lake-logo.png') no-repeat;
+			background-size: auto 50px;
+			height: 50px;
+		}
+	}
+
+	.menu-item {
+		margin: 1rem;
+		padding: .5rem;
+	}
+
+	.menu-item-198 {
+		background: $color__orange;
+		border-radius: 1.2rem;
+		color: #fff;
+		padding: .5rem 1.5rem;
+	}
+
+	.search-form {
+		fieldset {
+			border: none;
+			margin: 0;
+			padding: 0;
+
+			input[type=search] {
+				display: none;
+			}
+		}
+
+		.search-submit {
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			font-size: $base__space-unit;
+			margin: 0;
+			padding: 0;
+			text-shadow: none;
+		}
 	}
 }

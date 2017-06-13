@@ -454,7 +454,7 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  width: 100%; }
+  max-width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -514,6 +514,46 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.site-header {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 4rem;
+  margin-bottom: 2rem;
+  width: 100%; }
+  .site-header .site-branding {
+    height: 50px;
+    width: 130px; }
+    .site-header .site-branding .logo {
+      background: url("../../assets/images/evans-lake-logo.png") no-repeat;
+      background-size: auto 50px;
+      height: 50px; }
+  .site-header .menu-item {
+    margin: 1rem;
+    padding: .5rem; }
+  .site-header .menu-item-198 {
+    background: #F56D00;
+    border-radius: 1.2rem;
+    color: #fff;
+    padding: .5rem 1.5rem; }
+  .site-header .search-form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0; }
+    .site-header .search-form fieldset input[type=search] {
+      display: none; }
+  .site-header .search-form .search-submit {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    text-shadow: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -585,10 +625,18 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+.widget-area {
+  -ms-flex: 0 1 23%;
+      flex: 0 1 23%; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
+body {
+  margin: 0 auto;
+  max-width: 980px; }
+
 .sticky {
   display: block; }
 

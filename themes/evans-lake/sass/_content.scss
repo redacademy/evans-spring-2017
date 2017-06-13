@@ -4,6 +4,11 @@
 
 /* Posts and pages */
 
+body {
+	margin: 0 auto;
+	max-width: 980px;
+}
+
 .sticky {
 	display: block;
 }
