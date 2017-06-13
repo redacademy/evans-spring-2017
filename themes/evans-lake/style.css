@@ -593,6 +593,29 @@ a {
 .bypostauthor {
   display: block; }
 
+/*The stylesheet for standard pages with no special formatting. 
+All special formatting should be moved to a specific .scss partial
+named after the specific page to avoid merge conflicts. */
+/*All heading styles are in _headings.scss*/
+/*All navigation styles are in _navigation.scss*/
+/*All sidebar styles are in _sidebar.scss*/
+/*All footer styles are in _footer.scss*/
+.page .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-direction: reverse;
+      flex-direction: reverse; }
+
+.page .hero-title {
+  font-size: 3rem;
+  position: absolute; }
+
+.page .bread-crumbs {
+  font-size: 0.9rem;
+  color: grey; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
