@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "Evans Lake",
   "version": "1.0.0",
-  "description": "A starter theme for RED students, based on Underscores.",
+  "description": "A custom theme for Evans Lake, based on Underscores.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/redacademy/evans-spring-2017.git"
   },
-  "author": "mandiwise",
+  "author": "Ladan Vafi, Stan Maksarov, Victor Salmon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/redacademy/evans-spring-2017/"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/redacademy/evans-spring-2017#readme"
 }

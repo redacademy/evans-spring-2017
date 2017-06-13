@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package RED_Starter_Theme
+ * @package Evans_Lake_Theme
  */
 
 ?>
