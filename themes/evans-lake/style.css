@@ -222,6 +222,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'josefin_sans';
+  src: url("../../assets/fonts/josefinsans-bold-webfont.eot");
+  src: url("../../assets/fonts/josefinsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/josefinsans-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/josefinsans-bold-webfont.woff") format("woff"), url("../../assets/fonts/josefinsans-bold-webfont.ttf") format("truetype"), url("../../assets/fonts/josefinsans-bold-webfont.svg#josefin_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefin_sans';
+  src: url("../../assets/fonts/josefinsans-regular-webfont.eot");
+  src: url("../../assets/fonts/josefinsans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/josefinsans-regular-webfont.woff2") format("woff2"), url("../../assets/fonts/josefinsans-regular-webfont.woff") format("woff"), url("../../assets/fonts/josefinsans-regular-webfont.ttf") format("truetype"), url("../../assets/fonts/josefinsans-regular-webfont.svg#josefin_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lato';
+  src: url("../../assets/fonts/lato-regular-webfont.eot");
+  src: url("../../assets/fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/lato-regular-webfont.woff2") format("woff2"), url("../../assets/fonts/lato-regular-webfont.woff") format("woff"), url("../../assets/fonts/lato-regular-webfont.ttf") format("truetype"), url("../../assets/fonts/lato-regular-webfont.svg#latoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'selima';
+  src: url("../../assets/fonts/selima_-webfont.eot");
+  src: url("../../assets/fonts/selima_-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/selima_-webfont.woff2") format("woff2"), url("../../assets/fonts/selima_-webfont.woff") format("woff"), url("../../assets/fonts/selima_-webfont.ttf") format("truetype"), url("../../assets/fonts/selima_-webfont.svg#selimaregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -231,7 +259,7 @@ input,
 select,
 textarea {
   color: #000;
-  font-family: "Avenir", sans-serif;
+  font-family: "lato", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
