@@ -230,15 +230,11 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #000;
+  font-family: "Avenir", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
 
 /* Copy */
 p {
@@ -280,11 +276,16 @@ mark, ins {
 big {
   font-size: 125%; }
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box;
+  font-size: 16px;
   font-size: 16px;
   font-size: 1rem; }
 
