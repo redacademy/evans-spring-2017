@@ -6,14 +6,15 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
-.page{
-  .hero{
-
+.page {
+  .hero {
+    height: 65vh;
   }
-  .hero-title{
-
+  .hero-title {
+    font-size: 3rem;
+    position: absolute;
   }
-  .bread-crumbs{
-
+  .bread-crumbs {
+    
   }
 }
