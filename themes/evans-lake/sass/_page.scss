@@ -1,0 +1,19 @@
+/*The stylesheet for standard pages with no special formatting. 
+All special formatting should be moved to a specific .scss partial
+named after the specific page to avoid merge conflicts. */
+
+/*All heading styles are in _headings.scss*/
+/*All navigation styles are in _navigation.scss*/
+/*All sidebar styles are in _sidebar.scss*/
+/*All footer styles are in _footer.scss*/
+.page{
+  .hero{
+
+  }
+  .hero-title{
+
+  }
+  .bread-crumbs{
+
+  }
+}
