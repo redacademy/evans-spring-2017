@@ -258,7 +258,7 @@ button,
 input,
 select,
 textarea {
-  color: #000;
+  color: #4A4A4A;
   font-family: "lato", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -454,7 +454,7 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  width: 100%; }
+  max-width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -703,12 +703,35 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
-.page .site-content {
+.page .content-area {
   display: -ms-flexbox;
   display: flex; }
 
+.page .sub-navigation {
+  -ms-flex: 0 1 23%;
+      flex: 0 1 23%; }
+  .page .sub-navigation .menu {
+    font-family: "josefin_sans", sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .page .sub-navigation .menu li {
+      margin-bottom: .75rem; }
+    .page .sub-navigation .menu a {
+      color: #4A4A4A;
+      text-decoration: none; }
+    .page .sub-navigation .menu a:hover {
+      color: #429DCB;
+      text-decoration: underline; }
+
+.page .site-main {
+  -ms-flex: 0 1 75%;
+      flex: 0 1 75%; }
+
 .page .hero-image {
   height: 100vh;
+  margin-bottom: 2rem;
   overflow: hidden;
   position: relative;
   width: 100vw; }
@@ -728,6 +751,9 @@ named after the specific page to avoid merge conflicts. */
 .page .bread-crumbs {
   font-size: 0.9rem;
   color: grey; }
+
+.page .menu-evans-lake-menu-container {
+  position: relative; }
 
 /*--------------------------------------------------------------
 # Media

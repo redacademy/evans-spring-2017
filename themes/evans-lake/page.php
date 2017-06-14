@@ -8,7 +8,8 @@
 get_header(); 
 get_sidebar(); ?>
 
-<div id="primary" class="content-area">
+<div class="hero-image"><?php the_post_thumbnail( 'full' ); ?></div>
+<div id="primary" class="content-area container">
 	<div class="sub-navigation">
 		<?php wp_nav_menu( array( 
 			'theme_location' => 'primary', 

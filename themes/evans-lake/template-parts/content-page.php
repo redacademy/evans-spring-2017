@@ -12,8 +12,7 @@
 		<?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="hero-image"><?php the_post_thumbnail( 'full' ); ?></div>
-	<div class="entry-content container">
+	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
