@@ -5,8 +5,7 @@
  * @package Evans_Lake_Theme
  */
 
-get_header(); 
-get_sidebar(); ?>
+get_header(); ?>
 
 <div class="hero-image"><?php the_post_thumbnail( 'full' ); ?></div>
 <div id="primary" class="content-area container">
@@ -18,8 +17,14 @@ get_sidebar(); ?>
 		) ); ?>
 	</div>
 
+
 	<main id="main" class="site-main" role="main">
 
+<!--full time staff members loop-->
+
+<!--board of directors loop-->
+
+<!--Summer Camp staff loop-->
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
