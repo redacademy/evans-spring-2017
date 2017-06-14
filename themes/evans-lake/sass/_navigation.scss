@@ -74,6 +74,7 @@ a {
 
 			a {
 				color: $color__blue;
+				line-height: 0;
 				width: 200px;
 			}
 
@@ -118,13 +119,34 @@ a {
 	display: block;
 }
 
+.menu-toggle {
+	background: transparent;
+	border: none;
+	border-color: transparent;
+	border-radius: 3px;
+	box-shadow: none;
+	color: #000;
+	display: block;
+	font-size: 1.5rem;
+	margin: 0 1rem;
+	padding: .5rem 0;
+	position: absolute;
+	text-shadow: none;
+	z-index: 999;
+
+	&:hover {
+		border-color: none;
+		box-shadow: none;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
-	}
+	}	
 }
 
 .comment-navigation,
@@ -181,16 +203,18 @@ a {
 	.menu {
 		align-items: center;
 		display: flex;
+		font-family: $font__heading;
+		font-size: 1.2rem;
 
 		.menu-item {
-			margin: 1rem;
+			margin: 1.5rem;
 		}
 
 		.menu-item:last-child {
 			background: $color__orange;
 			border-radius: 1.2rem;
 			color: #fff;
-			padding: .5rem 1.5rem;
+			padding: .3rem 1.5rem;
 			cursor: pointer;
 		}
 	}

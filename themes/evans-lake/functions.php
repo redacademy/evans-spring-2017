@@ -85,6 +85,15 @@ add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
 function evans_lake_scripts() {
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
 
+	wp_enqueue_script('jquery');
+	wp_enqueue_script(
+		'evans-lake-toggle-menu',
+		get_template_directory_uri() . '/js/toggle-menu.js',
+		array('jquery'),
+		false,
+		true
+	);
+
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
 
 	wp_enqueue_script( 'evans-lake-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );

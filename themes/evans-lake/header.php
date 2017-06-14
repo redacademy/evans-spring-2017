@@ -21,6 +21,9 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<i class="fa fa-bars" aria-hidden="true"></i><?php esc_html( 'Primary Menu' ); ?>
+				</button>
 				<div class="wrapper">
 					<div class="site-branding">
 						<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home" class="logo"><div class="logo"></div></a>
@@ -29,11 +32,10 @@
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					<div class="search-bar">
+					<!--<div class="search-bar">
 						<?php get_search_form();?>
-					</div>
+					</div>-->
 					</nav><!-- #site-navigation -->
 					
 				</div>

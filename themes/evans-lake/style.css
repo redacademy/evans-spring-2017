@@ -379,10 +379,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
@@ -490,6 +489,7 @@ a {
         left: 100%; }
       .main-navigation ul ul a {
         color: #1B5D97;
+        line-height: 0;
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
@@ -505,6 +505,24 @@ a {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  border-color: transparent;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #000;
+  display: block;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  padding: .5rem 0;
+  position: absolute;
+  text-shadow: none;
+  z-index: 999; }
+  .menu-toggle:hover {
+    border-color: none;
+    box-shadow: none; }
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -562,14 +580,16 @@ a {
     -ms-flex-align: center;
         align-items: center;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    font-family: "josefin_sans", sans-serif;
+    font-size: 1.2rem; }
     .site-header .menu .menu-item {
-      margin: 1rem; }
+      margin: 1.5rem; }
     .site-header .menu .menu-item:last-child {
       background: #F56D00;
       border-radius: 1.2rem;
       color: #fff;
-      padding: .5rem 1.5rem;
+      padding: .3rem 1.5rem;
       cursor: pointer; }
   .site-header .sub-menu .menu-item:last-child {
     background: transparent;
@@ -762,13 +782,16 @@ named after the specific page to avoid merge conflicts. */
       flex: 0 1 75%; }
 
 .page .hero-image {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
   height: 100vh;
   margin-bottom: 2rem;
   overflow: hidden;
   position: relative;
   width: 100vw; }
   .page .hero-image img {
-    width: 100%; }
+    object-fit: cover;
+    width: 100%;
+    z-index: -1; }
 
 .page .hero-title {
   color: #fff;
