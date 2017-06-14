@@ -8,6 +8,32 @@ named after the specific page to avoid merge conflicts. */
 /*All footer styles are in _footer.scss*/
 
 .page {
+
+  #breadcrumbs {
+    font-family: $font__heading;
+    font-size: .9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    a {
+      color: #9B9B9B;
+      text-decoration: none;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .5rem;
+    }
+
+    .separator {
+      font-size: 1rem;
+      color: #9B9B9B;
+    }
+  }
+
   .content-area {
     display: flex;
   }
@@ -63,11 +89,6 @@ named after the specific page to avoid merge conflicts. */
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-  }
-
-  .bread-crumbs {
-    font-size: 0.9rem;
-    color: grey;
   }
 
   .menu-evans-lake-menu-container {

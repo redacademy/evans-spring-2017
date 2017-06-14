@@ -703,6 +703,24 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
+.page #breadcrumbs {
+  font-family: "josefin_sans", sans-serif;
+  font-size: .9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  .page #breadcrumbs a {
+    color: #9B9B9B;
+    text-decoration: none; }
+  .page #breadcrumbs li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5rem; }
+  .page #breadcrumbs .separator {
+    font-size: 1rem;
+    color: #9B9B9B; }
+
 .page .content-area {
   display: -ms-flexbox;
   display: flex; }
@@ -747,10 +765,6 @@ named after the specific page to avoid merge conflicts. */
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 99; }
-
-.page .bread-crumbs {
-  font-size: 0.9rem;
-  color: grey; }
 
 .page .menu-evans-lake-menu-container {
   position: relative; }
