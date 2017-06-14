@@ -454,7 +454,7 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  max-width: 100%; }
+  width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
