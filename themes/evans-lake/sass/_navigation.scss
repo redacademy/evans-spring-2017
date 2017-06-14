@@ -27,8 +27,10 @@ a {
 /* Menus */
 
 .main-navigation {
+	align-items: center;
 	clear: both;
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	max-width: 100%;
 
 	ul {
@@ -155,6 +157,14 @@ a {
 	position: absolute;
 	width: 100%;
 	z-index: 999;
+
+	.wrapper {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 980px;
+	}
 
 	.site-branding {
 		height: 50px;

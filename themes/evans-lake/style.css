@@ -452,8 +452,13 @@ a {
 
 /* Menus */
 .main-navigation {
+  -ms-flex-align: center;
+      align-items: center;
   clear: both;
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   max-width: 100%; }
   .main-navigation ul {
     display: none;
@@ -537,6 +542,15 @@ a {
   position: absolute;
   width: 100%;
   z-index: 999; }
+  .site-header .wrapper {
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin: 0 auto;
+    width: 980px; }
   .site-header .site-branding {
     height: 50px;
     width: 130px; }
