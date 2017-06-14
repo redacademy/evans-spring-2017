@@ -5,6 +5,10 @@
 /* Posts and pages */
 
 body {
+	width: 100%;
+}
+
+.container {
 	margin: 0 auto;
 	max-width: 980px;
 }
@@ -27,7 +31,6 @@ body {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: $base__space-unit 0 0;
 }

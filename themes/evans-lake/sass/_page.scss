@@ -6,6 +6,7 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
+
 .page {
   .site-content{
     display: flex;
@@ -14,14 +15,28 @@ named after the specific page to avoid merge conflicts. */
   .sub-navigation{
   }
 
-  .hero {
-  }
+  .hero-image {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
 
-  .hero-title {
-    font-size: 3rem;
-    position: absolute;
+    img {
+      width: 100%;
+    }
   }
   
+  .hero-title {
+    color: $color__background-body;
+    font-size: 3rem;
+    left: 50%;
+    letter-spacing: .3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+
   .bread-crumbs {
     font-size: 0.9rem;
     color: grey;

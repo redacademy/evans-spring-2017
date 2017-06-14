@@ -461,19 +461,30 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
       position: absolute;
-      top: 1.5rem;
+      top: 2.5rem;
       left: -999rem;
       z-index: 99999; }
       .main-navigation ul ul ul {
         left: -999rem;
         top: 0; }
+      .main-navigation ul ul::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: .5rem solid transparent;
+        border-right: .5rem solid transparent;
+        border-bottom: 1rem solid rgba(255, 255, 255, 0.8);
+        top: -1rem;
+        left: 1.5rem; }
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
+        color: #1B5D97;
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
@@ -522,9 +533,10 @@ a {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  height: 4rem;
   margin-bottom: 2rem;
-  width: 100%; }
+  position: absolute;
+  width: 100%;
+  z-index: 999; }
   .site-header .site-branding {
     height: 50px;
     width: 130px; }
@@ -532,14 +544,22 @@ a {
       background: url("../../assets/images/evans-lake-logo.png") no-repeat;
       background-size: auto 50px;
       height: 50px; }
-  .site-header .menu-item {
-    margin: 1rem;
-    padding: .5rem; }
-  .site-header .menu-item-198 {
-    background: #F56D00;
-    border-radius: 1.2rem;
-    color: #fff;
-    padding: .5rem 1.5rem; }
+  .site-header .menu {
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex; }
+    .site-header .menu .menu-item {
+      margin: 1rem; }
+    .site-header .menu .menu-item:last-child {
+      background: #F56D00;
+      border-radius: 1.2rem;
+      color: #fff;
+      padding: .5rem 1.5rem;
+      cursor: pointer; }
+  .site-header .sub-menu .menu-item:last-child {
+    background: transparent;
+    padding: 0; }
   .site-header .search-form fieldset {
     border: none;
     margin: 0;
@@ -554,6 +574,9 @@ a {
     margin: 0;
     padding: 0;
     text-shadow: none; }
+
+.fa-search {
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -634,6 +657,9 @@ a {
 --------------------------------------------------------------*/
 /* Posts and pages */
 body {
+  width: 100%; }
+
+.container {
   margin: 0 auto;
   max-width: 980px; }
 
@@ -651,7 +677,6 @@ body {
   display: inline; }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5rem 0 0; }
 
@@ -682,9 +707,23 @@ named after the specific page to avoid merge conflicts. */
   display: -ms-flexbox;
   display: flex; }
 
+.page .hero-image {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100vw; }
+  .page .hero-image img {
+    width: 100%; }
+
 .page .hero-title {
+  color: #fff;
   font-size: 3rem;
-  position: absolute; }
+  left: 50%;
+  letter-spacing: .3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99; }
 
 .page .bread-crumbs {
   font-size: 0.9rem;

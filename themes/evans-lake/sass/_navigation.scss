@@ -38,16 +38,29 @@ a {
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 15px;
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			position: absolute;
-			top: $base__space-unit;
+			top: 2.5rem;
 			left: -999rem;
 			z-index: 99999;
 
 			ul {
 				left: -999rem;
 				top: 0;
+			}
+
+			&::before {
+				content: "";
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-left: .5rem solid transparent;
+				border-right: .5rem solid transparent;	
+				border-bottom: 1rem solid rgba(255, 255, 255, 0.8);
+				top: -1rem;
+				left: 1.5rem;
 			}
 
 			li {
@@ -58,6 +71,7 @@ a {
 			}
 
 			a {
+				color: $color__blue;
 				width: 200px;
 			}
 
@@ -75,6 +89,7 @@ a {
 			left: auto;
 		}
 	}
+
 	li {
 		float: left;
 		position: relative;
@@ -83,6 +98,7 @@ a {
 		&.focus > a {
 		}
 	}
+	
 	a {
 		display: block;
 		text-decoration: none;
@@ -133,12 +149,12 @@ a {
 
 .site-header {
 	align-items: center;
-	// background: #d1d1d1;
 	display: flex;
 	justify-content: space-between;
-	height: 4rem;
 	margin-bottom: 2rem;
+	position: absolute;
 	width: 100%;
+	z-index: 999;
 
 	.site-branding {
 		height: 50px;
@@ -152,16 +168,28 @@ a {
 		}
 	}
 
-	.menu-item {
-		margin: 1rem;
-		padding: .5rem;
+	.menu {
+		align-items: center;
+		display: flex;
+
+		.menu-item {
+			margin: 1rem;
+		}
+
+		.menu-item:last-child {
+			background: $color__orange;
+			border-radius: 1.2rem;
+			color: #fff;
+			padding: .5rem 1.5rem;
+			cursor: pointer;
+		}
 	}
 
-	.menu-item-198 {
-		background: $color__orange;
-		border-radius: 1.2rem;
-		color: #fff;
-		padding: .5rem 1.5rem;
+	.sub-menu {
+		.menu-item:last-child {
+			background: transparent;
+			padding: 0;
+		}
 	}
 
 	.search-form {
@@ -185,4 +213,8 @@ a {
 			text-shadow: none;
 		}
 	}
+}
+
+.fa-search {
+	color: #fff;
 }
