@@ -23,18 +23,30 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		<?php endwhile; // End of the loop. ?>
 	
-	<!--Load Custom Post Data-->
+	<!--Query for Custom Post Data-->
 	<?php 
 		$args = array(
 			'post_type'=> 'staffmember',
 			'post_count'=> 50,
 			'posts_per_page'=> 50
 			);
-		$staff = new WP_Query($args); ?>
-		<pre>
-			<?php print_r ($staff); ?>
-		</pre>
-
+		$all_staff = new WP_Query($args);
+		// Create storage arrays
+		// $full_time = [];
+		// $summer = [];
+		// $director = [];
+		// $executive = [];
+	?>
+	
+		<!--Populate arrays-->
+		<?php foreach ($all_staff->posts as $staff_member): 
+		?>
+		<div>
+			<pre>
+				<?php CFS()->get(false, $staff_member->ID); ?>
+			</pre>
+		</div>
+		<?php endforeach; ?>		
 
 	<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content', 'staff-fulltime' ); ?>
