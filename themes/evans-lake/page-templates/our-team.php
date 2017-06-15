@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: Our Team
+ * 
  * The template for displaying the Our Team page.
  *
  * @package Evans_Lake_Theme
@@ -20,15 +22,7 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-		<div class="full-time">
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					CFS->get()
-
-				<?php endwhile; // End of the loop. ?>
-		</div>
-
-<!--full time staff members loop-->
+			<?php get_template_part( 'template-parts/content', 'staff-fulltime' ); ?>
 
 <!--board of directors loop-->
 
