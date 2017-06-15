@@ -16,6 +16,10 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
+		<h2><?php	echo CFS()->get( 'site_title' ); ?></h2>
+		<h3><?php	echo CFS()->get( 'site_subtitle' ); ?></h3>
+		<span class="site-description"> <?php	echo CFS()->get( 'site_description' ); ?> </span>
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
