@@ -42,14 +42,12 @@ get_header(); ?>
 		<?php foreach ($all_staff->posts as $staff_member): 
 		?>
 		<div>
-			<pre>
-				<?php CFS()->get(false, $staff_member->ID); ?>
-			</pre>
+						<?php get_template_part( 'template-parts/content', 'staff-fulltime' ); ?>
 		</div>
 		<?php endforeach; ?>		
 
 	<main id="main" class="site-main" role="main">
-		<?php get_template_part( 'template-parts/content', 'staff-fulltime' ); ?>
+	
 
 <!--board of directors loop-->
 
