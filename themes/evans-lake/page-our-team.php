@@ -20,6 +20,14 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
+		<div class="full-time">
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					CFS->get()
+
+				<?php endwhile; // End of the loop. ?>
+		</div>
+
 <!--full time staff members loop-->
 
 <!--board of directors loop-->
