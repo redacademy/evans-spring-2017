@@ -1,0 +1,44 @@
+.home-hero {
+	background: url('../../assets/images/home-hero.png') bottom no-repeat;
+  background-size: cover;
+  height: 80vh;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+
+  @include desktop {
+    height: 100vh;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.slogan {
+  color: $color__orange;
+  font-family: $font__slogan;
+  font-size: 2rem;
+  z-index: 1;
+
+  @include desktop {
+    font-size: 7rem;
+  }
+}
+
+.text-logo {
+  color: #fff;
+  font-family: $font__heading;
+  font-size: 1rem;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  z-index: 1;
+
+  @include desktop {
+    font-size: 2rem;
+  }
+}

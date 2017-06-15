@@ -9,6 +9,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<section class="home-hero">
+				<p class="slogan">Your Home in the Forest</p>
+				<p class="text-logo">Evans Lake</p>
+			</section>
 
 		<?php if ( have_posts() ) : ?>
 
