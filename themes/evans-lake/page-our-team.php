@@ -25,11 +25,16 @@ get_header(); ?>
 	
 	<!--Load Custom Post Data-->
 	<?php 
-		$args = array('post_type' => 'staffmembers');
-		$staff = new WP_Query($args);
-		echo "Custom Post Data Loaded";
-		print_r (get_posts ($staff));
-	?>
+		$args = array(
+			'post_type'=> 'staffmember',
+			'post_count'=> 50,
+			'posts_per_page'=> 50
+			);
+		$staff = new WP_Query($args); ?>
+		<pre>
+			<?php print_r ($staff); ?>
+		</pre>
+
 
 	<main id="main" class="site-main" role="main">
 		<?php get_template_part( 'template-parts/content', 'staff-fulltime' ); ?>
@@ -42,4 +47,5 @@ get_header(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
+<?php wp_reset_query(); ?>
 <?php get_footer(); ?>
