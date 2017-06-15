@@ -1,6 +1,6 @@
 <?php
 /**
- * Page Template: Site Description
+ * Template Name: Site Description
  *
  *
  *
