@@ -54,8 +54,6 @@ function evans_lake_submenu_get_children_ids( $id, $items ) {
     return $ids;
 }
 
-
-
 // Breadcrumbs
 function evans_lake_breadcrumbs() {
 			
