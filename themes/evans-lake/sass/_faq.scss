@@ -2,3 +2,10 @@
 .ewd-ufaq-post-margin-symbol {
     display: none;
 }
+div.ufaq-faq-title h4 {
+    color: black;
+}
+
+h4::after {
+    content: url(../../assets/images/arrow-down.png);
+}
