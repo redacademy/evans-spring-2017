@@ -59,7 +59,7 @@ $name_plural_low_case = 'staff members';
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( $name_low_case, $args );
+	register_post_type( 'staffmember', $args );
 }
 add_action( 'init', 'register_staff_member_post_type', 0 );
 
