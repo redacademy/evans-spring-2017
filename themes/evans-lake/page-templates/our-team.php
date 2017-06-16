@@ -7,7 +7,8 @@
  * @package Evans_Lake_Theme
  */
 
-get_header(); ?>
+get_header();
+?>
 
 <div class="hero-image"><?php the_post_thumbnail( 'full' ); ?></div>
 <div id="primary" class="content-area container">
@@ -16,12 +17,14 @@ get_header(); ?>
 			'theme_location' => 'primary', 
 			'menu_id' => 'primary-menu',
 			'submenu' => get_the_title($post->post_parent)
-		) ); ?>
+		) );
+		$our_team_ID = get_the_ID();
+ 		?>
 	</div>
 	<main class="entry-content">
 		<?php 
 			evans_lake_breadcrumbs(); 
-			$our_team_ID = get_the_ID();
+
 		?>
 		<h2>The team behind Evans Lake</h2>
 
@@ -69,6 +72,9 @@ get_header(); ?>
 		?>
 		<section class="fulltime staff-container">
 			<h2>Our Fulltime Staff</h2>
+			<div class="fulltime description">
+				<?php echo CFS()->get( 'desc_fulltime', $our_team_ID ); ?>
+			</div>
 			<?php foreach ($fulltimes as $staff_member) : ?>
 				<div class="fulltime staff-member">
 
@@ -124,7 +130,9 @@ get_header(); ?>
 
 		<section class="board-container">
 			<h2>Board of Directors</h2>
-			<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
+			<div class="board description">
+				<?php echo CFS()->get( 'desc_board', $our_team_ID ); ?>
+			</div>
 
 			<section class="executive staff-container">
 				<h1>Executives</h1>
@@ -165,12 +173,15 @@ get_header(); ?>
 		</section> <!--Board of Directors Container-->
 
 		<section class="summer staff-container">
+			<div class="summer description">
+				<?php echo CFS()->get( 'desc_summer', $our_team_ID ); ?>
+			</div>
 			<?php foreach ($summers as $staff_member) : ?>
 			<div class="summer staff-member">
 				<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
 					<div class="image" style="background-image: url( '<?php echo $image_URL; ?>' )">
 					</div>
-
+					
 					<div class="content">
 						<h2 class="name">
 							<?php echo get_the_title($staff_member->ID); ?>
