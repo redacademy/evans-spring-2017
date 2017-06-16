@@ -18,11 +18,13 @@ get_header(); ?>
 			'submenu' => get_the_title($post->post_parent)
 		) ); ?>
 	</div>
-	<?php 
-		evans_lake_breadcrumbs(); 
-		$our_team_ID = get_the_ID();
-	?>
-	
+	<main class="entry-content">
+		<?php 
+			evans_lake_breadcrumbs(); 
+			$our_team_ID = get_the_ID();
+		?>
+		<h3>The team behind Evans Lake</h3>
+
 		<!--Query for Staff Member Custom Posts-->
 		<?php 
 			$args = array(
@@ -66,6 +68,7 @@ get_header(); ?>
 			}
 		?>
 		<section class="fulltime staff-container">
+			<h3>Our Fulltime Staff</h3>
 			<?php foreach ($fulltimes as $staff_member) : ?>
 				<div class="fulltime staff-member">
 
@@ -74,15 +77,15 @@ get_header(); ?>
 					</div>
 
 					<div class="content">
-						<span class="name">
-							<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
-						</span>
-						<span class="role">
+						<h2 class="name">
+							<?php echo get_the_title($staff_member->ID), ' - '; ?>
+						</h2>
+						<h3 class="role">
 							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
-						</span>
-						<span class="email">
+						</h3>
+						<a class="email" href="mailto: <?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>">
 							<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
-						</span>
+						</a>
 						<span class="tel-1">
 							<?php 
 								if ( CFS()->get( 's_tel_1_is_mobile',  $staff_member->ID ) ) {
@@ -99,7 +102,7 @@ get_header(); ?>
 								if ( CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ) ) {
 									echo "M: ";
 								} 
-								else {
+								elseif (!CFS()->get( 's_tel_2',  $staff_member->ID ) ) {
 									echo "T: ";
 								}; 
 								echo CFS()->get( 's_tel_2',  $staff_member->ID ); 
@@ -115,13 +118,14 @@ get_header(); ?>
 							<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
 						</span>
 					</div> <!--Content-->
-				</div> <!--Single Fulltime Staff Member-->
+				</div> <!--Single Fulltime Staff Member-->	
 			<?php endforeach; ?>
 		</section> <!--Staff Fulltime Member Section-->
 		<section class="board-container">
 			<h3>Board of Directors</h3>
 			<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
-			<section class="executives staff-container">
+
+			<section class="executive staff-container">
 				<h3>Executives</h3>
 				<div class="executive-columns">
 					<span class="name">Name</span>
@@ -129,10 +133,10 @@ get_header(); ?>
 					<span class="email">Contact</span>
 				</div>
 				<?php foreach ($executives as $staff_member) : ?>
-					<div class="executives staff-member">
+					<div class="executive staff-member">
 
 						<span class="name">
-							<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
+							<?php echo get_the_title($staff_member->ID); ?>
 						</span>
 
 						<span class="role">
@@ -145,63 +149,44 @@ get_header(); ?>
 
 					</div> <!--Single Executive Staff Member-->
 				<?php endforeach; ?>
-			</section> <!--Executive Staff Member Section-->
-		
+			</section> <!--Executive Staff Member Section-->		
 
-			<section class="directors staff-container">
+			<section class="director staff-container">
+				<h3>Directors</h3>
 				<?php foreach ($directors as $staff_member) : ?>
-					<!--Directors-->
+					<p class="director staff-member">
+						<?php echo get_the_title($staff_member->ID); ?>
+					</p>
 				<?php endforeach; ?>
 			</section>
 		</section> <!--Board of Directors Container-->
 
 		<section class="summer staff-container">
 			<?php foreach ($summers as $staff_member) : ?>
-				<!--Summer Staff-->
+			<div class="summer staff-member">
+				<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
+					<div class="image" style="background-image: url( '<?php echo $image_URL; ?>' )">
+					</div>
+
+					<div class="content">
+						<span class="name">
+							<?php echo get_the_title($staff_member->ID); ?>
+						</span>
+						<span class="role">
+							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
+						</span>
+						<button class="staff orange-button">View Bio</button>
+						<span class="bio">
+						<!--Bio should be hidden until button above is clicked-->
+							<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
+						</span>
+					</div>
+			</div>
 			<?php endforeach; ?>
 		</section>
 
+	<?php wp_reset_query(); ?>
 	</main><!-- #main -->
-</div><!-- #primary -->
-<?php wp_reset_query(); ?>
-<?php get_footer(); ?>
 
-
-		<div>
-			<div class="staff fulltime">
-				<section class="staff-member fulltime">
-					<span class="name">
-						<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
-					</span>
-					<br><br>
-					<span class="role">
-						<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
-					</span>
-					<span class="image">
-						<?php echo CFS()->get( 's_img',  $staff_member->ID ); ?>
-					</span>
-					
-					<span class="email">
-						<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
-					</span>
-					<span class="tel-1">
-						<?php echo CFS()->get( 's_tel_1',  $staff_member->ID ); ?>
-					</span>
-					<span class="tel-1-is-mobile">
-						<?php echo CFS()->get( 's_tel_1_is_mobile',  $staff_member->ID ); ?>
-					</span>
-					<span class="tel-2">
-						<?php echo CFS()->get( 's_tel_2',  $staff_member->ID ); ?>
-					</span>
-					<span class="tel-2-is-mobile">
-						<?php echo CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ); ?>
-					</span>
-					<span class="year-started">
-						<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
-					</span>
-					<span class="bio">
-						<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
-					</span>
-				</section>
-			</div>
-		</div>
+	<?php get_footer(); ?>
+</div><!--Content Area-->

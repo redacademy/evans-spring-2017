@@ -1,3 +1,19 @@
-.staff-member span.bio{
-  display: none;
+.staff-member {
+  span.bio{
+    display: none;
+  }
+  div.image {
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.staff-container {
+  display: flex;
+  justify-content: space-between;
+  &.fulltime {
+    border-bottom: 1px solid black; 
+  }
 }

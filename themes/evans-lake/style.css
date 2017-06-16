@@ -860,6 +860,20 @@ named after the specific page to avoid merge conflicts. */
 .staff-member span.bio {
   display: none; }
 
+.staff-member div.image {
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+  width: 100px; }
+
+.staff-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .staff-container.fulltime {
+    border-bottom: 1px solid black; }
+
 .home-hero {
   -ms-flex-align: center;
       align-items: center;
