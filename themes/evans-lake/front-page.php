@@ -12,11 +12,12 @@ get_header(); ?>
 			<section class="home-hero">
 				<p class="slogan">Your Home in the Forest</p>
 				<p class="text-logo">Evans Lake</p>
+				<a href="#s-descr"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			</section>
 
 		<?php if ( have_posts() ) : ?>
 
-		<section class="site-description">
+		<section class="site-description" id="s-descr">
 			<div class="description-image">
 				<img src="<?php	echo CFS()->get( 'site_image' ); ?>">
 				<div class="description-text-area">
