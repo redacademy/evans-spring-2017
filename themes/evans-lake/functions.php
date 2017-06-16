@@ -104,6 +104,15 @@ function evans_lake_scripts() {
 		true
 	);
 
+	wp_enqueue_script('jquery');
+	wp_enqueue_script(
+		'evans-lake-arrow-scroll',
+		get_template_directory_uri() . '/js/arrow-scroll.js',
+		array('jquery'),
+		false,
+		true
+	);
+
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
 	wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
 
