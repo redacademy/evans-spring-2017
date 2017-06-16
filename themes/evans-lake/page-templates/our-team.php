@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Template Name: Our Team
  * 
  * The template for displaying the Our Team page.
  *
@@ -118,10 +118,11 @@ get_header(); ?>
 					</div> <!--Content-->
 				</div> <!--Single Fulltime Staff Member-->
 			</section> <!--Staff Fulltime Member Section-->
-		<?php endforeach;
+		<?php endforeach; ?>
 
-		foreach ($executives as $staff_member) : ?>
-			<section class="executives staff-container">
+		<section class="executives staff-container">
+			<?php foreach ($executives as $staff_member) : ?>	
+
 				<div class="executives staff-member">
 
 					<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
@@ -172,20 +173,21 @@ get_header(); ?>
 						</span>
 					</div> <!--Content-->
 				</div> <!--Single Executive Staff Member-->
-			</section> <!--Executive Staff Member Section-->
-		<?php endforeach;
+			<?php endforeach; ?>
+		</section> <!--Executive Staff Member Section-->
+	
 
-		foreach ($directors as $staff_member) : ?>
-			<section class="directors staff-container">
+		<section class="directors staff-container">
+			<?php foreach ($directors as $staff_member) : ?>
 				<!--Directors-->
-			</section>
-		<?php endforeach;
+			<?php endforeach; ?>
+		</section>
 
-		foreach ($summers as $staff_member) : ?>
-			<section class="executives staff-container">
+		<section class="executives staff-container">
+			<?php foreach ($summers as $staff_member) : ?>
 				<!--Summer Staff-->
-			</section>
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		</section>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
