@@ -563,6 +563,7 @@ a {
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between;
+    height: 50px;
     background-color: rgba(153, 153, 153, 0.1);
     padding: .4rem .7rem; }
     .site-header .mobile-menu .mobile-logo {
@@ -624,19 +625,14 @@ a {
     border: none;
     margin: 0;
     padding: 0; }
-    .site-header .search-form fieldset input[type=search] {
-      display: none; }
-  .site-header .search-form .search-submit {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-    text-shadow: none; }
+
+.mobile-search {
+  display: -ms-flexbox;
+  display: flex; }
 
 .fa-search {
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -786,8 +782,12 @@ named after the specific page to avoid merge conflicts. */
   display: flex; }
 
 .page .sub-navigation {
-  -ms-flex: 0 1 23%;
-      flex: 0 1 23%; }
+  display: none; }
+  @media (min-width: 768px) {
+    .page .sub-navigation {
+      display: initial;
+      -ms-flex: 0 1 23%;
+          flex: 0 1 23%; } }
   .page .sub-navigation .menu {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem;
@@ -804,30 +804,45 @@ named after the specific page to avoid merge conflicts. */
       text-decoration: underline; }
 
 .page .site-main {
-  -ms-flex: 0 1 75%;
-      flex: 0 1 75%; }
+  padding: 0 .7rem;
+  width: 100%; }
+  .page .site-main .entry-title {
+    font-size: 1.3rem;
+    margin-top: 0.5rem; }
+  @media (min-width: 768px) {
+    .page .site-main {
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%; } }
 
 .page .hero-image {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
-  height: 100vh;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
   width: 100vw; }
-  .page .hero-image img {
+  .page .hero-image .wp-post-image {
     object-fit: cover;
     width: 100%;
     z-index: -1; }
+  @media (min-width: 768px) {
+    .page .hero-image {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
+      height: 80vh;
+      margin-bottom: 2rem; } }
 
 .page .hero-title {
-  color: #fff;
-  font-size: 3rem;
-  left: 50%;
-  letter-spacing: .3rem;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99; }
+  display: none; }
+  @media (min-width: 768px) {
+    .page .hero-title {
+      color: #fff;
+      display: initial;
+      font-size: 3rem;
+      left: 50%;
+      letter-spacing: .3rem;
+      position: absolute;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      z-index: 99; } }
 
 .page .menu-evans-lake-menu-container {
   position: relative; }

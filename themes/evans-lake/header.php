@@ -21,8 +21,16 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
+				<!--<div class="mobile-search-expanded">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<?php get_search_form();?>
+				</div>-->
 				<div class="mobile-menu">
-					<div class="search-bar"><?php get_search_form();?></div>
+					<!--<div class="search-bar"><?php get_search_form();?></div>-->
+					<div class="mobile-search">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<?php get_search_form();?>
+					</div>
 					<div class="mobile-logo"><a href="<?php echo esc_url( home_url('/') ); ?>">Evans Lake</a></div>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 						<i class="fa fa-bars" aria-hidden="true"></i><?php esc_html( 'Primary Menu' ); ?>

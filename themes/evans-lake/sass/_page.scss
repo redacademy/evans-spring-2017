@@ -39,7 +39,12 @@ named after the specific page to avoid merge conflicts. */
   }
 
   .sub-navigation {
-    flex: 0 1 23%;
+    display: none;
+
+    @include desktop {
+      display: initial;
+      flex: 0 1 23%;
+    }
 
     .menu {
       font-family: $font__heading;
@@ -65,33 +70,54 @@ named after the specific page to avoid merge conflicts. */
   }
 
   .site-main {
-    flex: 0 1 75%;
+    padding: 0 .7rem;
+    width: 100%;
+
+    .entry-title {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+    }
+
+    @include desktop {
+      flex: 0 1 75%;
+    }
   }
 
   .hero-image {
     background: linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center;
-    height: 100vh;
-    margin-bottom: 2rem;
+    // height: 30vh;
+    margin-bottom: 1rem;
     overflow: hidden;
     position: relative;
     width: 100vw;
 
-    img {
+    .wp-post-image {
       object-fit: cover;
       width: 100%;
       z-index: -1;
     }
+
+    @include desktop {
+      background: linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center;
+      height: 80vh;
+      margin-bottom: 2rem;
+    }
   }
   
   .hero-title {
-    color: $color__background-body;
-    font-size: 3rem;
-    left: 50%;
-    letter-spacing: .3rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
+    display: none;
+
+    @include desktop {
+      color: $color__background-body;
+      display: initial;
+      font-size: 3rem;
+      left: 50%;
+      letter-spacing: .3rem;
+      position: absolute;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+    }
   }
 
   .menu-evans-lake-menu-container {
