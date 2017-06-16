@@ -863,7 +863,6 @@ named after the specific page to avoid merge conflicts. */
   background: url("../../assets/images/home-hero.png") bottom no-repeat;
   background-size: cover;
   height: 80vh;
-  margin-bottom: 2.5rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -873,27 +872,42 @@ named after the specific page to avoid merge conflicts. */
   width: 100vw; }
   @media (min-width: 768px) {
     .home-hero {
-      height: 100vh; } }
+      height: 100vh;
+      margin-bottom: 2.5rem; } }
 
 .site-description {
+  box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
+  padding: 2rem 0;
   position: relative; }
+  @media (min-width: 768px) {
+    .site-description {
+      box-shadow: none;
+      padding: 0; } }
 
 .description-image {
   margin: 0 auto;
   padding: 0 2rem; }
   .description-image img {
+    display: none;
     width: 100vw; }
+    @media (min-width: 768px) {
+      .description-image img {
+        display: initial; } }
 
 .description-text-area {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
-  line-height: 1.8rem;
-  padding: 4rem 5rem;
-  position: absolute;
-  left: 37.5%;
-  top: 30px;
-  width: 47vw; }
+  padding: 0;
+  position: static; }
+  @media (min-width: 768px) {
+    .description-text-area {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
+      line-height: 1.8rem;
+      padding: 4rem 5rem;
+      position: absolute;
+      left: 37.5%;
+      top: 30px;
+      width: 47vw; } }
   .description-text-area h2 {
     margin-top: 0;
     text-transform: uppercase; }

@@ -3,7 +3,6 @@
 	background: url('../../assets/images/home-hero.png') bottom no-repeat;
   background-size: cover;
   height: 80vh;
-  margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,11 +10,19 @@
 
   @include desktop {
     height: 100vh;
+    margin-bottom: 2.5rem;
   }
 }
 
 .site-description {
+  box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
+  padding: 2rem 0;
   position: relative;
+
+  @include desktop {
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 .description-image {
@@ -23,20 +30,30 @@
   padding: 0 2rem;
 
   img {
+    display: none;
     width: 100vw;
+
+    @include desktop {
+      display: initial;
+    }
   }
 }
 
 .description-text-area {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
-  line-height: 1.8rem;
-  padding: 4rem 5rem;
-  position: absolute;
-  left: 37.5%;
-  top: 30px;
-  width: 47vw;
+  padding: 0;
+  position: static;
+
+  @include desktop {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
+    line-height: 1.8rem;
+    padding: 4rem 5rem;
+    position: absolute;
+    left: 37.5%;
+    top: 30px;
+    width: 47vw;
+  }
 
   h2 {
     margin-top: 0;
