@@ -858,7 +858,11 @@ named after the specific page to avoid merge conflicts. */
   position: relative; }
 
 .staff-member span.bio {
+<<<<<<< HEAD
   display: none; }
+=======
+  display: hidden; }
+>>>>>>> Change site-description class name to site-description-section
 
 .home-hero {
   -ms-flex-align: center;
@@ -883,16 +887,21 @@ named after the specific page to avoid merge conflicts. */
     color: #fff;
     cursor: pointer;
     font-size: 3.5rem;
+    left: 43%;
     padding: 0 .5rem;
     position: absolute;
-    top: 95%; }
+    top: 77%; }
+    @media (min-width: 768px) {
+      .home-hero .fa-angle-down {
+        left: 48%;
+        top: 95%; } }
 
-.site-description {
+.site-description-section {
   box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
   padding: 2rem 0;
   position: relative; }
   @media (min-width: 768px) {
-    .site-description {
+    .site-description-section {
       box-shadow: none;
       height: 100vh;
       padding: 0; } }

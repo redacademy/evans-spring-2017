@@ -19,13 +19,19 @@
     color: #fff;
     cursor: pointer;
     font-size: 3.5rem;
+    left: 43%;
     padding: 0 .5rem;
     position: absolute;
-    top: 95%;
+    top: 77%;
+
+    @include desktop {
+      left: 48%;
+      top: 95%;
+    }
   }
 }
 
-.site-description {
+.site-description-section {
   box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
   padding: 2rem 0;
   position: relative;

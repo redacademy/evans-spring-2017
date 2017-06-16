@@ -17,7 +17,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-		<section class="site-description" id="s-descr">
+		<section class="site-description-section" id="s-descr">
 			<div class="description-image">
 				<img src="<?php	echo CFS()->get( 'site_image' ); ?>">
 				<div class="description-text-area">
