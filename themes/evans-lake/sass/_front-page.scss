@@ -12,6 +12,17 @@
     height: 100vh;
     margin-bottom: 2.5rem;
   }
+
+  .fa-angle-down {
+    background-color: transparent;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 3.5rem;
+    padding: 0 .5rem;
+    position: absolute;
+    top: 95%;
+  }
 }
 
 .site-description {
@@ -21,6 +32,7 @@
 
   @include desktop {
     box-shadow: none;
+    height: 100vh;
     padding: 0;
   }
 }
@@ -31,6 +43,7 @@
 
   img {
     display: none;
+    height: 100%;
     width: 100vw;
 
     @include desktop {
@@ -52,7 +65,7 @@
     position: absolute;
     left: 37.5%;
     top: 30px;
-    width: 47vw;
+    width: 47%;
   }
 
   h2 {
@@ -74,6 +87,7 @@
   font-family: $font__slogan;
   font-size: 2rem;
   margin: 0;
+  text-align: center;
   z-index: 1;
 
   @include desktop {
@@ -94,4 +108,8 @@
   @include desktop {
     font-size: 2rem;
   }
+}
+
+.carousel-title {
+  text-align: center;
 }

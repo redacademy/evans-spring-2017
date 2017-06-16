@@ -874,6 +874,15 @@ named after the specific page to avoid merge conflicts. */
     .home-hero {
       height: 100vh;
       margin-bottom: 2.5rem; } }
+  .home-hero .fa-angle-down {
+    background-color: transparent;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 3.5rem;
+    padding: 0 .5rem;
+    position: absolute;
+    top: 95%; }
 
 .site-description {
   box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
@@ -882,6 +891,7 @@ named after the specific page to avoid merge conflicts. */
   @media (min-width: 768px) {
     .site-description {
       box-shadow: none;
+      height: 100vh;
       padding: 0; } }
 
 .description-image {
@@ -889,6 +899,7 @@ named after the specific page to avoid merge conflicts. */
   padding: 0 2rem; }
   .description-image img {
     display: none;
+    height: 100%;
     width: 100vw; }
     @media (min-width: 768px) {
       .description-image img {
@@ -907,7 +918,7 @@ named after the specific page to avoid merge conflicts. */
       position: absolute;
       left: 37.5%;
       top: 30px;
-      width: 47vw; } }
+      width: 47%; } }
   .description-text-area h2 {
     margin-top: 0;
     text-transform: uppercase; }
@@ -921,6 +932,7 @@ named after the specific page to avoid merge conflicts. */
   font-family: "selima", serif;
   font-size: 2rem;
   margin: 0;
+  text-align: center;
   z-index: 1; }
   @media (min-width: 768px) {
     .slogan {
@@ -938,6 +950,9 @@ named after the specific page to avoid merge conflicts. */
   @media (min-width: 768px) {
     .text-logo {
       font-size: 2rem; } }
+
+.carousel-title {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Media
