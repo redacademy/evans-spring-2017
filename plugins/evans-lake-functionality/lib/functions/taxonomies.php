@@ -13,7 +13,7 @@ function register_staff_type_taxonomy() {
   $name_low_plur = 'staff types';
   $name_low_sing = 'staff type';
   $name_low_reg = 'stafftype';
-
+	$name_custom_post_type = 'staffmember';
 
 	$labels = array(
 		'name'                       => $name_up_plur,
@@ -46,7 +46,7 @@ function register_staff_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( $name_low_reg, array( $name_low_reg ), $args );
+	register_taxonomy( $name_low_reg, array( $name_custom_post_type ), $args );
 }
 add_action( 'init', 'register_staff_type_taxonomy', 0 );
 
@@ -56,6 +56,7 @@ function register_faq_type_taxonomy() {
   $name_low_plur = 'FAQ types';
   $name_low_sing = 'FAQ type';
   $name_low_reg = 'faqtype';
+	$name_custom_post_type = 'faq';
 
 
 	$labels = array(
@@ -89,6 +90,7 @@ function register_faq_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( $name_low_reg, array( $name_low_reg ), $args );
+	register_taxonomy( $name_low_reg, array( $name_custom_post_type ), $args );
+
 }
 add_action( 'init', 'register_faq_type_taxonomy', 0 );
