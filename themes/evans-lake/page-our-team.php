@@ -18,34 +18,44 @@ get_header(); ?>
 			'submenu' => get_the_title($post->post_parent)
 		) ); ?>
 	</div>
-
+	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		<?php endwhile; // End of the loop. ?>
 	
-	<!--Query for Custom Post Data-->
-	<?php 
-		$args = array(
-			'post_type'=> 'staffmember',
-			'post_count'=> 50,
-			'posts_per_page'=> 50
+		<!--Query for Custom Post Data-->
+		<?php 
+			$args = array(
+				'post_type'=> 'staffmember',
+				'post_count'=> 50,
+				'posts_per_page'=> 50,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'staffmember',
+						'field'    => 'all',
+						'terms'    => 'fulltime'
+					),
+				),
 			);
-		$all_staff = new WP_Query($args);
-	?>
 
-	<!--Populate arrays-->
-	<?php foreach ($all_staff->posts as $staff_member): ?>
+			$fulltime_staff = new WP_Query($args);
+		?>
+
+		<!--Populate arrays-->
+		<?php 
+			$staff_types = get_terms( 'stafftype' );
+			echo "Staff Types:";
+			print_r($staff_types);
+
+			if ( !empty($fulltime_staff) && !is_wp_error($fulltime_staff)) :
+				foreach ( $fulltime_staff->posts as $post ) :
+					setup_postdata ( $post );
+		?>
 		<div>
-			<div class="all-staff">
-				<section class="staff-member">
-					<span class="id">
-						<?php echo $staff_member->ID; ?>
-					</span>
-					<span class="type">
-						<?php
-							$type = CFS()->get( 's_type',  $staff_member->ID ); 
-							print_r($type)[0];
-						?>
+			<div class="staff fulltime">
+				<section class="staff-member fulltime">
+					<span class="name">
+						<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
 					</span>
 					<br><br>
 					<span class="role">
@@ -79,16 +89,16 @@ get_header(); ?>
 				</section>
 			</div>
 		</div>
-	<?php endforeach; ?>		
+		<?php
+			endforeach;
+			endif;
+		?>
+		<!--board of directors/executives-->
+		<!--board of directors/directors loop-->
 
-	<main id="main" class="site-main" role="main">
-<!---->
-<!--board of directors/executives-->
-<!--board of directors/directors loop-->
+		<!--Summer Camp staff loop-->
 
-<!--Summer Camp staff loop-->
 	</main><!-- #main -->
-
 </div><!-- #primary -->
 <?php wp_reset_query(); ?>
 <?php get_footer(); ?>
