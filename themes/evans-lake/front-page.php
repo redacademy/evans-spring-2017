@@ -16,9 +16,18 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-		<h2><?php	echo CFS()->get( 'site_title' ); ?></h2>
-		<h3><?php	echo CFS()->get( 'site_subtitle' ); ?></h3>
-		<span class="site-description"> <?php	echo CFS()->get( 'site_description' ); ?> </span>
+		<section class="site-description">
+			<div class="description-image">
+				<img src="<?php	echo CFS()->get( 'site_image' ); ?>">
+				<div class="description-text-area">
+					<h2><?php	echo CFS()->get( 'site_title' ); ?></h2>
+					<span class="site-description-subtitle"><?php	echo CFS()->get( 'site_subtitle' ); ?></span>
+					<span class="site-description"> <?php	echo CFS()->get( 'site_description' ); ?> </span>
+				</div>
+			</div>
+		</section>
+
+		<?php get_template_part( 'template-parts/content', 'flickity' ); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

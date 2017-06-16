@@ -308,9 +308,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "josefin_sans", sans-serif; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   color: #1B5D97;
   clear: both; }
+
+h3 {
+  font-family: "lato", sans-serif;
+  font-size: 1rem;
+  font-weight: bold; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -612,7 +617,7 @@ a {
       background: #F56D00;
       border-radius: 1.2rem;
       color: #fff;
-      padding: .3rem 1.5rem;
+      padding: .2rem 1.75rem;
       cursor: pointer; }
   .site-header .sub-menu .menu-item a, .site-header .sub-menu .menu-item a:visited {
     color: #1B5D97; }
@@ -799,36 +804,41 @@ named after the specific page to avoid merge conflicts. */
     .page .sub-navigation .menu a {
       color: #4A4A4A;
       text-decoration: none; }
+    .page .sub-navigation .menu a:visited {
+      color: #4A4A4A; }
     .page .sub-navigation .menu a:hover {
-      color: #429DCB;
-      text-decoration: underline; }
+      color: #429DCB; }
 
 .page .site-main {
-  padding: 0 .7rem;
   width: 100%; }
   .page .site-main .entry-title {
     font-size: 1.3rem;
     margin-top: 0.5rem; }
+    @media (min-width: 768px) {
+      .page .site-main .entry-title {
+        font-size: 2rem;
+        letter-spacing: .1rem; } }
   @media (min-width: 768px) {
     .page .site-main {
       -ms-flex: 0 1 75%;
-          flex: 0 1 75%; } }
+          flex: 0 1 75%;
+      margin: 0 auto; } }
 
-.page .hero-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
+.page .hero {
+  height: 30vh;
   margin-bottom: 1rem;
   overflow: hidden;
-  position: relative;
+  position: static;
   width: 100vw; }
-  .page .hero-image .wp-post-image {
-    object-fit: cover;
-    width: 100%;
-    z-index: -1; }
   @media (min-width: 768px) {
-    .page .hero-image {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
+    .page .hero {
       height: 80vh;
       margin-bottom: 2rem; } }
+  .page .hero .hero-image {
+    height: 30vh; }
+    @media (min-width: 768px) {
+      .page .hero .hero-image {
+        height: 80vh; } }
 
 .page .hero-title {
   display: none; }
@@ -836,7 +846,7 @@ named after the specific page to avoid merge conflicts. */
     .page .hero-title {
       color: #fff;
       display: initial;
-      font-size: 3rem;
+      font-size: 4rem;
       left: 50%;
       letter-spacing: .3rem;
       position: absolute;
@@ -848,41 +858,57 @@ named after the specific page to avoid merge conflicts. */
   position: relative; }
 
 .home-hero {
+  -ms-flex-align: center;
+      align-items: center;
   background: url("../../assets/images/home-hero.png") bottom no-repeat;
   background-size: cover;
   height: 80vh;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  width: auto; }
+  width: 100vw; }
   @media (min-width: 768px) {
     .home-hero {
       height: 100vh; } }
 
-p {
-  margin: 0;
-  padding: 0; }
+.description-image {
+  margin: 0 auto;
+  padding: 0 2rem; }
+  .description-image img {
+    width: 100vw; }
+
+.description-text-area {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px #d3d3d3;
+  padding: 2rem 3rem; }
+  .description-text-area h2 {
+    margin-top: 0;
+    text-transform: uppercase; }
+  .description-text-area .site-description-subtitle {
+    color: #1B5D97; }
 
 .slogan {
   color: #F56D00;
   font-family: "selima", serif;
   font-size: 2rem;
+  margin: 0;
   z-index: 1; }
   @media (min-width: 768px) {
     .slogan {
-      font-size: 7rem; } }
+      font-size: 7rem;
+      line-height: 7rem; } }
 
 .text-logo {
   color: #fff;
   font-family: "josefin_sans", sans-serif;
   font-size: 1rem;
   letter-spacing: .5rem;
+  margin: 0;
   text-transform: uppercase;
   z-index: 1; }
   @media (min-width: 768px) {
