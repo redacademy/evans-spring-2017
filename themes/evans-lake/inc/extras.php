@@ -307,9 +307,15 @@ function remove_editor_init() {
 
 	// Don't do anything unless there is a post_id.
 	if ( isset( $post_id ) ) {
-		// Get the template of the current post.
-		$template_file = get_post_meta( $post_id, '_wp_page_template', true );
-		// remove_post_type_support( 'page', 'editor' );
+		if ( 
+			$post_id == 55 ||   // camp-faq
+			$post_id == 434 ||  // front-page
+			$post_id == 18)     // our-team 
+			{
+				// Get the template of the current post.
+				$template_file = get_post_meta( $post_id, '_wp_page_template', true );
+				remove_post_type_support( 'page', 'editor' );
+		}
 	}
 }
 add_action( 'init', 'remove_editor_init' );
