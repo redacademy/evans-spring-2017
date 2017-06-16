@@ -84,6 +84,7 @@ add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
  */
 function evans_lake_scripts() {
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script(
@@ -104,6 +105,7 @@ function evans_lake_scripts() {
 	);
 
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
+	wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
 
 	wp_enqueue_script( 'evans-lake-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
