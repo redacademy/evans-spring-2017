@@ -1036,6 +1036,26 @@ named after the specific page to avoid merge conflicts. */
 .carousel-title {
   text-align: center; }
 
+.flickity-slider {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .flickity-slider .carousel-cell {
+    -ms-flex: 0 1 32%;
+        flex: 0 1 32%;
+    left: 0%;
+    width: 32%; }
+    .flickity-slider .carousel-cell h3, .flickity-slider .carousel-cell p {
+      margin: 0; }
+    .flickity-slider .carousel-cell .events-thumbnail {
+      height: 200px; }
+    .flickity-slider .carousel-cell .events-post {
+      background-color: yellow;
+      border-radius: 0 0 15px 15px;
+      padding: 1rem 2rem;
+      text-align: center; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
