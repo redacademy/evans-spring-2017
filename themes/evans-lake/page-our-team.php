@@ -31,7 +31,7 @@ get_header(); ?>
 				'posts_per_page'=> 50
 			);
 
-			$all_staff = new WP_Query($args);
+			$all_staff = get_posts($args);
 
 			// Create Sorting Arrays
 			$summers = [];
@@ -43,12 +43,11 @@ get_header(); ?>
 		<!--Get Staff Type by Staff Member Post-->
 		<?php 
 			if ( !empty($all_staff) && !is_wp_error($all_staff)) {
-				foreach ( $all_staff->posts as $post ) {
+				foreach ( $all_staff as $post ) {
 					$staff_term_obj = get_the_terms($post, 'stafftype');
 					$staff_term_slug = $staff_term_obj[0]->slug;
 
 					// Sort Staff Member by Staff Type
-					echo $staff_term_slug;
 					switch ($staff_term_slug){
 						case 'summer':
 							array_push($summers, $post);
@@ -65,7 +64,7 @@ get_header(); ?>
 					}
 				}
 			}
-					?><div><pre><?php print_r ($summers); ?></pre></div><?php
+					?><div><pre><?php print_r ($directors); ?></pre></div><?php
 		?>
 
 		<div>
