@@ -67,6 +67,71 @@ get_header(); ?>
 					?><div><pre><?php print_r ($directors); ?></pre></div><?php
 		?>
 
+		<section class="fulltime staff-container">
+			<div class="fulltime staff-member">
+
+				<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
+				<div class="image" style="background-image: url( '<?php echo $image_URL; ?>' )">
+				</div>
+
+				<div class="content">
+					<span class="name">
+						<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
+					</span>
+					<br><br>
+					<span class="role">
+						<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
+					</span>
+					<span class="email">
+						<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
+					</span>
+					<span class="tel-1">
+						<?php 
+							if ( CFS()->get( 's_tel_1_is_mobile',  $staff_member->ID ) ) {
+								echo "M: ";
+							} 
+							else {
+								echo "T: ";
+							}; 
+							echo CFS()->get( 's_tel_1',  $staff_member->ID ); 
+						?>
+					</span>
+						<span class="tel-2">
+						<?php 
+							if ( CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ) ) {
+								echo "M: ";
+							} 
+							else {
+								echo "T: ";
+							}; 
+							echo CFS()->get( 's_tel_2',  $staff_member->ID ); 
+						?>
+					</span>
+					<span class="year-started">
+						<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
+					</span>
+
+					<button class="staff orange-button">View Bio</button>
+					<span class="bio">
+					<!--Bio should be hidden until button above is clicked-->
+						<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
+					</span>
+
+				</div>
+
+			</div>
+		</section>
+		<!--board of directors/executives-->
+		<!--board of directors/directors loop-->
+
+		<!--Summer Camp staff loop-->
+
+	</main><!-- #main -->
+</div><!-- #primary -->
+<?php wp_reset_query(); ?>
+<?php get_footer(); ?>
+
+
 		<div>
 			<div class="staff fulltime">
 				<section class="staff-member fulltime">
@@ -105,12 +170,3 @@ get_header(); ?>
 				</section>
 			</div>
 		</div>
-		<!--board of directors/executives-->
-		<!--board of directors/directors loop-->
-
-		<!--Summer Camp staff loop-->
-
-	</main><!-- #main -->
-</div><!-- #primary -->
-<?php wp_reset_query(); ?>
-<?php get_footer(); ?>
