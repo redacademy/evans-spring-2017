@@ -14,6 +14,10 @@
   }
 }
 
+.site-description {
+  position: relative;
+}
+
 .description-image {
   margin: 0 auto;
   padding: 0 2rem;
@@ -26,12 +30,21 @@
 .description-text-area {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 2px 15px #d3d3d3;
-  padding: 2rem 3rem;
+  box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
+  line-height: 1.8rem;
+  padding: 4rem 5rem;
+  position: absolute;
+  left: 37.5%;
+  top: 30px;
+  width: 47vw;
 
   h2 {
     margin-top: 0;
     text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 
   .site-description-subtitle {
