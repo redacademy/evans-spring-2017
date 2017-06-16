@@ -163,7 +163,7 @@ get_header();
 			</section> <!--Executive Staff Member Section-->		
 
 			<section class="director staff-container">
-				<h3>Directors</h3>
+				<h1>Directors</h1>
 				<?php foreach ($directors as $staff_member) : ?>
 					<p class="director staff-member">
 						<?php echo get_the_title($staff_member->ID); ?>
@@ -174,6 +174,7 @@ get_header();
 
 		<section class="summer staff-container">
 			<div class="summer description">
+				<h2>Summer Camp</h2>
 				<?php echo CFS()->get( 'desc_summer', $our_team_ID ); ?>
 			</div>
 			<?php foreach ($summers as $staff_member) : ?>
