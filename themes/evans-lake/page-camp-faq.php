@@ -24,10 +24,10 @@ get_header();  ?>
 			<?php the_title(); ?>
       <?php 
       $FAQs = CFS()->get('faq');
-      foreach ( $FAQs as $FAQ) { ?>
+      foreach ( $FAQs as $FAQ) : ?>
       <?php echo $FAQ['faq_question']; ?>
       <?php echo $FAQ['faq_answer']; ?>
-      <?php } ?>
+      <?php endforeach; ?>
       
 
 
