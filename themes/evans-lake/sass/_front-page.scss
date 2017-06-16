@@ -119,3 +119,29 @@
 .carousel-title {
   text-align: center;
 }
+
+.flickity-slider {
+  display: flex;
+  justify-content: space-between;
+
+  .carousel-cell {
+    flex: 0 1 32%;
+    left: 0%;
+    width: 32%;
+
+    h3, p {
+      margin: 0;
+    }
+
+    .events-thumbnail {
+      height: 200px;
+    }
+
+    .events-post {
+      background-color: yellow;
+      border-radius: 0 0 15px 15px;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+  }
+}
