@@ -23,34 +23,51 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 		<?php endwhile; // End of the loop. ?>
 	
-		<!--Query for Custom Post Data-->
+		<!--Query for Staff Member Custom Posts-->
 		<?php 
 			$args = array(
 				'post_type'=> 'staffmember',
 				'post_count'=> 50,
-				'posts_per_page'=> 50,
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'staffmember',
-						'field'    => 'all',
-						'terms'    => 'fulltime'
-					),
-				),
+				'posts_per_page'=> 50
 			);
 
-			$fulltime_staff = new WP_Query($args);
+			$all_staff = new WP_Query($args);
+
+			// Create Sorting Arrays
+			$summers = [];
+			$fulltimes = [];
+			$directors = [];
+			$executives = [];
 		?>
 
-		<!--Populate arrays-->
+		<!--Get Staff Type by Staff Member Post-->
 		<?php 
-			$staff_types = get_terms( 'stafftype' );
-			echo "Staff Types:";
-			print_r($staff_types);
+			if ( !empty($all_staff) && !is_wp_error($all_staff)) {
+				foreach ( $all_staff->posts as $post ) {
+					$staff_term_obj = get_the_terms($post, 'stafftype');
+					$staff_term_slug = $staff_term_obj[0]->slug;
 
-			if ( !empty($fulltime_staff) && !is_wp_error($fulltime_staff)) :
-				foreach ( $fulltime_staff->posts as $post ) :
-					setup_postdata ( $post );
+					// Sort Staff Member by Staff Type
+					echo $staff_term_slug;
+					switch ($staff_term_slug){
+						case 'summer':
+							array_push($summers, $post);
+							break;
+						case 'director':
+							array_push($directors, $post);
+							break;
+						case 'executive':
+							array_push($executives, $post);
+							break;
+						case 'fulltime':
+							array_push($fulltimes, $post);
+							break;
+					}
+				}
+			}
+					?><div><pre><?php print_r ($summers); ?></pre></div><?php
 		?>
+
 		<div>
 			<div class="staff fulltime">
 				<section class="staff-member fulltime">
@@ -89,10 +106,6 @@ get_header(); ?>
 				</section>
 			</div>
 		</div>
-		<?php
-			endforeach;
-			endif;
-		?>
 		<!--board of directors/executives-->
 		<!--board of directors/directors loop-->
 
