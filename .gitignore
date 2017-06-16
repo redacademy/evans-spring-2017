@@ -34,6 +34,7 @@ plugins/*
 # ====================================================== #
 themes/*
 !themes/evans-lake/
+themes/evans-lake/style.css
 
 # Ignore npm packages #
 # =================== #
