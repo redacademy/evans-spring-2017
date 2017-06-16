@@ -127,11 +127,11 @@ get_header(); ?>
 			<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
 
 			<section class="executive staff-container">
-				<h3>Executives</h3>
+				<h1>Executives</h1>
 				<div class="executive-columns">
-					<span class="name">Name</span>
-					<span class="role">Role</span>
-					<span class="email">Contact</span>
+					<h2 class="name">Name</h2>
+					<h2 class="role">Role</h2>
+					<h2 class="email">Contact</h2>
 				</div>
 				<?php foreach ($executives as $staff_member) : ?>
 					<div class="executive staff-member">
@@ -145,7 +145,9 @@ get_header(); ?>
 						</span>
 
 						<span class="email">
-							<?php echo "mailto: ", CFS()->get( 's_email',  $staff_member->ID ); ?>
+							<a href = "mailto: <?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>">
+								<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
+							</a>
 						</span>
 
 					</div> <!--Single Executive Staff Member-->

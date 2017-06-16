@@ -864,19 +864,22 @@ named after the specific page to avoid merge conflicts. */
   background-position: center;
   background-size: cover;
   height: 150px;
-  margin: 1.5rem;
   width: 150px; }
 
 .staff-member.fulltime {
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #1B5D97; }
-  .staff-member.fulltime .name {
-    text-transform: uppercase; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  border-bottom: 1px solid #1B5D97;
+  margin: 0 1.5rem;
+  padding: 1.5rem; }
+  .staff-member.fulltime .role {
+    margin-top: 0; }
   .staff-member.fulltime .name, .staff-member.fulltime .role {
-    display: inline-block;
-    margin-top: 1.5rem;
-    margin-bottom: 0; }
+    display: block;
+    margin-bottom: 0;
+    text-transform: uppercase; }
   .staff-member.fulltime .email {
     display: block; }
   .staff-member.fulltime .tel-1, .staff-member.fulltime .tel-2, .staff-member.fulltime .year-started {
@@ -887,6 +890,20 @@ named after the specific page to avoid merge conflicts. */
   .staff-member.summer .name {
     display: block; }
 
+.executive-columns {
+  border-bottom: 1px solid #1B5D97; }
+
+.executive-columns, .executive.staff-member {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.executive-columns h2, .executive.staff-member span {
+  display: inline-block;
+  text-align: left;
+  width: 30%; }
+
 .staff-container {
   display: -ms-flexbox;
   display: flex;
@@ -896,12 +913,26 @@ named after the specific page to avoid merge conflicts. */
   .staff-container.fulltime {
     -ms-flex-direction: column;
         flex-direction: column; }
+  .staff-container.executive {
+    -ms-flex-direction: column;
+        flex-direction: column; }
   .staff-container.summer {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%; }
+
+@media (min-width: 768px) {
+  .staff-member.fulltime {
+    -ms-flex-direction: row;
+        flex-direction: row; }
+    .staff-member.fulltime .image {
+      margin: 2rem; }
+    .staff-member.fulltime .name, .staff-member.fulltime .role {
+      display: inline-block; }
+    .staff-member.fulltime .role {
+      text-transform: initial; } }
 
 .home-hero {
   -ms-flex-align: center;
@@ -1065,15 +1096,6 @@ object {
 .gallery-caption {
   display: block; }
 
-<<<<<<< HEAD
-.ewd-ufaq-post-margin-symbol {
-  display: none; }
-
-div.ufaq-faq-title h4 {
-  color: black; }
-
-=======
->>>>>>> Modify page-camp-faq.php
 h4::after {
   content: url(../../assets/images/arrow-down.png);
   position: absolute;

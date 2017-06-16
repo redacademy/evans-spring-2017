@@ -6,19 +6,21 @@
     background-position: center;
     background-size: cover;
     height: 150px;
-    margin: 1.5rem;
     width: 150px;
   }
   &.fulltime{
     display:flex;
+    flex-direction: column;
     border-bottom: 1px solid $color__blue;    
-    .name{
-      text-transform: uppercase;
+    margin: 0 1.5rem;
+    padding: 1.5rem;
+    .role{
+      margin-top: 0;
     }
     .name, .role {
-      display: inline-block;
-      margin-top: 1.5rem;
+      display: block;
       margin-bottom: 0;
+      text-transform: uppercase;
     }
     .email{
       display: block;
@@ -32,22 +34,59 @@
     .name{
       display:block;
     }
-    .role{
-
-    }
   }
 }
+
+.executive-columns {
+  border-bottom: 1px solid $color__blue;
+}
+
+.executive-columns, .executive.staff-member {
+  display: flex;
+  justify-content: space-between;
+}
+
+.executive-columns h2, .executive.staff-member span {
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+}    
+
 
 .staff-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  &.fulltime {
+  &.fulltime{
     flex-direction: column;
   }
+  &.executive {
+    flex-direction: column;
+  }
+
   &.summer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
+}
+@include desktop {
+  .staff-member{
+    &.fulltime {
+      flex-direction: row;
+      .image {
+        margin: 2rem;
+      }
+      .name, .role {
+        display: inline-block;
+      }
+      .role {
+        text-transform: initial;
+      }
+    }
+    &.executive{
+
+    }
+  }
+  
 }
