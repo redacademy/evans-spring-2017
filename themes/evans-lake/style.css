@@ -863,16 +863,45 @@ named after the specific page to avoid merge conflicts. */
 .staff-member div.image {
   background-position: center;
   background-size: cover;
-  height: 100px;
-  width: 100px; }
+  height: 150px;
+  margin: 1.5rem;
+  width: 150px; }
+
+.staff-member.fulltime {
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #1B5D97; }
+  .staff-member.fulltime .name {
+    text-transform: uppercase; }
+  .staff-member.fulltime .name, .staff-member.fulltime .role {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 0; }
+  .staff-member.fulltime .email {
+    display: block; }
+  .staff-member.fulltime .tel-1, .staff-member.fulltime .tel-2, .staff-member.fulltime .year-started {
+    display: block; }
+
+.staff-member.summer {
+  width: 150px; }
+  .staff-member.summer .name {
+    display: block; }
 
 .staff-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  width: 100%; }
   .staff-container.fulltime {
-    border-bottom: 1px solid black; }
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .staff-container.summer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%; }
 
 .home-hero {
   -ms-flex-align: center;

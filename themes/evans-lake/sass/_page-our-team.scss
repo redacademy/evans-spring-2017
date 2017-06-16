@@ -5,15 +5,49 @@
   div.image {
     background-position: center;
     background-size: cover;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    margin: 1.5rem;
+    width: 150px;
+  }
+  &.fulltime{
+    display:flex;
+    border-bottom: 1px solid $color__blue;    
+    .name{
+      text-transform: uppercase;
+    }
+    .name, .role {
+      display: inline-block;
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+    .email{
+      display: block;
+    }
+    .tel-1, .tel-2, .year-started {
+      display: block;
+    }
+  }
+  &.summer{
+    width: 150px;
+    .name{
+      display:block;
+    }
+    .role{
+
+    }
   }
 }
 
 .staff-container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   &.fulltime {
-    border-bottom: 1px solid black; 
+    flex-direction: column;
+  }
+  &.summer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }

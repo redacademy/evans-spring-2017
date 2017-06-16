@@ -23,7 +23,7 @@ get_header(); ?>
 			evans_lake_breadcrumbs(); 
 			$our_team_ID = get_the_ID();
 		?>
-		<h3>The team behind Evans Lake</h3>
+		<h2>The team behind Evans Lake</h2>
 
 		<!--Query for Staff Member Custom Posts-->
 		<?php 
@@ -68,7 +68,7 @@ get_header(); ?>
 			}
 		?>
 		<section class="fulltime staff-container">
-			<h3>Our Fulltime Staff</h3>
+			<h2>Our Fulltime Staff</h2>
 			<?php foreach ($fulltimes as $staff_member) : ?>
 				<div class="fulltime staff-member">
 
@@ -80,9 +80,9 @@ get_header(); ?>
 						<h2 class="name">
 							<?php echo get_the_title($staff_member->ID), ' - '; ?>
 						</h2>
-						<h3 class="role">
+						<h2 class="role">
 							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
-						</h3>
+						</h2>
 						<a class="email" href="mailto: <?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>">
 							<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
 						</a>
@@ -102,7 +102,7 @@ get_header(); ?>
 								if ( CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ) ) {
 									echo "M: ";
 								} 
-								elseif (!CFS()->get( 's_tel_2',  $staff_member->ID ) ) {
+								elseif ('' !== CFS()->get( 's_tel_2',  $staff_member->ID ) ) {
 									echo "T: ";
 								}; 
 								echo CFS()->get( 's_tel_2',  $staff_member->ID ); 
@@ -121,8 +121,9 @@ get_header(); ?>
 				</div> <!--Single Fulltime Staff Member-->	
 			<?php endforeach; ?>
 		</section> <!--Staff Fulltime Member Section-->
+
 		<section class="board-container">
-			<h3>Board of Directors</h3>
+			<h2>Board of Directors</h2>
 			<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
 
 			<section class="executive staff-container">
@@ -169,9 +170,9 @@ get_header(); ?>
 					</div>
 
 					<div class="content">
-						<span class="name">
+						<h2 class="name">
 							<?php echo get_the_title($staff_member->ID); ?>
-						</span>
+						</h2>
 						<span class="role">
 							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
 						</span>
