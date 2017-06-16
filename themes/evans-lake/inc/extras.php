@@ -309,7 +309,7 @@ function remove_editor_init() {
 	if ( isset( $post_id ) ) {
 		// Get the template of the current post.
 		$template_file = get_post_meta( $post_id, '_wp_page_template', true );
-		remove_post_type_support( 'page', 'editor' );
+		// remove_post_type_support( 'page', 'editor' );
 	}
 }
 add_action( 'init', 'remove_editor_init' );
