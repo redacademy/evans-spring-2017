@@ -1,6 +1,12 @@
 /* Headings */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
 	color: $color__blue;
 	clear: both;
+}
+
+h3 {
+	font-family: $font__main;
+	font-size: 1rem;
+	font-weight: bold;
 }
