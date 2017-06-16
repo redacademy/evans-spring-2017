@@ -15,7 +15,7 @@
         if (target.length) {
           event.preventDefault();
           $('html, body').stop().animate({
-            scrollTop: target.offset().top -70
+            scrollTop: target.offset().top -50
           }, 800, function() {
             var $target = $(target);
             $target.blur();
