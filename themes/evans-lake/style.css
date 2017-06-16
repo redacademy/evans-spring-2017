@@ -857,6 +857,9 @@ named after the specific page to avoid merge conflicts. */
 .page .menu-evans-lake-menu-container {
   position: relative; }
 
+.staff-member span.bio {
+  display: none; }
+
 .home-hero {
   -ms-flex-align: center;
       align-items: center;
@@ -1014,10 +1017,6 @@ object {
 .gallery-caption {
   display: block; }
 
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* Front page */
 .ewd-ufaq-post-margin-symbol {
   display: none; }
 
