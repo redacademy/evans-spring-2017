@@ -1036,12 +1036,15 @@ object {
 .gallery-caption {
   display: block; }
 
+<<<<<<< HEAD
 .ewd-ufaq-post-margin-symbol {
   display: none; }
 
 div.ufaq-faq-title h4 {
   color: black; }
 
+=======
+>>>>>>> Modify page-camp-faq.php
 h4::after {
   content: url(../../assets/images/arrow-down.png);
   position: absolute;

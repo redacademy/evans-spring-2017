@@ -20,15 +20,19 @@ get_header();  ?>
 	<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php the_title(); ?>
-      <?php 
-      $FAQs = CFS()->get('faq');
-      foreach ( $FAQs as $FAQ) : ?>
-      <?php echo $FAQ['faq_question']; ?>
-      <?php echo $FAQ['faq_answer']; ?>
-      <?php endforeach; ?>
-      
+				<?php the_title(); ?>
+				<?php 
+				$FAQs = CFS()->get('summer_faqs');
+				foreach ( $FAQs as $FAQ) : ?>
+				<h4><?php echo $FAQ['summer_faq_question']; ?></h4>
+				<h3><?php echo $FAQ['summer_faq_answer']; ?></h3>
+				<?php endforeach; ?>
+        <?php 
+				$ARGs = CFS()->get('packing_faqs');
+				foreach ( $ARGs as $ARG) : ?>
+				<h4><?php echo $ARG['packing_faq_question']; ?></h4>
+				<h3><?php echo $ARG['packing_faq_answer']; ?></h3>
+				<?php endforeach; ?>
 
 
 		<?php endwhile; // End of the loop. ?>
