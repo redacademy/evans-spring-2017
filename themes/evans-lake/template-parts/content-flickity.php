@@ -7,16 +7,19 @@
 
 ?>
 
-<h2 class="carousel-title">Activities</h2>
-<div class="activities-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-  <div class="activities-cell">Bla</div>
-  <div class="activities-cell">...</div>
-  <div class="activities-cell">...</div>
-</div>
+<div class="main-carousel container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
-<h2 class="carousel-title">Events</h2>
-<div class="events-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-  <div class="events-cell">Bla</div>
-  <div class="events-cell">...</div>
-  <div class="events-cell">...</div>
+  <?php $args = array( 'posts_per_page' => 3,); ?>
+  <?php $posts = get_posts( $args ); ?>
+  <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+    <div class="carousel-cell">
+      <div class="events-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
+      <div class="events-post">
+        <h3 class="events-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read Entry</a></p>
+      </div>
+    </div>
+  <?php endforeach; ?>
+  <?php wp_reset_postdata(); ?>
+    
 </div>
