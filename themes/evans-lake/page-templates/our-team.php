@@ -18,10 +18,10 @@ get_header(); ?>
 			'submenu' => get_the_title($post->post_parent)
 		) ); ?>
 	</div>
-	<main id="main" class="site-main" role="main">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
-		<?php endwhile; // End of the loop. ?>
+	<?php 
+		evans_lake_breadcrumbs(); 
+		$our_team_ID = get_the_ID();
+	?>
 	
 		<!--Query for Staff Member Custom Posts-->
 		<?php 
@@ -64,9 +64,9 @@ get_header(); ?>
 					}
 				}
 			}
-
-		foreach ($fulltimes as $staff_member) : ?>
-			<section class="fulltime staff-container">
+		?>
+		<section class="fulltime staff-container">
+			<?php foreach ($fulltimes as $staff_member) : ?>
 				<div class="fulltime staff-member">
 
 					<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
@@ -77,7 +77,6 @@ get_header(); ?>
 						<span class="name">
 							<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
 						</span>
-						<br><br>
 						<span class="role">
 							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
 						</span>
@@ -117,73 +116,46 @@ get_header(); ?>
 						</span>
 					</div> <!--Content-->
 				</div> <!--Single Fulltime Staff Member-->
-			</section> <!--Staff Fulltime Member Section-->
-		<?php endforeach; ?>
+			<?php endforeach; ?>
+		</section> <!--Staff Fulltime Member Section-->
+		<section class="board-container">
+			<h3>Board of Directors</h3>
+			<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
+			<section class="executives staff-container">
+				<h3>Executives</h3>
+				<div class="executive-columns">
+					<span class="name">Name</span>
+					<span class="role">Role</span>
+					<span class="email">Contact</span>
+				</div>
+				<?php foreach ($executives as $staff_member) : ?>
+					<div class="executives staff-member">
 
-		<section class="executives staff-container">
-			<?php foreach ($executives as $staff_member) : ?>	
-
-				<div class="executives staff-member">
-
-					<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
-					<div class="image" style="background-image: url( '<?php echo $image_URL; ?>' )">
-					</div>
-
-					<div class="content">
 						<span class="name">
 							<?php $type = CFS()->get( 's_name',  $staff_member->ID ); ?>
 						</span>
-						<br><br>
+
 						<span class="role">
 							<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
 						</span>
+
 						<span class="email">
-							<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
-						</span>
-						<span class="tel-1">
-							<?php 
-								if ( CFS()->get( 's_tel_1_is_mobile',  $staff_member->ID ) ) {
-									echo "M: ";
-								} 
-								else {
-									echo "T: ";
-								}; 
-								echo CFS()->get( 's_tel_1',  $staff_member->ID ); 
-							?>
-						</span>
-							<span class="tel-2">
-							<?php 
-								if ( CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ) ) {
-									echo "M: ";
-								} 
-								else {
-									echo "T: ";
-								}; 
-								echo CFS()->get( 's_tel_2',  $staff_member->ID ); 
-							?>
-						</span>
-						<span class="year-started">
-							<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
+							<?php echo "mailto: ", CFS()->get( 's_email',  $staff_member->ID ); ?>
 						</span>
 
-						<button class="staff orange-button">View Bio</button>
-						<span class="bio">
-						<!--Bio should be hidden until button above is clicked-->
-							<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
-						</span>
-					</div> <!--Content-->
-				</div> <!--Single Executive Staff Member-->
-			<?php endforeach; ?>
-		</section> <!--Executive Staff Member Section-->
-	
+					</div> <!--Single Executive Staff Member-->
+				<?php endforeach; ?>
+			</section> <!--Executive Staff Member Section-->
+		
 
-		<section class="directors staff-container">
-			<?php foreach ($directors as $staff_member) : ?>
-				<!--Directors-->
-			<?php endforeach; ?>
-		</section>
+			<section class="directors staff-container">
+				<?php foreach ($directors as $staff_member) : ?>
+					<!--Directors-->
+				<?php endforeach; ?>
+			</section>
+		</section> <!--Board of Directors Container-->
 
-		<section class="executives staff-container">
+		<section class="summer staff-container">
 			<?php foreach ($summers as $staff_member) : ?>
 				<!--Summer Staff-->
 			<?php endforeach; ?>
