@@ -858,11 +858,7 @@ named after the specific page to avoid merge conflicts. */
   position: relative; }
 
 .staff-member span.bio {
-<<<<<<< HEAD
   display: none; }
-=======
-  display: hidden; }
->>>>>>> Change site-description class name to site-description-section
 
 .home-hero {
   -ms-flex-align: center;
