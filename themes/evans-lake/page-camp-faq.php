@@ -21,19 +21,25 @@ get_header();  ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_title(); ?>
-				<?php 
-				$FAQs = CFS()->get('summer_faqs');
-				foreach ( $FAQs as $FAQ) : ?>
-				<h4><?php echo $FAQ['summer_faq_question']; ?></h4>
-				<h3><?php echo $FAQ['summer_faq_answer']; ?></h3>
-				<?php endforeach; ?>
-        <?php 
-				$ARGs = CFS()->get('packing_faqs');
-				foreach ( $ARGs as $ARG) : ?>
-				<h4><?php echo $ARG['packing_faq_question']; ?></h4>
-				<h3><?php echo $ARG['packing_faq_answer']; ?></h3>
-				<?php endforeach; ?>
+				<div class="accordion">
+					<?php 
+					$FAQs = CFS()->get('summer_faqs');
+					foreach ( $FAQs as $FAQ) : ?>
+					<h3><?php echo $FAQ['summer_faq_question']; ?></h3>
+					<div><?php echo $FAQ['summer_faq_answer']; ?></div>
+					<?php endforeach; ?>
+        </div>
 
+				
+          <h2> Packing</h2>
+				<div class="accordion">	
+					<?php 
+					$ARGs = CFS()->get('packing_faqs');
+					foreach ( $ARGs as $ARG) : ?>
+					<h3><?php echo $ARG['packing_faq_question']; ?></h3>
+					<div><?php echo $ARG['packing_faq_answer']; ?></div>
+					<?php endforeach; ?>
+        </div>
 
 		<?php endwhile; // End of the loop. ?>
 
