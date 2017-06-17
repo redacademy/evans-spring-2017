@@ -8,23 +8,23 @@
  */
 
 get_header();
-?>
+get_sidebar(); ?>
 
 <div class="hero-image"><?php the_post_thumbnail( 'full' ); ?></div>
 <div id="primary" class="content-area container">
 	<div class="sub-navigation">
 		<?php wp_nav_menu( array( 
-			'theme_location' => 'primary', 
-			'menu_id' => 'primary-menu',
-			'submenu' => get_the_title($post->post_parent)
-		) );
-		$our_team_ID = get_the_ID();
+				'theme_location' => 'primary', 
+				'menu_id' => 'primary-menu',
+				'submenu' => get_the_title($post->post_parent)
+			) );
+			$our_team_ID = get_the_ID();
  		?>
 	</div>
+	
 	<main class="entry-content">
 		<?php 
 			evans_lake_breadcrumbs(); 
-
 		?>
 		<h2>The team behind Evans Lake</h2>
 

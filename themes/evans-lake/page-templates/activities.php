@@ -27,11 +27,18 @@ get_sidebar(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+<!--Query for Activity Custom Posts-->
+		<?php 
+			$args = array(
+				'post_type'=> 'activity',
+				'post_count'=> 50,
+				'posts_per_page'=> 50
+			);
 
-			<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			$activities = get_posts($args);
+		?>
 
-		<?php endwhile; // End of the loop. ?>
+<!--Iteratively Display Activities-->
 
 	</main><!-- #main -->
 
