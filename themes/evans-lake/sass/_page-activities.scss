@@ -12,3 +12,14 @@
 .activity-content {
   margin: 1rem;
 }
+
+.page-template-activities {
+  .hero {
+    @include desktop {
+      height: 40vh;
+      margin-bottom: 2rem;
+      width: initial;
+
+    }
+  }
+}

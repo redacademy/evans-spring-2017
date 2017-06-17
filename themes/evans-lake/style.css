@@ -942,6 +942,12 @@ named after the specific page to avoid merge conflicts. */
 .activity-content {
   margin: 1rem; }
 
+@media (min-width: 768px) {
+  .page-template-activities .hero {
+    height: 40vh;
+    margin-bottom: 2rem;
+    width: initial; } }
+
 .home-hero {
   -ms-flex-align: center;
       align-items: center;
