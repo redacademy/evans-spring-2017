@@ -5,7 +5,7 @@
  *
  *
  * @package Evans_Lake_Theme
- */?>
+ */
 
 
 get_header(); 
@@ -25,8 +25,6 @@ get_sidebar(); ?>
 		) ); ?>
 	</div>
 
-	<main id="main" class="site-main" role="main">
-
 <!--Query for Activity Custom Posts-->
 		<?php 
 			$args = array(
@@ -37,8 +35,22 @@ get_sidebar(); ?>
 
 			$activities = get_posts($args);
 		?>
-
+			<div><pre><?php print_r ($activities); ?></pre></div>
+		
 <!--Iteratively Display Activities-->
+	<main id="main" class="site-main" role="main">
+		<?php foreach ($activities as $activity) : ?>
+			<div class="activity-container">
+				<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+				</div>
+
+				<div class="activity-content">
+					<?php CFS()->get( 'act_desc', $activity->ID ); ?>
+				</div>
+			</div>
+		<?php endforeach; ?>
+
+
 
 	</main><!-- #main -->
 
