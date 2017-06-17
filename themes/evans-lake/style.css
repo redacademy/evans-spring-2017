@@ -841,7 +841,9 @@ named after the specific page to avoid merge conflicts. */
         height: 80vh; } }
 
 .page .hero-title {
-  display: none; }
+  display: none;
+  line-height: 5rem;
+  text-align: center; }
   @media (min-width: 768px) {
     .page .hero-title {
       color: #fff;
@@ -860,11 +862,11 @@ named after the specific page to avoid merge conflicts. */
 .staff-member span.bio {
   display: none; }
 
-.staff-member div.image {
+.staff-member .image {
   background-position: center;
   background-size: cover;
-  height: 150px;
-  width: 150px; }
+  height: 170px;
+  width: 170px; }
 
 .staff-member.fulltime {
   display: -ms-flexbox;
@@ -872,13 +874,13 @@ named after the specific page to avoid merge conflicts. */
   -ms-flex-direction: column;
       flex-direction: column;
   border-bottom: 1px solid #1B5D97;
-  margin: 0 1.5rem;
-  padding: 1.5rem; }
+  margin-bottom: 2rem; }
   .staff-member.fulltime .role {
     margin-top: 0; }
   .staff-member.fulltime .name, .staff-member.fulltime .role {
     display: block;
-    margin-bottom: 0;
+    font-size: 1.4rem;
+    margin: 0;
     text-transform: uppercase; }
   .staff-member.fulltime .email {
     display: block; }
@@ -923,30 +925,25 @@ named after the specific page to avoid merge conflicts. */
     -ms-flex-direction: row;
         flex-direction: row; }
     .staff-member.fulltime .image {
-      margin: 2rem; }
+      margin: 0 2rem 2rem 0; }
     .staff-member.fulltime .name, .staff-member.fulltime .role {
       display: inline-block; }
     .staff-member.fulltime .role {
       text-transform: initial; } }
 
-.activity-hero {
-  background-size: cover;
-  background-position: center; }
-
-.bot-brd-blu {
-  border-bottom: 1px solid #1B5D97; }
-
-.intro-content {
-  margin: 0 1rem; }
-
-.activity-content {
-  margin: 1rem; }
-
-@media (min-width: 768px) {
-  .page-template-activities .hero {
-    height: 40vh;
-    margin-bottom: 2rem;
-    width: initial; } }
+.orange-button {
+  background-color: #F56D00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none; }
+  .orange-button:hover {
+    background-color: #ff8600;
+    box-shadow: none; }
 
 .home-hero {
   -ms-flex-align: center;

@@ -1,37 +1,45 @@
 .staff-member {
-  span.bio{
+  span.bio {
     display: none;
   }
-  div.image {
+
+  .image {
     background-position: center;
     background-size: cover;
-    height: 150px;
-    width: 150px;
+    height: 170px;
+    width: 170px;
   }
-  &.fulltime{
-    display:flex;
+
+  &.fulltime {
+    display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $color__blue;    
-    margin: 0 1.5rem;
-    padding: 1.5rem;
-    .role{
+    border-bottom: 1px solid $color__blue;
+    margin-bottom: 2rem;
+
+    .role {
       margin-top: 0;
     }
+
     .name, .role {
       display: block;
-      margin-bottom: 0;
+      font-size: 1.4rem;
+      margin: 0;
       text-transform: uppercase;
     }
-    .email{
+
+    .email {
       display: block;
     }
+
     .tel-1, .tel-2, .year-started {
       display: block;
     }
   }
-  &.summer{
+
+  &.summer {
     width: 150px;
-    .name{
+
+    .name {
       display:block;
     }
   }
@@ -63,23 +71,45 @@
     flex-wrap: wrap;
   }
 }
+
 @include desktop {
-  .staff-member{
+  .staff-member {
+    
     &.fulltime {
       flex-direction: row;
+    
       .image {
-        margin: 2rem;
+        margin: 0 2rem 2rem 0;
       }
+    
       .name, .role {
         display: inline-block;
       }
+    
       .role {
         text-transform: initial;
       }
     }
-    &.executive{
+    &.executive {
 
     }
   }
   
+}
+
+.orange-button {
+  background-color: $color__orange;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none;
+
+  &:hover {
+    background-color: #ff8600;
+    box-shadow: none;
+  }
 }

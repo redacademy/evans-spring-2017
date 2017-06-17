@@ -114,6 +114,8 @@ named after the specific page to avoid merge conflicts. */
   
   .hero-title {
     display: none;
+    line-height: 5rem;
+    text-align: center;
 
     @include desktop {
       color: $color__background-body;
