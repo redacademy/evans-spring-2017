@@ -907,13 +907,14 @@ named after the specific page to avoid merge conflicts. */
 .staff-container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
   width: 100%; }
-  .staff-container.fulltime, .staff-container.executive, .staff-container.director {
-    -ms-flex-direction: column;
-        flex-direction: column; }
   .staff-container.summer {
+    -ms-flex-direction: row;
+        flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
@@ -927,6 +928,19 @@ named after the specific page to avoid merge conflicts. */
       display: inline-block; }
     .staff-member.fulltime .role {
       text-transform: initial; } }
+
+.activity-hero {
+  background-size: cover;
+  background-position: center; }
+
+.bot-brd-blu {
+  border-bottom: 1px solid #1B5D97; }
+
+.intro-content {
+  margin: 0 1rem; }
+
+.activity-content {
+  margin: 1rem; }
 
 .home-hero {
   -ms-flex-align: center;

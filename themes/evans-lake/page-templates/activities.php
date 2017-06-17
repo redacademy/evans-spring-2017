@@ -31,24 +31,32 @@ get_sidebar(); ?>
 				'post_type'=> 'activity',
 				'post_count'=> 50,
 				'posts_per_page'=> 50
+				// Add comma above and 'order_by'=> statement
 			);
-
 			$activities = get_posts($args);
 		?>
-			<div><pre><?php print_r ($activities); ?></pre></div>
 		
 <!--Iteratively Display Activities-->
 	<main id="main" class="site-main" role="main">
+		<div class="intro-content">
+			<?php 
+				evans_lake_breadcrumbs(); 
+			?>
+			<h1 class="bot-brd-blu">Activities</h1>
+		</div>
+		
+		
 		<?php foreach ($activities as $activity) : ?>
 			<div class="activity-container">
 				<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
 				</div>
-
 				<div class="activity-content">
-					<?php CFS()->get( 'act_desc', $activity->ID ); ?>
+					<h3><?php echo $activity->post_title; ?></h3>
+					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
 				</div>
 			</div>
 		<?php endforeach; ?>
+
 
 
 

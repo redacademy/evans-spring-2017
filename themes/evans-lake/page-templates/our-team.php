@@ -19,6 +19,7 @@ get_sidebar(); ?>
 				'theme_location' => 'primary', 
 				'menu_id' => 'primary-menu',
 				'submenu' => get_the_title($post->post_parent)
+				// Add comma above and 'order_by'=> statement
 			) );
 			$our_team_ID = get_the_ID();
  		?>
