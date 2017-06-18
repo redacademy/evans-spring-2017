@@ -50,13 +50,13 @@ function register_staff_type_taxonomy() {
 }
 add_action( 'init', 'register_staff_type_taxonomy', 0 );
 
-function register_faq_type_taxonomy() {
-  $name_up_plur = 'FAQ Types';
-  $name_up_sing = 'FAQ Type';
-  $name_low_plur = 'FAQ types';
-  $name_low_sing = 'FAQ type';
-  $name_low_reg = 'faqtype';
-	$name_custom_post_type = 'faq';
+function register_activity_type_taxonomy() {
+  $name_up_plur = 'Activity Types';
+  $name_up_sing = 'Activity Type';
+  $name_low_plur = 'activity types';
+  $name_low_sing = 'activity type';
+  $name_low_reg = 'activitytype';
+	$name_custom_post_type = 'activity';
 
 
 	$labels = array(
@@ -93,4 +93,4 @@ function register_faq_type_taxonomy() {
 	register_taxonomy( $name_low_reg, array( $name_custom_post_type ), $args );
 
 }
-add_action( 'init', 'register_faq_type_taxonomy', 0 );
+add_action( 'init', 'register_activity_type_taxonomy', 0 );
