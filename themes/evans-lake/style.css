@@ -865,8 +865,8 @@ named after the specific page to avoid merge conflicts. */
 .staff-member .image {
   background-position: center;
   background-size: cover;
-  height: 170px;
-  width: 170px; }
+  height: 150px;
+  width: 150px; }
 
 .staff-member.fulltime {
   display: -ms-flexbox;
@@ -883,16 +883,38 @@ named after the specific page to avoid merge conflicts. */
     margin: 0;
     text-transform: uppercase; }
   .staff-member.fulltime .email {
-    display: block; }
+    display: block;
+    color: #429DCB; }
   .staff-member.fulltime .tel-1, .staff-member.fulltime .tel-2, .staff-member.fulltime .year-started {
     display: block; }
+
+.staff-member.fulltime:last-child {
+  border: none;
+  margin-bottom: 0; }
 
 .staff-member.summer {
   width: 150px; }
   .staff-member.summer .name {
     display: block; }
 
+.executive {
+  line-height: 1.5rem;
+  margin-bottom: 1rem; }
+  .executive:last-child {
+    border-bottom: 1px solid #1B5D97;
+    padding-bottom: .5rem; }
+  .executive .executive-columns .name, .executive .staff-member .name {
+    width: 25%; }
+  .executive .executive-columns .role, .executive .staff-member .role {
+    width: 35%; }
+  .executive .executive-columns .email, .executive .staff-member .email {
+    width: 40%; }
+
 .executive-columns {
+  border-bottom: 1px solid #1B5D97;
+  margin-bottom: .5rem; }
+
+.director-columns {
   border-bottom: 1px solid #1B5D97; }
 
 .executive-columns, .executive.staff-member {
@@ -901,10 +923,18 @@ named after the specific page to avoid merge conflicts. */
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.executive-columns h2, .executive.staff-member span {
+.executive-columns h3, .executive.staff-member span {
+  color: #1B5D97;
   display: inline-block;
-  text-align: left;
-  width: 30%; }
+  text-align: left; }
+
+.director.staff-container {
+  color: #1B5D97;
+  display: inline-block; }
+  .director.staff-container p {
+    line-height: 2.5rem; }
+  .director.staff-container p {
+    margin: 0; }
 
 .staff-container {
   display: -ms-flexbox;
@@ -930,6 +960,21 @@ named after the specific page to avoid merge conflicts. */
       display: inline-block; }
     .staff-member.fulltime .role {
       text-transform: initial; } }
+
+.board-container {
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  padding: 2rem; }
+  .board-container h2 {
+    margin: 0 0 .5rem; }
+  .board-container h3 {
+    margin: 0; }
+
+.summer {
+  margin-bottom: 2rem; }
+  .summer h2 {
+    margin: 0; }
 
 .orange-button {
   background-color: #F56D00;

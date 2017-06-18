@@ -6,8 +6,8 @@
   .image {
     background-position: center;
     background-size: cover;
-    height: 170px;
-    width: 170px;
+    height: 150px;
+    width: 150px;
   }
 
   &.fulltime {
@@ -29,6 +29,7 @@
 
     .email {
       display: block;
+      color: $color__blue-light;
     }
 
     .tel-1, .tel-2, .year-started {
@@ -36,16 +37,48 @@
     }
   }
 
+  &.fulltime:last-child {
+    border: none;
+    margin-bottom: 0;
+  }
+
   &.summer {
     width: 150px;
 
     .name {
-      display:block;
+      display: block;
     }
   }
 }
 
+.executive {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    border-bottom: 1px solid $color__blue;
+    padding-bottom: .5rem;
+  }
+
+  .executive-columns .name, .staff-member .name {
+    width: 25%;
+  }
+
+  .executive-columns .role, .staff-member .role {
+    width: 35%;
+  }
+
+  .executive-columns .email, .staff-member .email {
+    width: 40%;
+  }
+}
+
 .executive-columns {
+  border-bottom: 1px solid $color__blue;
+  margin-bottom: .5rem;
+}
+
+.director-columns {
   border-bottom: 1px solid $color__blue;
 }
 
@@ -54,12 +87,24 @@
   justify-content: space-between;
 }
 
-.executive-columns h2, .executive.staff-member span {
+.executive-columns h3, .executive.staff-member span {
+  color: $color__blue;
   display: inline-block;
   text-align: left;
-  width: 30%;
 }    
 
+.director.staff-container {
+  color: $color__blue;
+  display: inline-block;
+
+  p {
+    line-height: 2.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
 
 .staff-container {
   display: flex;
@@ -94,7 +139,29 @@
 
     }
   }
-  
+}
+
+.board-container {
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
+  margin-bottom: 3rem;
+  padding: 2rem;
+
+  h2 {
+    margin: 0 0 .5rem;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.summer {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0;
+  }
 }
 
 .orange-button {
