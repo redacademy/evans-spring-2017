@@ -593,8 +593,9 @@ a {
         display: flex;
         -ms-flex-pack: justify;
             justify-content: space-between;
+        line-height: 1.5rem;
         margin: 0 auto;
-        width: 980px; } }
+        width: 100%; } }
   .site-header .site-branding {
     height: 50px;
     width: 130px; }
@@ -610,7 +611,7 @@ a {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem; }
     .site-header .menu .menu-item {
-      margin: 1.5rem; }
+      margin: 1.25rem; }
       .site-header .menu .menu-item a, .site-header .menu .menu-item a:visited {
         color: #fff; }
     .site-header .menu .menu-item:last-child {

@@ -36,7 +36,7 @@
 						<i class="fa fa-bars" aria-hidden="true"></i><?php esc_html( 'Primary Menu' ); ?>
 					</button>
 				</div>
-				<div class="desktop-menu">
+				<div class="desktop-menu container">
 					<div class="site-branding">
 						<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home" class="logo"><div class="logo"></div></a>
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
