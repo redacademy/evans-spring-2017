@@ -604,14 +604,19 @@ a {
       background-size: auto 50px;
       height: 50px; }
   .site-header .menu {
-    -ms-flex-align: center;
-        align-items: center;
+    -ms-flex-align: baseline;
+        align-items: baseline;
     display: -ms-flexbox;
     display: flex;
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem; }
     .site-header .menu .menu-item {
-      margin: 1.25rem; }
+      margin: 1.25rem;
+      padding-bottom: 1.25rem; }
+      .site-header .menu .menu-item .sub-menu .menu-item {
+        padding-bottom: 0.5rem; }
+        .site-header .menu .menu-item .sub-menu .menu-item:first-child {
+          padding-top: .5rem; }
       .site-header .menu .menu-item a, .site-header .menu .menu-item a:visited {
         color: #fff; }
     .site-header .menu .menu-item:last-child {
@@ -1018,6 +1023,25 @@ named after the specific page to avoid merge conflicts. */
   .orange-button:hover {
     background-color: #ff8600;
     box-shadow: none; }
+
+.activity-hero {
+  background-size: cover;
+  background-position: center; }
+
+.bot-brd-blu {
+  border-bottom: 1px solid #1B5D97; }
+
+.intro-content {
+  margin: 0 1rem; }
+
+.activity-content {
+  margin: 1rem; }
+
+@media (min-width: 768px) {
+  .page-template-activities .hero {
+    height: 40vh;
+    margin-bottom: 2rem;
+    width: initial; } }
 
 .home-hero {
   -ms-flex-align: center;

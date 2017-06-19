@@ -231,13 +231,22 @@ a {
 	}
 
 	.menu {
-		align-items: center;
+		align-items: baseline;
 		display: flex;
 		font-family: $font__heading;
 		font-size: 1.2rem;
 
 		.menu-item {
 			margin: 1.25rem;
+			padding-bottom: 1.25rem;
+
+			.sub-menu .menu-item {
+				padding-bottom: 0.5rem;
+				
+				&:first-child {
+					padding-top: .5rem;
+				}
+			}
 
 			a, a:visited {
 				color: #fff;
