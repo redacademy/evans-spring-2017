@@ -209,7 +209,6 @@ a {
 		display: none;
 
 		@include desktop {
-			align-items: center;
 			display: flex;
 			justify-content: space-between;
 			line-height: 1.5rem;
@@ -220,6 +219,7 @@ a {
 
 	.site-branding {
 		height: 50px;
+		margin-top: .5rem;
 		width: 130px;
 		
 		.logo {

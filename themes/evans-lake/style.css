@@ -587,8 +587,6 @@ a {
     display: none; }
     @media (min-width: 768px) {
       .site-header .desktop-menu {
-        -ms-flex-align: center;
-            align-items: center;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: justify;
@@ -598,6 +596,7 @@ a {
         width: 100%; } }
   .site-header .site-branding {
     height: 50px;
+    margin-top: .5rem;
     width: 130px; }
     .site-header .site-branding .logo {
       background: url("../../assets/images/evans-lake-logo.png") no-repeat;
@@ -701,6 +700,56 @@ a {
   clear: both;
   content: "";
   display: table; }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  width: 100%;
+  background: url("../../assets/images/footer.JPG") bottom no-repeat;
+  padding-top: 4rem;
+  color: white;
+  line-height: 1.4;
+  background-size: cover;
+  padding: 2.5rem 2rem; }
+
+.contact-us ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .contact-us ul :first-of-type {
+    margin-right: 1rem; }
+
+.get-notified-email #your-email {
+  width: 100%;
+  margin: 1rem 0; }
+
+.get-notified-email input[type=radio] {
+  margin-right: .5rem; }
+
+.get-notified-email .get-notified-button {
+  background: #f56d00;
+  border-radius: 1.2rem;
+  color: #fff;
+  padding: .5rem 1.75rem;
+  cursor: pointer;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  float: right; }
+
+@media screen and (min-width: 800px) {
+  .social-media {
+    display: inline-block; }
+  .contact-us {
+    display: inline-block; }
+  hr {
+    display: none; }
+  .get-notified-email {
+    display: inline-block;
+    border-left: 1px solid #fff;
+    padding-left: 2rem; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1253,14 +1302,9 @@ object {
 .gallery-caption {
   display: block; }
 
-h4::after {
-  content: url(../../assets/images/arrow-down.png);
-}
-
 h3 {
   position: relative;
-  width: 100%; 
-}
+  width: 100%; }
 
 .ui-icon.iconOpen {
   background: url(../../assets/images/arrow-up.png) no-repeat;
