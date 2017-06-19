@@ -1,3 +1,11 @@
+h2 {
+  margin: 0 0 .5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
 .staff-member {
   span.bio {
     display: none;
@@ -149,6 +157,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+
   &.summer {
     flex-direction: row;
     flex-wrap: wrap;
