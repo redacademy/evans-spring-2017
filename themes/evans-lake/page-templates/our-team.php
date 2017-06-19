@@ -34,7 +34,6 @@ get_sidebar(); ?>
 		<div class="entry-content">
 			<?php 
 				evans_lake_breadcrumbs(); 
-				$our_team_ID = get_the_ID();
 			?>
 			<h1>The team behind Evans Lake</h1>
 
@@ -82,6 +81,8 @@ get_sidebar(); ?>
 			?>
 			<section class="fulltime staff-container">
 				<h2>Our Fulltime Staff</h2>
+				<?php echo CFS()->get( 'desc_fulltime', $our_team_ID ); ?>
+
 				<?php foreach ($fulltimes as $staff_member) : ?>
 					<div class="fulltime staff-member">
 
@@ -138,7 +139,7 @@ get_sidebar(); ?>
 			<section class="board-container">
 				<h2>Board of Directors</h2>
 				<p>Evans Lake’s dedicated full time team is committed to ensuring our programs and services meet the highest standards for quality and safety. Our full time, year round team works both at our office in Vancouver and on site at Evans Lake.</p>
-				<?php echo CFS()->get( 'desc_board', $our_page_ID ); ?>
+				<?php echo CFS()->get( 'desc_board', $our_team_ID ); ?>
 
 				<section class="executive staff-container">
 					<h2>Executives</h2>
@@ -182,6 +183,7 @@ get_sidebar(); ?>
 			</section> <!--Board of Directors Container-->
 
 			<h2>Summer Camp Staff</h2>
+							<?php echo CFS()->get( 'desc_summer', $our_team_ID ); ?>
 			<section class="summer staff-container">
 				<?php foreach ($summers as $staff_member) : ?>
 				<div class="summer staff-member">
