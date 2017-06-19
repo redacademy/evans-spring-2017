@@ -6,8 +6,14 @@
   .image {
     background-position: center;
     background-size: cover;
-    height: 150px;
-    width: 150px;
+    height: 135px;
+    margin-bottom: .5rem;
+    width: 135px;
+
+    @include desktop {
+      height: 150px;
+      width: 150px;
+    }
   }
 
   &.fulltime {
@@ -15,6 +21,10 @@
     flex-direction: column;
     border-bottom: 1px solid $color__blue;
     margin-bottom: 2rem;
+
+    .content {
+      padding-bottom: 1rem;
+    }
 
     .role {
       margin-top: 0;
@@ -43,10 +53,38 @@
   }
 
   &.summer {
-    width: 150px;
+    width: 135px;
+
+    @include desktop {
+      width: 150px;
+    }
 
     .name {
       display: block;
+    }
+  }
+}
+
+@include desktop {
+  .staff-member {
+    
+    &.fulltime {
+      flex-direction: row;
+    
+      .image {
+        margin: 0 2rem 2rem 0;
+      }
+    
+      .name, .role {
+        display: inline-block;
+      }
+    
+      .role {
+        text-transform: initial;
+      }
+    }
+    &.executive {
+
     }
   }
 }
@@ -61,15 +99,15 @@
   }
 
   .executive-columns .name, .staff-member .name {
-    width: 25%;
+    width: 30%;
   }
 
   .executive-columns .role, .staff-member .role {
-    width: 35%;
+    width: 40%;
   }
 
   .executive-columns .email, .staff-member .email {
-    width: 40%;
+    width: 30%;
   }
 }
 
@@ -117,30 +155,6 @@
   }
 }
 
-@include desktop {
-  .staff-member {
-    
-    &.fulltime {
-      flex-direction: row;
-    
-      .image {
-        margin: 0 2rem 2rem 0;
-      }
-    
-      .name, .role {
-        display: inline-block;
-      }
-    
-      .role {
-        text-transform: initial;
-      }
-    }
-    &.executive {
-
-    }
-  }
-}
-
 .board-container {
   border-radius: 15px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
@@ -159,12 +173,22 @@
 .summer {
   margin-bottom: 2rem;
 
+  .content{
+    display: flex;
+    flex-direction: column;
+  }
+
   h2 {
     margin: 0;
+  }
+
+  .role {
+    font-style: italic;
   }
 }
 
 .orange-button {
+  align-self: flex-start;
   background-color: $color__orange;
   border: none;
   border-radius: 15px;
@@ -174,6 +198,10 @@
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none;
+
+  @include desktop {
+    align-self: center;
+  }
 
   &:hover {
     background-color: #ff8600;

@@ -7,17 +7,21 @@
 
 ?>
 
+<h1 class="blog container">News & Events</h1>
 <div class="main-carousel container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
   <?php $args = array( 'posts_per_page' => 3,); ?>
   <?php $posts = get_posts( $args ); ?>
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <div class="carousel-cell">
-      <div class="events-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
-      <div class="events-post">
-        <h3 class="events-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read Entry</a></p>
+      <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+      <div class="events-thumbnail" style="background-image: url('<?php echo $thumb['0'];?>'); background-size: cover; background-position: center;">
       </div>
+      <a href="<?php the_permalink(); ?>">
+        <div class="events-post">
+          <h2 class="events-title"><?php the_title(); ?></h2>
+        </div>
+      </a>
     </div>
   <?php endforeach; ?>
   <?php wp_reset_postdata(); ?>

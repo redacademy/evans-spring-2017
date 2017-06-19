@@ -38,7 +38,7 @@
 
   @include desktop {
     box-shadow: none;
-    height: 100vh;
+    height: 85vh;
     padding: 0;
   }
 }
@@ -121,27 +121,75 @@
 }
 
 .flickity-slider {
-  display: flex;
-  justify-content: space-between;
 
   .carousel-cell {
     flex: 0 1 32%;
-    left: 0%;
-    width: 32%;
+    margin-left: 7px;
+    margin-right: 7px;
+    position: static;
+    width: 100%;
 
-    h3, p {
+    @include desktop {
+      width: 32%;
+    }
+
+    h2, p {
       margin: 0;
     }
 
+    a, a:visited {
+      color: $color__blue;
+    }
+
+    a:hover {
+      color: $color__blue-light;
+    }
+
     .events-thumbnail {
-      height: 200px;
+      height: 250px;
     }
 
     .events-post {
-      background-color: yellow;
+      background-color: #e1e1e1;
       border-radius: 0 0 15px 15px;
       padding: 1rem 2rem;
       text-align: center;
     }
+  }
+}
+
+.blog {
+  letter-spacing: .2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-carousel {
+  margin-bottom: 2rem;
+
+  .flickity-prev-next-button {
+    box-shadow: none;
+    color: transparent;
+  }
+
+  button.flickity-prev-next-button.previous {
+    left: -50px;
+
+    @include desktop{
+      display: none;
+    }
+  }
+
+  button.flickity-prev-next-button.next {
+    right: -50px;
+
+    @include desktop{
+      display: none;
+    }
+  }
+
+  .flickity-page-dots {
+    display: none;
   }
 }
