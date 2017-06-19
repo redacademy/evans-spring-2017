@@ -126,6 +126,7 @@ function evans_lake_scripts() {
   wp_enqueue_script( 'jquery-ui', 'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js');
 	wp_enqueue_script( 'evans-lake-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
+  wp_enqueue_script( 'toggle-faq', get_template_directory_uri() . '/build/js/toggle-faq.js', array() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
