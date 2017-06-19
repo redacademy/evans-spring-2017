@@ -25,31 +25,57 @@ get_sidebar(); ?>
 		) ); ?>
 	</div>
 
-<!--Query for Activity Custom Posts-->
-		<?php 
-			$args = array(
-				'post_type'=> 'activity',
-				'post_count'=> 50,
-				'posts_per_page'=> 50
-				// Add comma above and 'order_by'=> statement
-			);
-			$activities = get_posts($args);
-		?>
-		
-<!--Iteratively Display Activities-->
+			<!--Query for Activity Custom Posts-->
+	<?php 
+		$args = array(
+			'post_type'=> 'activity',
+			'post_count'=> 50,
+			'posts_per_page'=> 50
+			// Add comma above and 'order_by'=> statement
+		);
+		$activities = get_posts($args);
+				// Create Sorting Arrays
+		$day_activities = [];
+		$evening_activities = [];
+		$game_activities = [];
+	
+				// Get Activity Type
+		if ( !empty($activities) && !is_wp_error($activities)) {
+			foreach ( $activities as $activity ) {
+				$activity_term_obj = get_the_terms($activity, 'activitytype');
+				$activity_term_slug = $activity_term_obj[0]->slug;
+
+				// Sort Activity into Array by Type
+				switch ($activity_term_slug){
+					case 'camp-games':
+						array_push($game_activities, $activity);
+						break;
+					case 'day-activities':
+						array_push($day_activities, $activity);
+						break;
+					case 'evening-activities':
+						array_push($evening_activities, $activity);
+						break;
+				}
+			}
+		}
+	?>
+			<!--Setup Content Area-->
 	<main id="main" class="site-main" role="main">
 		<div class="intro-content">
 			<?php 
 				evans_lake_breadcrumbs(); 
 			?>
-			<h1 class="bot-brd-blu">Activities</h1>
 		</div>
-		
-		
-		<?php foreach ($activities as $activity) : ?>
+
+			<!--Iteratively Display Daytime Activities-->
+		<h1 class="bot-brd-blu">Activities</h1>			
+		<?php foreach ($day_activities as $activity) : ?>
 			<div class="activity-container">
-				<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
-				</div>
+				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+					</div>
+				<?php endif; ?>
 				<div class="activity-content">
 					<h3><?php echo $activity->post_title; ?></h3>
 					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
@@ -57,7 +83,33 @@ get_sidebar(); ?>
 			</div>
 		<?php endforeach; ?>
 
+		<h1 class="bot-brd-blu">Camp Games</h1>			
+		<?php foreach ($game_activities as $activity) : ?>
+			<div class="activity-container">
+				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+					</div>
+				<?php endif; ?>
+				<div class="activity-content">
+					<h3><?php echo $activity->post_title; ?></h3>
+					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
+				</div>
+			</div>
+		<?php endforeach; ?>
 
+		<h1 class="bot-brd-blu">Evening Activities</h1>
+		<?php foreach ($evening_activities as $activity) : ?>
+			<div class="activity-container">
+				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+					</div>
+				<?php endif; ?>
+				<div class="activity-content">
+					<h3><?php echo $activity->post_title; ?></h3>
+					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
+				</div>
+			</div>
+		<?php endforeach; ?>
 
 
 	</main><!-- #main -->
