@@ -706,12 +706,15 @@ a {
 --------------------------------------------------------------*/
 .site-footer {
   width: 100%;
-  background: url("../../assets/images/footer.JPG") bottom no-repeat;
   padding-top: 4rem;
   color: white;
   line-height: 1.4;
   background-size: cover;
-  padding: 2.5rem 2rem; }
+  padding: 2.5rem 2rem;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0, rgba(0, 0, 0, 0.25)), url("../../assets/images/footer-gradient.png");
+  background-position: center 20%; }
+  .site-footer h3 {
+    text-align: center; }
 
 .contact-us ul {
   display: inline-block;

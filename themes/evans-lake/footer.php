@@ -11,11 +11,11 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="social-media">
-					<h3>Contact Info</h3>
-					<p><i class="fa fa-facebook-official" aria-hidden="true" ></i>
-						<i class="fa fa-twitter-square" aria-hidden="true"></i>
-						<i class="fa fa-google-plus-square" aria-hidden="true"></i>
-					</p>
+					<h3>Connect with us</h3>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>	
 				</div>
         <div class="contact-us">
 					<ul>
