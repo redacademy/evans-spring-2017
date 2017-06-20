@@ -131,6 +131,24 @@ function evans_lake_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+
+	//Colorbox stylesheet
+	wp_enqueue_style( 'colorbox', get_template_directory_uri() . 
+	'/colorbox/colorbox.css' );
+	
+	//Your theme CSS
+	wp_enqueue_style( 'themeslug-style', get_stylesheet_uri() );
+	
+	//Colorbox jQuery plugin js file
+	wp_enqueue_script( 'colorbox', get_template_directory_uri() . 
+	'/js/jquery.colorbox.js', array( 'jquery'   ), '', true );
+	
+	//Add main.js file
+	wp_enqueue_script( 'themeslug-script', get_template_directory_uri() . 
+	'/js/colorbox.js', array( 'colorbox' ), '', true );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'evans_lake_scripts' );
 
