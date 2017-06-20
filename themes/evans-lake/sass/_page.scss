@@ -40,6 +40,8 @@ named after the specific page to avoid merge conflicts. */
 
   .sub-navigation {
     display: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @include desktop {
       display: initial;

@@ -868,7 +868,9 @@ named after the specific page to avoid merge conflicts. */
   display: flex; }
 
 .page .sub-navigation {
-  display: none; }
+  display: none;
+  padding-left: 1rem;
+  padding-right: 1rem; }
   @media (min-width: 815px) {
     .page .sub-navigation {
       display: initial;
