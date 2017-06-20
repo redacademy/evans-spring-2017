@@ -13,7 +13,7 @@
 	</header><!-- .entry-header -->
 
 	<?php evans_lake_breadcrumbs(); ?>
-  <h2><?php echo get_the_title( $post ); ?></h2>
+  <h1><?php echo get_the_title( $post ); ?></h1>
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
