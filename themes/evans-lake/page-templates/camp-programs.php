@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Camp Programs
  * The template for displaying the camp programs page.
  *
  * @package Evans_Lake_Theme
