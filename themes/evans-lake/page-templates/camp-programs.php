@@ -42,11 +42,18 @@ get_sidebar(); ?>
 		</header><!-- .entry-header -->
 
 		<div class="intro-content entry-content">
-			<?php echo get_the_content(); ?>
+			<?php the_content(); ?>
 		</div>
 
-		<!--Taxonomy titles and scriptions-->
+		<!--Custom Post Loop-->
 		<?php 
+		$args = array (
+			'post_type' => 'campprogram',
+			'post_count'=> 50,
+			'order'	=> 'ASC'
+		);
+			$camp_programs = get_posts ($args);
+			print_r ( $camp_programs );
 		?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
