@@ -32,21 +32,21 @@ get_sidebar(); ?>
 			evans_lake_breadcrumbs(); 
 		?>
 
-		<header class="entry-header">
-			<h2><?php echo the_title(); ?></h2>
+		<header class="intro-header entry-header">
+			<h2>
+				<?php 
+					echo get_the_title() . ' ';
+					echo CFS()->get( 'camp_year' ); 
+				?>
+			</h2>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
-			<?php the_content(); ?>
-		</div><!-- .entry-content -->
-			
-		<!--from page: camp programs 2017-->
-		<!--Description-->
+		<div class="intro-content entry-content">
+			<?php echo get_the_content(); ?>
+		</div>
 
 		<!--Taxonomy titles and scriptions-->
 		<?php 
-			$term_ids = get_the_terms ( $taxonomy );
-			echo term_description( $term_id, $taxonomy );  
 		?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
