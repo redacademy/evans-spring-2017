@@ -1129,7 +1129,6 @@ p {
 .home-hero {
   -ms-flex-align: center;
       align-items: center;
-  background: url("../../assets/images/home-hero.png") bottom no-repeat;
   background-size: cover;
   height: 80vh;
   display: -ms-flexbox;

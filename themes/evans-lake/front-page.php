@@ -9,7 +9,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<section class="home-hero">
+			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+			<section class="home-hero" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('<?php echo $thumb['0'];?>'); background-size: cover,cover; background-position: center, center;">
 				<p class="slogan">Your Home in the Forest</p>
 				<p class="text-logo">Evans Lake</p>
 				<a href="#s-descr"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
