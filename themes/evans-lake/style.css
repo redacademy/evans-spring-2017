@@ -745,6 +745,12 @@ a {
   border: none;
   float: right; }
 
+.social-media ul {
+  list-style: none; }
+
+.social-media li {
+  display: inline-block; }
+
 @media screen and (min-width: 800px) {
   .social-media {
     display: inline-block; }

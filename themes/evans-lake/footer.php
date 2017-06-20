@@ -13,8 +13,11 @@
 				<div class="social-media">
 					<h3>Connect with us</h3>
 					<ul>
-						<li></li>
-						<li></li>
+						<li><a href="https://www.facebook.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/facebook-icon-footer.png'); ?>"> </li>
+						<li><a href="https://twitter.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/twitter-icon-footer.png'); ?>"></li>
+						<li><a href="https://www.flickr.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/flickr.png'); ?>"></li>
+						<li><a href="https://www.youtube.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/youtube.png'); ?>"></li>
+						<li><a href="https://www.instagram.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/instagram-icon-footer.png'); ?>"></li>
 					</ul>	
 				</div>
         <div class="contact-us">
