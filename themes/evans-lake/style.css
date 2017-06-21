@@ -1170,8 +1170,8 @@ p {
     background-color: #ff8600;
     box-shadow: none; }
 
-.tabbed-view-container {
-  box-shadow: 2px 3px 5px 4px #ccc; }
+.tabbed-view-container, .registration-table {
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
 
 .tab-head-container {
   -ms-flex-line-pack: center;
@@ -1217,13 +1217,40 @@ p {
     left: 0;
     position: relative; }
 
-.table-header {
-  background: #429DCB;
-  color: white;
+.table-header, .table-row, .table-footer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
+
+.camp-number, .length, .fee {
+  text-align: center;
+  width: 2rem; }
+
+.date-range {
+  text-align: center;
+  width: 8rem; }
+
+.camp-program {
+  min-width: 8rem;
+  text-align: center;
+  width: 20rem; }
+
+.table-header, .table-footer {
+  background: #429DCB;
+  color: white; }
+
+.table-header {
+  padding: 2rem 0.5rem 0.5rem 0.5rem; }
+
+.table-row {
+  color: #7A7A7A; }
+
+.table-footer {
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .table-footer i {
+    padding: 1rem 2rem 1rem 1rem; }
 
 .activity-hero {
   background-size: cover;

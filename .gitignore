@@ -34,7 +34,6 @@ plugins/*
 # ====================================================== #
 themes/*
 !themes/evans-lake/
-themes/evans-lake/style.css
 
 # Ignore npm packages #
 # =================== #
@@ -42,5 +41,6 @@ themes/evans-lake/node_modules/*
 
 # Ignore build files #
 # ================== #
+themes/evans-lake/style.css
 themes/evans-lake/gulpfile.js
 themes/evans-lake/build/*
