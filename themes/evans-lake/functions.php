@@ -86,6 +86,7 @@ function evans_lake_scripts() {
 	// Load Styles
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/colorbox/colorbox.css' );
 
 	// Load CDN Scripts
 	wp_enqueue_script( 'jquery' );
@@ -130,6 +131,13 @@ function evans_lake_scripts() {
 		false,
 		true
 	);
+	wp_enqueue_script(
+		'popup-bio',
+		get_template_directory_uri() . '/build/js/popup-bio.min.js',
+		array('jquery'),
+		false,
+		true
+	);
 	wp_enqueue_script( 
 		'toggle-camp-program',
 		get_template_directory_uri() . '/build/js/toggle-camp-program.min.js',
@@ -137,27 +145,24 @@ function evans_lake_scripts() {
 		'20170620',
 		true
 	);
+	wp_enqueue_script(
+		'colorbox',
+		get_template_directory_uri() . '/js/jquery.colorbox.js',
+		array ('jquery'),
+		'',
+		true
+	);
+	wp_enqueue_script(
+		'themeslug-script',
+		get_template_directory_uri() . '/js/colorbox.js',
+		array ('colorbox'),
+		'',
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-
-	//Colorbox stylesheet
-	wp_enqueue_style( 'colorbox', get_template_directory_uri() . 
-	'/colorbox/colorbox.css' );
-	
-	//Your theme CSS
-	wp_enqueue_style( 'themeslug-style', get_stylesheet_uri() );
-	
-	//Colorbox jQuery plugin js file
-	wp_enqueue_script( 'colorbox', get_template_directory_uri() . 
-	'/js/jquery.colorbox.js', array( 'jquery'   ), '', true );
-	
-	//Add main.js file
-	wp_enqueue_script( 'themeslug-script', get_template_directory_uri() . 
-	'/js/colorbox.js', array( 'colorbox' ), '', true );
-
 
 }
 add_action( 'wp_enqueue_scripts', 'evans_lake_scripts' );
