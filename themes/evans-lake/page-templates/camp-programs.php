@@ -9,7 +9,7 @@
 get_header(); 
 get_sidebar(); ?>
 
-			<!--Hero area -->
+	<?php // Hero Area ?>
 <div class="hero">
 	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 	<div class="hero-image" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('<?php echo $thumb['0'];?>'); background-size: cover,cover; background-position: center, center;">
@@ -19,7 +19,7 @@ get_sidebar(); ?>
 
 </div>
 <div id="primary" class="content-area container">
-			<!--Build submenu on left pane of content area-->
+			<?php // Build submenu on left pane of content area ?>
 	<div class="sub-navigation">
 		<?php wp_nav_menu( array( 
 			'theme_location' => 'primary', 
@@ -29,7 +29,7 @@ get_sidebar(); ?>
 	</div>
 
 	<main id="main" class="site-main" role="main">
-			<!--Content Area right pane next to submenu-->
+			<?php // Content Area right pane next to submenu ?>
 		<button class="orange-button">Register Now</button>
 
 		<?php evans_lake_breadcrumbs(); ?>
@@ -41,18 +41,19 @@ get_sidebar(); ?>
 					echo CFS()->get( 'camp_year', $post->ID ); 
 				?>
 			</h2>
-		</header><!-- .intro-header -->
+		</header> <!--.intro-header-->
 
 		<div class="intro-content entry-content">
 			<?php
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) {
+					the_post();
 					the_content();
-				endwhile;
+				}
 			?>
 		</div> <!--.intro-content-->
 
-			<!--Custom Post Query in Order-->
 		<?php 
+			// Custom Post Query in Order
 			$args = array (
 				'post_type' => 'campprogram',
 				'post_count'=> '50',
@@ -61,65 +62,72 @@ get_sidebar(); ?>
 			);
 
 			$camp_programs = get_posts ($args);
-			// print_r ($camp_programs);
 		?>
 
-			<!--Produce tabs	-->
-		<div class="tab-head-container">
-			<?php foreach ( $camp_programs as $program) : ?>
-				<div class="tab-head <?php echo $program->post_name ;?>" id="<?php echo $program->ID; ?>">
-					<?php echo $program->post_title; ?>
-				</div>
-			<?php endforeach; // End of the loop. ?>
-		</div><!--End tab-head-container-->
-
-		<div class="tab-body-container">
-			<?php foreach ( $camp_programs as $program) : ?>
-				<div class="tab-body <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
-					<?php	$program_contents = CFS()->get( 'text_block', $program->ID ); ?>
-					<?php	foreach ($program_contents as $program_content) : ?>
-										<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
-							<span class="tab-body-content"><?php echo $program_content['cprog_content']; ?></span>
-					<?php endforeach; // End program_contents loop. ?>
-				</div>
-			<?php endforeach; // End camp_programs loop. ?>		
-		</div><!--Tab body container-->
-
-		<?php if ( CFS()->get( 'summer_first' ) ) : ?>
-
-		<?php $season = 'summer';?>
-			<div class="<?php echo $season; ?>-registration">
-				<div class="<?php echo $season; ?> table-container">
-					<div class="<?php echo $season; ?> table-header">
-						<span>Camp #</span>
-						<span>Dates</span>
-						<span>Length</span>
-						<span>Camp Program</span>
-						<span>Fee</span>						
+			<?php // Produce tabs	?>
+		<div class="tabbed-view-container">
+			<div class="tab-head-container">
+				<?php foreach ( $camp_programs as $program) : ?>
+					<div class="tab-head <?php echo $program->post_name ;?>" id="<?php echo $program->ID; ?>">
+						<?php echo $program->post_title; ?>
 					</div>
-					<?php $reg_sessions = CFS()->get('reg_session_loop'); ?>
-					<?php	foreach ($reg_sessions as $reg_session) : ?>
+				<?php endforeach; // End of the loop. ?>
+			</div> <!--.tab-head-container-->
+			
+			<div class="tab-body-container">
+				<?php foreach ( $camp_programs as $program) : ?>
+					<div class="tab-body <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
+						<?php	$program_contents = CFS()->get( 'text_block', $program->ID ); ?>
+						<?php	foreach ($program_contents as $program_content) : ?>
+											<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
+								<span class="tab-body-content"><?php echo $program_content['cprog_content']; ?></span>
+						<?php endforeach; // End program_contents loop. ?>
+					</div>
+				<?php endforeach; // End camp_programs loop. ?>		
+			</div> <!--.tab-body-container-->
+		</div> <!--.tabbed-view-container-->
 
-						<div class="<?php echo $season; ?> table-line">
-							<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
-							<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
-							<span class="length"><?php echo $reg_session['reg_length'];?></span>
-							<span class="camp-program"><?php echo $reg_session['reg_program'];?></span>
-							<span class="fee"><?php echo $reg_session['reg_fee'];?></span>						
-						</div>
-					<?php endforeach; ?>
+		<?php 
+			// Set Season 1
+			if ( CFS()->get( 'summer_first' ) ) {
+				$season = 'summer';
+			}	else {
+				$season = 'winter';
+			}
+		?>
+		<!--Season 1 Table-->
+		<div class="<?php echo $season; ?>-registration-table">
+			<div class="<?php echo $season; ?> table-container">
+				<div class="<?php echo $season; ?> table-header">
+					<span>Camp #</span>
+					<span>Dates</span>
+					<span>Length</span>
+					<span>Camp Program</span>
+					<span>Fee</span>						
 				</div>
-				<div class="<?php echo $season; ?> table-footer">
-					<?php if (CFS()->get('warn_' . $season)) : ?>
-						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-						<div class="warn-message">
-							<?php echo CFS()->get( 'warn_message' ); ?>
-						</div>
-					<?php endif; ?>
-				</div>
+				<?php $reg_sessions = CFS()->get('reg_session_loop'); ?>
 
+				<?php	foreach ($reg_sessions as $reg_session) : ?>
+					<div class="<?php echo $season; ?> table-row">
+						<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
+						<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
+						<span class="length"><?php echo $reg_session['reg_length'];?></span>
+						<span class="camp-program"><?php echo $reg_session['reg_program'];?></span>
+						<span class="fee"><?php echo $reg_session['reg_fee'];?></span>						
+					</div>
+				<?php endforeach; ?>
+			</div> <!--.season1.table-container-->
+			
+			<div class="<?php echo $season; ?> table-footer">
+				<?php if (CFS()->get('warn_' . $season)) : ?>
+					<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+					<span class="warn-message"><?php echo CFS()->get( 'warn_message' ); ?></span>
+				<?php endif; ?>
 			</div>
-		<?php endif ?>
+		</div> <!--.season1-registration-table-->
+
+		<button class="orange-button">Register Now</button>
+		
 
 	</main><!-- #main -->
 </div><!-- #primary -->
