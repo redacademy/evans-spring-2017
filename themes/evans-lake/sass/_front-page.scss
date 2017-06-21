@@ -67,7 +67,7 @@
     border-radius: 15px;
     box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
     line-height: 1.8rem;
-    padding: 4rem 5rem;
+    padding: 3rem 5rem;
     position: absolute;
     left: 37.5%;
     top: 30px;
@@ -75,16 +75,19 @@
   }
 
   h2 {
-    margin-top: 0;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
   }
 
   p {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 
   .site-description-subtitle {
     color: $color__blue;
+    margin-bottom: 1rem;
   }
 }
 
