@@ -130,7 +130,44 @@ get_sidebar(); ?>
 							<span class="bio" id="<?php echo $staff_member->ID . "-bio"; ?>">
 							<!--Bio should be hidden until button above is clicked-->
 								<i class="fa fa-times" aria-hidden="true"></i>
-								<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
+									<?php $image_URL = CFS()->get( 's_img',  $staff_member->ID ); ?>
+									<div class="image" style="background-image: url( '<?php echo $image_URL; ?>' )">
+									</div>
+									<h2 class="name">
+										<?php echo get_the_title($staff_member->ID), ' - '; ?>
+									</h2>
+									<h2 class="role">
+										<?php echo CFS()->get( 's_role',  $staff_member->ID,  array( 'format' => 'raw' ) ); ?>
+									</h2>
+									<a class="email" href="mailto: <?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>">
+										<?php echo CFS()->get( 's_email',  $staff_member->ID ); ?>
+									</a>
+									<span class="tel-1">
+										<?php 
+											if ( CFS()->get( 's_tel_1_is_mobile',  $staff_member->ID ) ) {
+												echo "M: ";
+											} 
+											else {
+												echo "T: ";
+											}; 
+											echo CFS()->get( 's_tel_1',  $staff_member->ID ); 
+										?>
+									</span>
+										<span class="tel-2">
+										<?php 
+											if ( CFS()->get( 's_tel_2_is_mobile',  $staff_member->ID ) ) {
+												echo "M: ";
+											} 
+											elseif ('' !== CFS()->get( 's_tel_2',  $staff_member->ID ) ) {
+												echo "T: ";
+											}; 
+											echo CFS()->get( 's_tel_2',  $staff_member->ID ); 
+										?>
+									</span>
+									<span class="year-started">
+										<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
+									</span>
+									<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
 								<span class="overlay"></span>
 							</span>
 						</div> <!--Content-->

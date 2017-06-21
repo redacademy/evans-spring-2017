@@ -954,16 +954,18 @@ p {
 
 .staff-member span.bio {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 10%;
-  top: 110%;
+  top: 10%;
   width: 80vw;
   background-color: #fff;
   padding: 2rem;
   border-radius: 15px;
-  z-index: 15; }
+  z-index: 15;
+  overflow: auto;
+  max-height: 100%; }
   .staff-member span.bio .fa-times {
-    color: black;
+    color: #4A4A4A;
     width: 21px;
     height: 21px;
     position: absolute;
@@ -971,14 +973,12 @@ p {
     right: 10px;
     cursor: pointer;
     display: block; }
-  .staff-member span.bio .overlay {
-    background-color: rgba(0, 0, 0, 0.2);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10; }
+  .staff-member span.bio .image {
+    float: left; }
+  .staff-member span.bio .name, .staff-member span.bio .role {
+    margin-bottom: 1rem; }
+  .staff-member span.bio p {
+    clear: both; }
 
 .staff-member .image {
   background-position: center;
