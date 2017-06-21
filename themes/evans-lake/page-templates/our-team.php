@@ -168,7 +168,7 @@ get_sidebar(); ?>
 										<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
 									</span>
 									<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
-								<span class="overlay"></span>
+								
 							</span>
 						</div> <!--Content-->
 					</div> <!--Single Fulltime Staff Member-->	

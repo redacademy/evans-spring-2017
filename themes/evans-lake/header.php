@@ -33,9 +33,13 @@
 					</div>
 					<div class="mobile-logo"><a href="<?php echo esc_url( home_url('/') ); ?>">Evans Lake</a></div>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<i class="fa fa-bars" aria-hidden="true"></i><?php esc_html( 'Primary Menu' ); ?>
+						<i class="fa fa-bars" aria-hidden="true"></i>
+						<div class="mobile-menu-toggle">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</div>
 					</button>
 				</div>
+				
 				<div class="desktop-menu container">
 					<div class="site-branding">
 						<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home" class="logo"><div class="logo"></div></a>
