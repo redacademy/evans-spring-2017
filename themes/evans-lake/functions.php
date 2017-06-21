@@ -83,50 +83,60 @@ add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function evans_lake_scripts() {
+	// Load Styles
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 
-	wp_enqueue_script('jquery');
-	wp_enqueue_script(
-		'evans-lake-toggle-menu',
-		get_template_directory_uri() . '/js/toggle-menu.js',
-		array('jquery'),
-		false,
-		true
-	);
-
-	wp_enqueue_script('jquery');
-	wp_enqueue_script(
-		'evans-lake-toggle-search',
-		get_template_directory_uri() . '/js/toggle-search.js',
-		array('jquery'),
-		false,
-		true
-	);
-
-	wp_enqueue_script('jquery');
-	wp_enqueue_script(
-		'evans-lake-arrow-scroll',
-		get_template_directory_uri() . '/js/arrow-scroll.js',
-		array('jquery'),
-		false,
-		true
-	);
-	wp_enqueue_script('jquery');
-	wp_enqueue_script(
-		'toggle-faq',
-		get_template_directory_uri() . '/js/toggle-faq.js',
-		array('jquery'),
-		false,
-		true
-	);
-
+	// Load CDN Scripts
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
 	wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
   wp_enqueue_script( 'jquery-ui', 'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js');
-	wp_enqueue_script( 'evans-lake-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
-  wp_enqueue_script( 'toggle-faq', get_template_directory_uri() . '/build/js/toggle-faq.js', array() );
+	// Load Evans Lake Scripts without Dependencies
+	wp_enqueue_script( 
+		'toggle-faq',
+		get_template_directory_uri() . './build/js/toggle-camp-program.min.js',
+		array (),
+		'20170620',
+		true
+	);
+	wp_enqueue_script( 
+		'evans-lake-skip-link-focus-fix',
+		get_template_directory_uri() . './build/js/skip-link-focus-fix.min.js',
+		array(),
+		'20130115',
+		true
+	);
+	// Load Evans Lake Scripts with Dependencies
+	wp_enqueue_script(
+		'evans-lake-toggle-menu',
+		get_template_directory_uri() . '.build/js/toggle-menu.min.js',
+		array('jquery'),
+		false,
+		true
+	);
+	wp_enqueue_script(
+		'evans-lake-toggle-search',
+		get_template_directory_uri() . './build/js/toggle-search.min.js',
+		array('jquery'),
+		false,
+		true
+	);
+	wp_enqueue_script(
+		'evans-lake-arrow-scroll',
+		get_template_directory_uri() . './build/js/arrow-scroll.min.js',
+		array('jquery'),
+		false,
+		true
+	);
+	wp_enqueue_script(
+		'toggle-faq',
+		get_template_directory_uri() . './build/js/toggle-faq.min.js',
+		array('jquery'),
+		false,
+		true
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
