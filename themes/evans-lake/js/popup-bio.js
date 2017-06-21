@@ -5,7 +5,9 @@
     var bioId = "#" + event.target.id + "-bio"; 
     var $bio = $('.bio');
 
-    $('.overlay').show('fast',
+    $('body').append('<div class="overlay"></div>');
+
+    $('.overlay').fadeIn('fast',
       function(){
         $bio.css(
           'display', 'none'
@@ -21,7 +23,7 @@
       .animate({opacity: 0}, 'fast',
         function(){
           $(this).css('display', 'none');
-          $('.overlay').hide('fast');
+          $('.overlay').fadeOut('fast');
         }
       );
   });
