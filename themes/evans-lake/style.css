@@ -1139,7 +1139,8 @@ p {
   left: -1000rem;
   position: absolute; }
   .tab-body.selected {
-    left: 0; }
+    left: 0;
+    position: relative; }
 
 .activity-hero {
   background-size: cover;

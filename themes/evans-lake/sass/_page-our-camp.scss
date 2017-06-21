@@ -27,5 +27,6 @@
   position: absolute;
   &.selected{
     left: 0;
+    position: relative;
   }
 }
