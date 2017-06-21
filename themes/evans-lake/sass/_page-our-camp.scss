@@ -1,0 +1,31 @@
+.tab-head-container {
+  background: $color__blue-light;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.tab-head {
+  border: 1px solid white;
+  color: white;
+  display: inline-block;
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 1rem;
+  &.selected {
+    background: $color__blue;
+  }
+  &:nth-child(n+4){
+    flex: 1 1 40%;
+  }
+}
+.tab-body-container{
+  position: relative;
+}
+.tab-body {
+  left: -1000rem;
+  position: absolute;
+  &.selected{
+    left: 0;
+  }
+}

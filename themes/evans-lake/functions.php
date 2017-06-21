@@ -95,13 +95,6 @@ function evans_lake_scripts() {
 
 	// Load Evans Lake Scripts without Dependencies
 	wp_enqueue_script( 
-		'toggle-faq',
-		get_template_directory_uri() . './build/js/toggle-camp-program.min.js',
-		array (),
-		'20170620',
-		true
-	);
-	wp_enqueue_script( 
 		'evans-lake-skip-link-focus-fix',
 		get_template_directory_uri() . './build/js/skip-link-focus-fix.min.js',
 		array(),
@@ -135,6 +128,13 @@ function evans_lake_scripts() {
 		get_template_directory_uri() . './build/js/toggle-faq.min.js',
 		array('jquery'),
 		false,
+		true
+	);
+	wp_enqueue_script( 
+		'toggle-faq',
+		get_template_directory_uri() . './build/js/toggle-camp-program.min.js',
+		array ('jquery'),
+		'20170620',
 		true
 	);
 
