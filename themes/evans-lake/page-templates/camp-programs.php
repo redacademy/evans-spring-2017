@@ -30,7 +30,7 @@ get_sidebar(); ?>
 
 	<main id="main" class="site-main" role="main">
 			<?php // Content Area right pane next to submenu ?>
-		<button class="orange-button">Register Now</button>
+		<button class="orange-button reg-now">Register Now</button>
 
 		<?php evans_lake_breadcrumbs(); ?>
 
@@ -76,10 +76,10 @@ get_sidebar(); ?>
 			
 			<div class="tab-body-container">
 				<?php foreach ( $camp_programs as $program) : ?>
-					<div class="tab-body <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
+					<div class="tab-body accordion <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
 						<?php	$program_contents = CFS()->get( 'text_block', $program->ID ); ?>
-						<?php	foreach ($program_contents as $program_content) : ?>
-											<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
+						<?php	foreach ($program_contents as $program_content) : ?>		
+								<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
 								<span class="tab-body-content"><?php echo $program_content['cprog_content']; ?></span>
 						<?php endforeach; // End program_contents loop. ?>
 					</div>
@@ -91,11 +91,15 @@ get_sidebar(); ?>
 			// Set Season 1
 			if ( CFS()->get( 'summer_first' ) ) {
 				$season = 'summer';
+				$season_uc = 'Summer';
 			}	else {
 				$season = 'winter';
+				$season_uc = 'Winter';
 			}
 		?>
 		<!--Season 1 Table-->
+		<h2><?php echo $season_uc; ?> Registration</h2>
+		<p class="gst">*GST Additional</p>
 		<div class="<?php echo $season; ?>-registration-table">
 			<div class="<?php echo $season; ?> table-container">
 				<div class="<?php echo $season; ?> table-header">
@@ -116,18 +120,18 @@ get_sidebar(); ?>
 						<span class="fee"><?php echo $reg_session['reg_fee'];?></span>						
 					</div>
 				<?php endforeach; ?>
+
+				<div class="<?php echo $season; ?> table-footer">
+					<?php if (CFS()->get('warn_' . $season)) : ?>
+						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+						<span class="warn-message"><?php echo CFS()->get( 'warn_message' ); ?></span>
+					<?php endif; ?>
+				</div>
 			</div> <!--.season1.table-container-->
-			
-			<div class="<?php echo $season; ?> table-footer">
-				<?php if (CFS()->get('warn_' . $season)) : ?>
-					<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-					<span class="warn-message"><?php echo CFS()->get( 'warn_message' ); ?></span>
-				<?php endif; ?>
-			</div>
 		</div> <!--.season1-registration-table-->
 
-		<button class="orange-button">Register Now</button>
-		
+		<button class="orange-button reg-now">Register Now</button>
+
 
 	</main><!-- #main -->
 </div><!-- #primary -->

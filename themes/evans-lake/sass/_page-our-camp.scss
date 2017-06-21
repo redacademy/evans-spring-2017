@@ -1,17 +1,26 @@
+.tabbed-view-container {
+  box-shadow: 2px 3px 5px 4px #ccc;
+}
 .tab-head-container {
+  align-content: center;
   background: $color__blue-light;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: space-around;
 }
 .tab-head {
-  border: 1px solid white;
+  border-right: 1px solid white;
   color: white;
   display: inline-block;
   flex: 1 1 30%;
   text-align: center;
   padding: 1rem;
+  &.teen-camp-13-16, &.leadership-14-16{
+    border-right: none;
+  }
+  &.oak-13-16, &.leadership-14-16{
+    border-top: 1px solid white;
+  }
   &.selected {
     background: $color__blue;
   }
@@ -20,13 +29,27 @@
   }
 }
 .tab-body-container{
+  margin-bottom: 3rem;
+  padding: 3rem 0;
   position: relative;
 }
 .tab-body {
   left: -1000rem;
+  margin: 0 auto;
+  max-width: 500px;
   position: absolute;
+  width: 90%;
   &.selected{
     left: 0;
     position: relative;
   }
 }
+
+.table-header{
+  background: $color__blue-light;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+
+}
+

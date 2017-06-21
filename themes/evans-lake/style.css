@@ -1132,25 +1132,32 @@ p {
     background-color: #ff8600;
     box-shadow: none; }
 
+.tabbed-view-container {
+  box-shadow: 2px 3px 5px 4px #ccc; }
+
 .tab-head-container {
+  -ms-flex-line-pack: center;
+      align-content: center;
   background: #429DCB;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
 .tab-head {
-  border: 1px solid white;
+  border-right: 1px solid white;
   color: white;
   display: inline-block;
   -ms-flex: 1 1 30%;
       flex: 1 1 30%;
   text-align: center;
   padding: 1rem; }
+  .tab-head.teen-camp-13-16, .tab-head.leadership-14-16 {
+    border-right: none; }
+  .tab-head.oak-13-16, .tab-head.leadership-14-16 {
+    border-top: 1px solid white; }
   .tab-head.selected {
     background: #1B5D97; }
   .tab-head:nth-child(n+4) {
@@ -1158,14 +1165,27 @@ p {
         flex: 1 1 40%; }
 
 .tab-body-container {
+  margin-bottom: 3rem;
+  padding: 3rem 0;
   position: relative; }
 
 .tab-body {
   left: -1000rem;
-  position: absolute; }
+  margin: 0 auto;
+  max-width: 500px;
+  position: absolute;
+  width: 90%; }
   .tab-body.selected {
     left: 0;
     position: relative; }
+
+.table-header {
+  background: #429DCB;
+  color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .activity-hero {
   background-size: cover;
