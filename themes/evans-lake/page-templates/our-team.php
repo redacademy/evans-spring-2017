@@ -129,7 +129,9 @@ get_sidebar(); ?>
 							<button class="staff orange-button">View Bio</button>
 							<span class="bio">
 							<!--Bio should be hidden until button above is clicked-->
+								<i class="fa fa-times" aria-hidden="true"></i>
 								<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>
+								<span class="overlay"></span>
 							</span>
 						</div> <!--Content-->
 					</div> <!--Single Fulltime Staff Member-->	

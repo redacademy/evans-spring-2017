@@ -941,7 +941,7 @@ named after the specific page to avoid merge conflicts. */
       position: absolute;
       top: 40%;
       transform: translate(-50%, -50%);
-      z-index: 99; } }
+      z-index: 2; } }
 
 .page .menu-evans-lake-menu-container {
   position: relative; }
@@ -953,7 +953,32 @@ p {
   margin-top: 0; }
 
 .staff-member span.bio {
-  display: none; }
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 110%;
+  width: 80vw;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  z-index: 15; }
+  .staff-member span.bio .fa-times {
+    color: black;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block; }
+  .staff-member span.bio .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; }
 
 .staff-member .image {
   background-position: center;
@@ -1222,18 +1247,21 @@ p {
       border-radius: 15px;
       box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
       line-height: 1.8rem;
-      padding: 4rem 5rem;
+      padding: 3rem 5rem;
       position: absolute;
       left: 37.5%;
       top: 30px;
       width: 47%; } }
   .description-text-area h2 {
-    margin-top: 0;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
     text-transform: uppercase; }
   .description-text-area p {
-    margin-bottom: 0; }
+    margin-bottom: 1rem; }
   .description-text-area .site-description-subtitle {
-    color: #1B5D97; }
+    color: #1B5D97;
+    margin-bottom: 1rem; }
 
 .slogan {
   color: #F56D00;
