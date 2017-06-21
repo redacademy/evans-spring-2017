@@ -23,8 +23,8 @@ get_header(); ?>
 				<img src="<?php	echo CFS()->get( 'site_image' ); ?>">
 				<div class="description-text-area">
 					<h2><?php	echo CFS()->get( 'site_title' ); ?></h2>
-					<span class="site-description-subtitle"><?php	echo CFS()->get( 'site_subtitle' ); ?></span>
-					<span class="site-description"> <?php	echo CFS()->get( 'site_description' ); ?> </span>
+					<p class="site-description-subtitle"><?php	echo CFS()->get( 'site_subtitle' ); ?></p>
+					<p class="site-description"> <?php	echo CFS()->get( 'site_description' ); ?> </p>
 				</div>
 			</div>
 		</section>
