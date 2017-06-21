@@ -123,7 +123,7 @@ a {
 .menu-toggle {
 	background: transparent;
 	border: none;
-	border-color: transparent;
+	border-color: white;
 	border-radius: 3px;
 	box-shadow: none;
 	color: #fff;
@@ -137,6 +137,32 @@ a {
 	&:hover {
 		border-color: none;
 		box-shadow: none;
+	}
+
+	.mobile-menu-toggle {
+		height: 100%;
+		background-color: #fff;
+		color: $color__blue-light;
+		padding: 2rem;
+		width: 85vw;
+		position: fixed;
+		right: 0;
+		top: 0;
+		overflow: scroll;
+	}
+
+	.mobile-menu-toggle .menu, .sub-menu {
+		display: initial;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 1rem 0;
+			padding: 0;
+			text-shadow: none;
+		}
 	}
 }
 
@@ -249,7 +275,15 @@ a {
 			}
 
 			a, a:visited {
-				color: #fff;
+				color: $color__blue-light;
+			
+				@include desktop {
+					color: #fff;
+				}
+			}
+
+			a:hover {
+				color: $color__orange;
 			}
 		}
 
@@ -264,7 +298,11 @@ a {
 
 	.sub-menu {
 		.menu-item a, .menu-item a:visited {
-			color: $color__blue;
+			color: $color__blue-light;
+			
+			@include desktop {
+				color: $color__blue;
+			}
 		}
 
 		.menu-item a:hover {
