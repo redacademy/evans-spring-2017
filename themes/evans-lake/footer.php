@@ -35,7 +35,7 @@
 				<hr>
 				<div class="get-notified-email">
           <h3>Get notified when camp registration opens</h3>
-				  <form action="#updates" onsubmit="return someKindOfFormValidation">
+				  <form action="https://formspree.io/l_vafi@yahoo.com" method="POST">
             <input type="email" id="your-email"  placeholder="Your Email">
 						<input type="radio" name="" value="">I agree to recieve an emails from Evans lake. you can withraw your consent at anytime.<br>
           <button class="get-notified-button" type="submit">Get Notified</button>
