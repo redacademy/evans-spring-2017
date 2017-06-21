@@ -86,26 +86,36 @@ get_sidebar(); ?>
 		</div><!--Tab body container-->
 
 		<?php if ( CFS()->get( 'summer_first' ) ) : ?>
-			<div class="summer-registration">
-				<div class="summer table-container">
-					<div class="summer table-header">
+
+		<?php $season = 'summer';?>
+			<div class="<?php echo $season; ?>-registration">
+				<div class="<?php echo $season; ?> table-container">
+					<div class="<?php echo $season; ?> table-header">
 						<span>Camp #</span>
 						<span>Dates</span>
 						<span>Length</span>
 						<span>Camp Program</span>
 						<span>Fee</span>						
 					</div>
-
 					<?php $reg_sessions = CFS()->get('reg_session_loop'); ?>
 					<?php	foreach ($reg_sessions as $reg_session) : ?>
-						<div class="summer table-line">
+
+						<div class="<?php echo $season; ?> table-line">
 							<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
 							<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
-							<span class="length"><?php echo $reg_session['reg_legth'];?></span>
+							<span class="length"><?php echo $reg_session['reg_length'];?></span>
 							<span class="camp-program"><?php echo $reg_session['reg_program'];?></span>
 							<span class="fee"><?php echo $reg_session['reg_fee'];?></span>						
 						</div>
 					<?php endforeach; ?>
+				</div>
+				<div class="<?php echo $season; ?> table-footer">
+					<?php if (CFS()->get('warn_' . $season)) : ?>
+						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+						<div class="warn-message">
+							<?php echo CFS()->get( 'warn_message' ); ?>
+						</div>
+					<?php endif; ?>
 				</div>
 
 			</div>
