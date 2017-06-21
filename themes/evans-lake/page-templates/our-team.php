@@ -126,8 +126,8 @@ get_sidebar(); ?>
 								<?php echo CFS()->get( 's_year_started',  $staff_member->ID ); ?>
 							</span>
 
-							<button class="staff orange-button">View Bio</button>
-							<span class="bio">
+							<button class="staff orange-button" id="<?php echo $staff_member->ID; ?>">View Bio</button>
+							<span class="bio" id="<?php echo $staff_member->ID . "-bio"; ?>">
 							<!--Bio should be hidden until button above is clicked-->
 								<i class="fa fa-times" aria-hidden="true"></i>
 								<?php echo CFS()->get( 's_bio',  $staff_member->ID ); ?>

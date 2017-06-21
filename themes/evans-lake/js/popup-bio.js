@@ -1,17 +1,22 @@
 (function($) {
 
-  $('.orange-button').click( function(event){
+  $('.orange-button').on('click', function(event){
     event.preventDefault();
+    var bioId = "#" + event.target.id + "-bio"; 
+    var $bio = $('.bio');
 
     $('.overlay').fadeIn('fast',
       function(){
-        $('.bio') 
+        $bio.css(
+          'display', 'none'
+        )
+        $(bioId) 
           .css('display', 'block')
           .animate({opacity: 1}, 'fast')
     });
   });
 
-  $('.fa-times, .overlay').click( function(){
+  $('.fa-times, .overlay').on('click', function(){
     $('.bio')
       .animate({opacity: 0}, 'fast',
         function(){
