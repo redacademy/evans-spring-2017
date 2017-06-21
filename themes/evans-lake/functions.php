@@ -139,8 +139,8 @@ function evans_lake_scripts() {
 		true
 	);
 	wp_enqueue_script( 
-		'toggle-camp-program',
-		get_template_directory_uri() . '/build/js/toggle-camp-program.min.js',
+		'toggle-tabs',
+		get_template_directory_uri() . '/build/js/toggle-tabs.min.js',
 		array ('jquery'),
 		'20170620',
 		true
