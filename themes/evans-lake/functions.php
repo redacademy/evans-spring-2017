@@ -96,7 +96,7 @@ function evans_lake_scripts() {
 	// Load Evans Lake Scripts without Dependencies
 	wp_enqueue_script( 
 		'evans-lake-skip-link-focus-fix',
-		get_template_directory_uri() . './build/js/skip-link-focus-fix.min.js',
+		get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js',
 		array(),
 		'20130115',
 		true
@@ -104,35 +104,35 @@ function evans_lake_scripts() {
 	// Load Evans Lake Scripts with Dependencies
 	wp_enqueue_script(
 		'evans-lake-toggle-menu',
-		get_template_directory_uri() . '.build/js/toggle-menu.min.js',
+		get_template_directory_uri() . '/build/js/toggle-menu.min.js',
 		array('jquery'),
 		false,
 		true
 	);
 	wp_enqueue_script(
 		'evans-lake-toggle-search',
-		get_template_directory_uri() . './build/js/toggle-search.min.js',
+		get_template_directory_uri() . '/build/js/toggle-search.min.js',
 		array('jquery'),
 		false,
 		true
 	);
 	wp_enqueue_script(
 		'evans-lake-arrow-scroll',
-		get_template_directory_uri() . './build/js/arrow-scroll.min.js',
+		get_template_directory_uri() . '/build/js/arrow-scroll.min.js',
 		array('jquery'),
 		false,
 		true
 	);
 	wp_enqueue_script(
 		'toggle-faq',
-		get_template_directory_uri() . './build/js/toggle-faq.min.js',
+		get_template_directory_uri() . '/build/js/toggle-faq.min.js',
 		array('jquery'),
 		false,
 		true
 	);
 	wp_enqueue_script( 
-		'toggle-faq',
-		get_template_directory_uri() . './build/js/toggle-camp-program.min.js',
+		'toggle-camp-program',
+		get_template_directory_uri() . '/build/js/toggle-camp-program.min.js',
 		array ('jquery'),
 		'20170620',
 		true
