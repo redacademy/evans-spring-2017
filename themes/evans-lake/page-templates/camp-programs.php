@@ -67,7 +67,7 @@ get_sidebar(); ?>
 			<!--Produce tabs	-->
 		<div class="tab-head-container">
 			<?php foreach ( $camp_programs as $program) : ?>
-				<div class="tab-head <?php echo $program->post_name ;?>">
+				<div class="tab-head <?php echo $program->post_name ;?>" id="<?php echo $program->ID; ?>">
 					<?php echo $program->post_title; ?>
 				</div>
 			<?php endforeach; // End of the loop. ?>
@@ -75,7 +75,7 @@ get_sidebar(); ?>
 
 		<div class="tab-body-container">
 			<?php foreach ( $camp_programs as $program) : ?>
-				<div class="tab-body <?php echo $program->post_name ;?>">
+				<div class="tab-body <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
 					<?php	$program_contents = CFS()->get( 'text_block', $program->ID ); ?>
 					<?php	foreach ($program_contents as $program_content) : ?>
 										<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
