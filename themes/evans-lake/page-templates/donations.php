@@ -32,11 +32,19 @@ get_sidebar(); ?>
 		<?php endwhile; // End of the loop. ?>
     
     <h2>Our Donors & Supporters</h2>
-    <div class="donors">
-      <img class="donors-image" src="<?php echo CFS()->get( 'donors_image' ); ?>"></div>
-      <h3 class="donors-title"><?php echo CFS()->get( 'donors_title' ); ?></h3>
-      <p class="donors-description"><?php echo CFS()->get( 'donors_description' ); ?></p>
-    </div>
+    
+    <?php $donors = CFS()->get( 'donor_loop' ); ?>
+    <?php foreach ($donors as $donor) { ?>
+      <section class="donors">
+        <!--<img class="donor-image" src="<?php echo $donor['donor_image']; ?>">-->
+
+        <div class="donor-image" style="background-image: url('<?php echo $donor['donor_image']; ?>'); background-size: contain; background-position: top; background-repeat: no-repeat"></div>
+        <div class="donor-textarea">
+          <h3 class="donor-title"><?php echo $donor['donor_title']; ?></h3>
+          <?php echo $donor['donor_description']; ?>
+        </div>
+      </section>
+    <?php }; ?>
 
 	</main><!-- #main -->
 
