@@ -7,7 +7,7 @@ named after the specific page to avoid merge conflicts. */
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
 
-.page {
+.page, .blog {
 
   #breadcrumbs {
     font-family: $font__heading;

@@ -60,7 +60,7 @@ get_sidebar(); ?>
 		?>
 
 			<?php // Produce tabs	?>
-		<div class="tabbed-view-container">
+		<div class="tabbed-view-container box-pop-out">
 			<div class="tab-head-container">
 				<?php foreach ( $camp_programs as $program) : ?>
 					<div class="tab-head <?php echo $program->post_name ;?>" id="<?php echo $program->ID; ?>">
@@ -95,7 +95,7 @@ get_sidebar(); ?>
 		<!--Season 1 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table table-1">
+		<div class="<?php echo $season; ?> registration-table box-pop-out table-1">
 			<div class="<?php echo $season; ?> table-container table-1">
 				<div class="<?php echo $season; ?> table-header">
 					<span class="camp-number">Camp#</span>
@@ -176,7 +176,7 @@ get_sidebar(); ?>
 		<!--Season 2 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table table-2">
+		<div class="<?php echo $season; ?> registration-table box-pop-out table-2">
 			<div class="<?php echo $season; ?> table-container table-2">
 				<div class="<?php echo $season; ?> table-header">
 					<span class="camp-number">Camp#</span>

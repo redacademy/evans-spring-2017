@@ -377,6 +377,22 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.box-pop-out {
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
+
+.orange-button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #F56D00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -946,94 +962,94 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
-.page #breadcrumbs {
+.page #breadcrumbs, .blog #breadcrumbs {
   font-family: "josefin_sans", sans-serif;
   font-size: .9rem;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden; }
-  .page #breadcrumbs a {
+  .page #breadcrumbs a, .blog #breadcrumbs a {
     color: #9B9B9B;
     text-decoration: none; }
-  .page #breadcrumbs li {
+  .page #breadcrumbs li, .blog #breadcrumbs li {
     display: inline-block;
     vertical-align: middle;
     margin-right: .5rem; }
-  .page #breadcrumbs .separator {
+  .page #breadcrumbs .separator, .blog #breadcrumbs .separator {
     font-size: 1rem;
     color: #9B9B9B; }
 
-.page .content-area {
+.page .content-area, .blog .content-area {
   display: -ms-flexbox;
   display: flex; }
 
-.page .sub-navigation {
+.page .sub-navigation, .blog .sub-navigation {
   display: none;
   padding-left: 1rem;
   padding-right: 1rem; }
   @media (min-width: 815px) {
-    .page .sub-navigation {
+    .page .sub-navigation, .blog .sub-navigation {
       display: initial;
       -ms-flex: 0 1 23%;
           flex: 0 1 23%; } }
-  .page .sub-navigation .menu {
+  .page .sub-navigation .menu, .blog .sub-navigation .menu {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
     list-style: none; }
-    .page .sub-navigation .menu li {
+    .page .sub-navigation .menu li, .blog .sub-navigation .menu li {
       margin-bottom: .75rem; }
-    .page .sub-navigation .menu a {
+    .page .sub-navigation .menu a, .blog .sub-navigation .menu a {
       color: #4A4A4A;
       text-decoration: none; }
-    .page .sub-navigation .menu a:visited {
+    .page .sub-navigation .menu a:visited, .blog .sub-navigation .menu a:visited {
       color: #4A4A4A; }
-    .page .sub-navigation .menu a:hover {
+    .page .sub-navigation .menu a:hover, .blog .sub-navigation .menu a:hover {
       color: #429DCB; }
 
-.page .site-main {
+.page .site-main, .blog .site-main {
   width: 100%;
   padding: 0 1rem; }
   @media (min-width: 815px) {
-    .page .site-main {
+    .page .site-main, .blog .site-main {
       padding: 0; } }
-  .page .site-main .entry-title {
+  .page .site-main .entry-title, .blog .site-main .entry-title {
     font-size: 1.3rem;
     margin-top: 0.5rem; }
     @media (min-width: 815px) {
-      .page .site-main .entry-title {
+      .page .site-main .entry-title, .blog .site-main .entry-title {
         font-size: 2rem;
         letter-spacing: .1rem; } }
   @media (min-width: 815px) {
-    .page .site-main {
+    .page .site-main, .blog .site-main {
       -ms-flex: 0 1 75%;
           flex: 0 1 75%;
       margin: 0 auto; } }
 
-.page .hero {
+.page .hero, .blog .hero {
   height: 30vh;
   margin-bottom: 1rem;
   overflow: hidden;
   position: static;
   width: 100vw; }
   @media (min-width: 815px) {
-    .page .hero {
+    .page .hero, .blog .hero {
       height: 80vh;
       margin-bottom: 2rem; } }
-  .page .hero .hero-image {
+  .page .hero .hero-image, .blog .hero .hero-image {
     height: 30vh; }
     @media (min-width: 815px) {
-      .page .hero .hero-image {
+      .page .hero .hero-image, .blog .hero .hero-image {
         height: 80vh; } }
 
-.page .hero-title {
+.page .hero-title, .blog .hero-title {
   display: none;
   line-height: 5rem;
   text-align: center; }
   @media (min-width: 815px) {
-    .page .hero-title {
+    .page .hero-title, .blog .hero-title {
       color: #fff;
       display: initial;
       font-size: 4rem;
@@ -1044,7 +1060,7 @@ named after the specific page to avoid merge conflicts. */
       transform: translate(-50%, -50%);
       z-index: 2; } }
 
-.page .menu-evans-lake-menu-container {
+.page .menu-evans-lake-menu-container, .blog .menu-evans-lake-menu-container {
   position: relative; }
 
 .overlay {
@@ -1221,30 +1237,14 @@ p {
     margin: 0; }
   .summer .role {
     font-style: italic; }
-
-.orange-button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: #F56D00;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none; }
   @media (min-width: 815px) {
-    .orange-button {
+    .summer {
       -ms-flex-item-align: center;
           -ms-grid-row-align: center;
           align-self: center; } }
-  .orange-button:hover {
+  .summer:hover {
     background-color: #ff8600;
     box-shadow: none; }
-
-.tabbed-view-container, .registration-table {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
 
 .tab-head-container {
   -ms-flex-line-pack: center;
