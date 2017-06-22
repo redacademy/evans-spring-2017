@@ -84,6 +84,10 @@ box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
     padding: 1rem 2rem 1rem 1rem;
   }
   padding: 1rem;
+  margin: 2rem 0;
+  .table-2 &{
+    margin-bottom: 5rem;
+  }
 }
 
 // Cancellation Policy

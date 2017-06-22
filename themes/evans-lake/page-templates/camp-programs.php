@@ -95,8 +95,8 @@ get_sidebar(); ?>
 		<!--Season 1 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table">
-			<div class="<?php echo $season; ?> table-container">
+		<div class="<?php echo $season; ?> registration-table table-1">
+			<div class="<?php echo $season; ?> table-container table-1">
 				<div class="<?php echo $season; ?> table-header">
 					<span class="camp-number">Camp#</span>
 					<span class="date-range">Dates</span>
@@ -176,8 +176,8 @@ get_sidebar(); ?>
 		<!--Season 2 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table">
-			<div class="<?php echo $season; ?> table-container">
+		<div class="<?php echo $season; ?> registration-table table-2">
+			<div class="<?php echo $season; ?> table-container table-2">
 				<div class="<?php echo $season; ?> table-header">
 					<span class="camp-number">Camp#</span>
 					<span class="date-range">Dates</span>
