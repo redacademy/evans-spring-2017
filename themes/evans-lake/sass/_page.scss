@@ -9,7 +9,7 @@ named after the specific page to avoid merge conflicts. */
 
 .page, .blog {
 
-  #breadcrumbs {
+  .breadcrumbs {
     font-family: $font__heading;
     font-size: .9rem;
     list-style: none;
@@ -23,6 +23,7 @@ named after the specific page to avoid merge conflicts. */
     }
 
     li {
+      color: #9B9B9B;
       display: inline-block;
       vertical-align: middle;
       margin-right: .5rem;

@@ -962,21 +962,22 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
-.page #breadcrumbs, .blog #breadcrumbs {
+.page .breadcrumbs {
   font-family: "josefin_sans", sans-serif;
   font-size: .9rem;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden; }
-  .page #breadcrumbs a, .blog #breadcrumbs a {
+  .page .breadcrumbs a {
     color: #9B9B9B;
     text-decoration: none; }
-  .page #breadcrumbs li, .blog #breadcrumbs li {
+  .page .breadcrumbs li {
+    color: #9B9B9B;
     display: inline-block;
     vertical-align: middle;
     margin-right: .5rem; }
-  .page #breadcrumbs .separator, .blog #breadcrumbs .separator {
+  .page .breadcrumbs .separator {
     font-size: 1rem;
     color: #9B9B9B; }
 
