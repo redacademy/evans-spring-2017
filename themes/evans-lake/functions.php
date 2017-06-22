@@ -86,6 +86,9 @@ function evans_lake_scripts() {
 	// Load Styles
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/colorbox/colorbox.css' );
+	wp_enqueue_style( 'jquery-ui-cdn', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' );
+	
 
 	// Load CDN Scripts
 	wp_enqueue_script( 'jquery' );

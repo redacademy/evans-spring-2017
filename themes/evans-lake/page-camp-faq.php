@@ -31,8 +31,8 @@ get_sidebar(); ?>
 					<?php 
 					$FAQs = CFS()->get('summer_faqs');
 					foreach ( $FAQs as $FAQ) : ?>
-					<h3><?php echo $FAQ['summer_faq_question']; ?></h3>
-					<div><?php echo $FAQ['summer_faq_answer']; ?></div>
+					  <h3><?php echo $FAQ['summer_faq_question']; ?></h3>
+					  <div><?php echo $FAQ['summer_faq_answer']; ?></div>
 					<?php endforeach; ?>
         </div>
 

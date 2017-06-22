@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+
+  // Accordion
   $( function() {
     var icons={
       header: 'iconClosed',
@@ -10,4 +12,12 @@ jQuery(document).ready(function($) {
         icons: icons
       });
     } );
+
+    // Tabs
+    $( function() {
+      $( "#tabs" ).tabs();
+    } );
+
 }); 
+
+
