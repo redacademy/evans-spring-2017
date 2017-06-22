@@ -66,13 +66,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "footer";
 @import "widgets";
 @import "content";
+
 @import "page";
-@import "home";
+@import "single";
+
 @import "page-our-team";
 @import "page-our-camp";
 @import "page-orientation-packages";
 @import "page-activities";
 @import "front-page";
+@import "home";
 
 @import "media";
 @import "faq";

@@ -1,48 +1,49 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
 .site-footer {
-  width: 100%;
-  // height: 500px;
+  width: 100%; // height: 500px;
   // background: url('../../assets/images/footer-gradient.png') center 20% no-repeat;
   padding-top: 4rem;
   color: white;
   line-height: 1.4;
   background-size: cover;
   padding: 2.5rem 2rem;
-  background-image: linear-gradient(to bottom,rgba(255,255,255,.25) 0,rgba(0,0,0,.25)),url('../../assets/images/footer-gradient.png') ;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 0, rgba(0, 0, 0, .25)), url('../../assets/images/footer-gradient.png');
   background-position: center 20%;
   h3 {
     text-align: left;
   }
-  
 }
+
 .contact-us {
-  ul{
+  ul {
     display: inline-block;
     list-style: none;
     padding: 0;
-    margin:0;
-    :first-of-type {
+    margin: 0;
+     :first-of-type {
       margin-right: 1rem;
-    } 
+    }
   }
   a {
-    color:#fff;
+    color: #fff;
   }
 }
+
 .get-notified-email {
   #your-email {
     width: 100%;
     margin: 1rem 0;
-
   }
   input[type=radio] {
     margin-right: .5rem;
   }
 }
+
 .get-notified-email {
-  .get-notified-button{
+  .get-notified-button {
     background: #f56d00;
     border-radius: 1.2rem;
     color: #fff;
@@ -51,15 +52,16 @@
     text-shadow: none;
     box-shadow: none;
     border: none;
-    float: right;}
+    float: right;
+  }
   h3 {
     margin-bottom: 0;
   }
 }
+
 .social-media {
   ul {
     list-style: none;
-    
   }
   li {
     display: inline-block;
@@ -67,34 +69,31 @@
   }
 }
 
-
-
 @media screen and (min-width: 800px) {
   .social-media {
     display: inline-block;
     width: 30%;
     ul {
-      margin:0;
+      margin: 0;
       padding: 0;
     }
-   
   }
   .contact-us {
     display: inline-block;
     width: 30%;
     height: 200px;
-
   }
   hr {
-  display: none;
+    display: none;
   }
   .get-notified-email {
-   display: inline-block;
-   border-left: 1px solid #fff;
-   padding-left: 2rem;
-   width: 30%;
+    display: inline-block;
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
+    width: 30%;
   }
 }
+
 h3 {
   text-align: left;
 }
