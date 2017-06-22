@@ -1,0 +1,32 @@
+h2 {
+  margin-bottom: 2rem;
+}
+
+.donors {
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .donor-image {
+    flex: 0 1 23%;
+    margin-right: 1rem;
+    height: 100px;
+    width: 100%;
+  }
+
+  .donor-textarea {
+    flex: 0 1 75%;
+
+    h3 {
+      color: #000;
+      margin: 0;
+    }
+  }
+}
