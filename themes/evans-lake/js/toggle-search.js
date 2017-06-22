@@ -10,7 +10,7 @@
       $('.mobile-menu').hide();
     }
     else{
-      $('.desktop-search-expanded').show();
+      $('.desktop-search-expanded').show().css('display', 'flex');
       $('.search-field').focus();
       $('.main-navigation').hide();
     }

@@ -46,8 +46,8 @@
 					</div><!-- .site-branding -->
 
 					<div class="desktop-search-expanded">
-						<i class="fa fa-search desktop" aria-hidden="true"></i>
 						<?php get_search_form();?>
+						<i class="fa fa-search desktop" aria-hidden="true"></i>
 					</div>
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

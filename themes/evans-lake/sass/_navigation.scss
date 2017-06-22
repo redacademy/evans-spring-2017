@@ -413,20 +413,22 @@ a {
 			border: none;
 			border-radius: 0 10px 10px 0;
 			height: 32px;
-			// max-width: 93%;
+			width: 92%;
 		}
 	}
 }
 
 .desktop-search-expanded {
 	align-items: center;
+	border-radius: 10px;
 	display: none;
-	height: 50px;
+	height: 38px;
 	margin-top: 1.15rem;
+	width: 80%;
+	justify-content: flex-end;
+	background-color: #fff;
 
 	.fa-search {
-		float: right;
-		background-color: #fff;
 		border-radius: 0 10px 10px 0;
 		border-left: 1px solid #b4b4b4;
 		color: $color__text-main;
@@ -437,9 +439,9 @@ a {
 	}
 
 	.search-form {
-		float: right;
+		height: 38px;
 		left: 1.5rem;
-		width: 70%;
+		width: 100%;
 
 		input[type=search] {
 			padding-left: 15px;
@@ -450,10 +452,12 @@ a {
 		}
 
 		.search-field {
-			border: none;
 			border-radius: 10px 0 0 10px;
+			display: block;
+			border: none;
 			height: 32px;
 			width: 100%;
+			z-index: 99999;
 		}
 	}
 }
