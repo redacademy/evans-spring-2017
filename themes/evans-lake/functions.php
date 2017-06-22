@@ -86,7 +86,6 @@ function evans_lake_scripts() {
 	// Load Styles
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
-	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/colorbox/colorbox.css' );
 
 	// Load CDN Scripts
 	wp_enqueue_script( 'jquery' );
@@ -147,14 +146,14 @@ function evans_lake_scripts() {
 	);
 	wp_enqueue_script(
 		'colorbox',
-		get_template_directory_uri() . '/js/jquery.colorbox.js',
+		get_template_directory_uri() . '/build/js/jquery.colorbox.min.js',
 		array ('jquery'),
 		'',
 		true
 	);
 	wp_enqueue_script(
 		'themeslug-script',
-		get_template_directory_uri() . '/js/colorbox.js',
+		get_template_directory_uri() . '/build/js/colorbox.min.js',
 		array ('colorbox'),
 		'',
 		true
