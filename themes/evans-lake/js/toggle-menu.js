@@ -23,11 +23,11 @@
       header: 'iconClosed',
       activeHeader: 'iconOpen'
     };
-      $( '.menu' ).accordion({
-        collapsible: true,
-        heightStyle: 'content',
-        icons: icons
-      });
-    } );
+    $( '.mobile-menu-toggle .menu' ).accordion({
+      collapsible: true,
+      heightStyle: 'content',
+      icons: icons
+    });
+  });
 
 })(jQuery);

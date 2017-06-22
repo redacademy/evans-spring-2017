@@ -1,13 +1,15 @@
 (function($) {
-  
-  $('.search-form').hide();
 
-  $('.fa-search').on('click', function(e){
+  $('.fa-search').click(function(e){
     e.preventDefault();
-    e.stopPropagation();
+      $('.mobile-search-expanded').show();
+      $('.search-field').focus();
+      $('.mobile-menu').hide();
+  });
 
-    $('.search-form').animate({width:'toggle'},350);
-    $('.search-field').focus();
+  $('.content-area').click(function() {
+    $('.mobile-search-expanded').hide();
+    $('.mobile-menu').show();
   });
 
 })(jQuery);

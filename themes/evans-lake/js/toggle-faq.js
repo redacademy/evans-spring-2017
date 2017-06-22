@@ -10,17 +10,4 @@ jQuery(document).ready(function($) {
         icons: icons
       });
     } );
-
-
-    $( function() {
-    var icons={
-      header: 'iconClosed',
-      activeHeader: 'iconOpen'
-    };
-      $( '.menu' ).accordion({
-        collapsible: true,
-        heightStyle: 'content',
-        icons: icons
-      });
-    } );
 }); 
