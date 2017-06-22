@@ -143,12 +143,13 @@ a {
 		height: 100%;
 		background-color: #fff;
 		color: $color__blue-light;
-		padding: 2rem;
+		padding: 1rem 0;
 		width: 85vw;
 		position: fixed;
 		right: 0;
 		top: 0;
-		overflow: scroll;
+		// overflow: scroll;
+
 	}
 
 	.mobile-menu-toggle .menu, .sub-menu {
@@ -159,9 +160,21 @@ a {
 		list-style: none;
 
 		li {
-			margin: 1rem 0;
-			padding: 0;
+			margin: 0;
+			// padding: .75rem 2rem;
 			text-shadow: none;
+			width: 85vw;
+		}
+	}
+
+	.mobile-menu-toggle .sub-menu {
+		li {
+			left: 0;
+			background-color: #e1e1e1;
+			margin: 0;
+			padding: .75rem 2rem;
+			text-shadow: none;
+			width: 85vw;
 		}
 	}
 }
@@ -208,8 +221,8 @@ a {
 		display: flex;
 		justify-content: space-between;
 		height: 50px;
-		background-color: rgba(153, 153, 153, 0.1);
-		padding: .4rem .7rem;
+		background-color: rgba(153, 153, 153, 0.3);
+		padding: .4rem .9rem;
 
 		.mobile-logo {
 			font-family: $font__heading;
@@ -287,12 +300,16 @@ a {
 			}
 		}
 
-		.menu-item:last-child {
+		> .menu-item:last-child {
 			background: $color__orange;
 			border-radius: 1.2rem;
 			color: #fff;
 			padding: .2rem 1.75rem;
 			cursor: pointer;
+
+			span {
+				display: none;
+			}
 		}
 	}
 
@@ -309,10 +326,10 @@ a {
 			color: $color__orange;
 		}
 
-		.menu-item:last-child {
-			background: transparent;
-			padding: 0;
-		}
+		// .menu-item:last-child {
+		// 	background: transparent;
+		// 	padding: 0;
+		// }
 	}
 
 	.search-form {
@@ -347,29 +364,44 @@ a {
 	cursor: pointer;
 }
 
-// .mobile-search-expanded {
-// 	align-items: center;
-// 	background-color: $color__blue-light;
-// 	display: flex;
-// 	height: 50px;
-// 	padding: .4rem .7rem;
+.mobile-search-expanded {
+	align-items: center;
+	background-color: $color__blue-light;
+	display: none;
+	height: 50px;
+	padding: .4rem .9rem;
 
-// 	.fa-search {
-// 		border-right: 1px solid $color__text-main;
-// 		color: $color__text-main;
-// 		left: 1.5rem;
-// 		position: absolute;
-// 		z-index: 1;
-// 		padding: .4rem 0.5rem .4rem 0;
-// 	}
+	.fa-search {
+		background-color: #fff;
+		border-radius: 10px 0 0 10px;
+		border-right: 1px solid #b4b4b4;
+		color: $color__text-main;
+		font-size: 1.3rem;
+		height: 38px;
+		left: .4rem;
+		position: absolute;
+		z-index: 1;
+		padding: .55rem .45rem;
+	}
 
-// 	.search-form {
-// 		position: relative;
+	.search-form {
+		position: relative;
+		left: 1.5rem;
+		width: 98%;
 
-// 		.search-field {
-// 			border: none;
-// 			border-radius: .5rem;
+		input[type=search] {
+			padding-left: 15px;
+		}
 
-// 		}
-// 	}
-// }
+		input:focus {
+			outline-width: 0;
+		}
+
+		.search-field {
+			border: none;
+			border-radius: 0 10px 10px 0;
+			height: 32px;
+			// max-width: 93%;
+		}
+	}
+}
