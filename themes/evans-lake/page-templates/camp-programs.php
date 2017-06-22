@@ -95,9 +95,9 @@ get_sidebar(); ?>
 		<!--Season 1 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table box-pop-out table-1">
-			<div class="<?php echo $season; ?> table-container table-1">
-				<div class="<?php echo $season; ?> table-header">
+		<div class="registration-table box-pop-out table-1">
+			<div class="?> table-container table-1">
+				<div class="table-header">
 					<span class="camp-number">Camp#</span>
 					<span class="date-range">Dates</span>
 					<span class="length">Length</span>
@@ -176,14 +176,14 @@ get_sidebar(); ?>
 		<!--Season 2 Table-->
 		<h2><?php echo $season_uc; ?> Registration</h2>
 		<p class="gst">*GST Additional</p>
-		<div class="<?php echo $season; ?> registration-table box-pop-out table-2">
-			<div class="<?php echo $season; ?> table-container table-2">
-				<div class="<?php echo $season; ?> table-header">
+		<div class="registration-table box-pop-out table-1">
+			<div class="?> table-container table-1">
+				<div class="table-header">
 					<span class="camp-number">Camp#</span>
 					<span class="date-range">Dates</span>
 					<span class="length">Length</span>
 					<span class="camp-program">Camp Program</span>
-					<span class="fee">Fee</span>						
+					<span class="fee">Fee</span>							
 				</div>
 				<?php $reg_sessions = CFS()->get('reg_session_loop'); ?>
 
