@@ -1280,13 +1280,24 @@ p {
   padding: 2rem 0.5rem 0.5rem 0.5rem; }
 
 .table-row {
-  color: #7A7A7A; }
+  color: #7A7A7A;
+  margin-bottom: 0; }
 
 .table-footer {
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  padding: 1rem; }
   .table-footer i {
     padding: 1rem 2rem 1rem 1rem; }
+
+.cancel.container {
+  margin-top: 2rem; }
+
+.cancel.block {
+  padding-bottom: 1rem; }
+
+.cancel.condition {
+  font-weight: bold; }
 
 .activity-hero {
   background-size: cover;

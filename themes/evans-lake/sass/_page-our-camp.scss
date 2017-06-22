@@ -66,6 +66,7 @@ box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
   width: 20rem;
 }
 
+// Seasonal Tables Formatting
 .table-header, .table-footer{
   background: $color__blue-light;
   color: white;
@@ -75,10 +76,23 @@ box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
 }
 .table-row {
   color: #7A7A7A;
+  margin-bottom: 0;
 }
 .table-footer {
   justify-content: center;
   i {
     padding: 1rem 2rem 1rem 1rem;
   }
+  padding: 1rem;
+}
+
+// Cancellation Policy
+.cancel.container{
+  margin-top: 2rem;
+}
+.cancel.block {
+  padding-bottom: 1rem;
+}
+.cancel.condition {
+  font-weight: bold;
 }

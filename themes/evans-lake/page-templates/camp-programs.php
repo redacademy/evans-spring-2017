@@ -42,6 +42,7 @@ get_sidebar(); ?>
 				while ( have_posts() ) {
 					the_post();
 					the_content();
+					$this_page_id = $post->ID;
 				}
 			?>
 		</div> <!--.intro-content-->
@@ -129,6 +130,37 @@ get_sidebar(); ?>
 		</div> <!--.season1-registration-table-->
 
 		<button class="orange-button reg-now">Register Now</button>
+
+		<h2 class="add-on header"><?php CFS()->get( 'add_text' ); ?></h2>
+		<div class="accordion">
+			<?php $add_ons = CFS()->get( 'add_ons' ); ?>
+			<?php foreach ($add_ons as $add_on) : ?>
+				<h3 class="add-on title"><?php echo $add_on['add_title']; ?></h3>
+				<div class="add-on content">
+					<?php echo $add_on['add_content']; ?>
+				</div>
+			<?php endforeach; ?>
+		</div>
+
+		<div class="accordion">
+			<h2 class="cancel header">Cancellation Policy</h2>
+			<div class="cancel container">
+				<?php $policies = CFS()->get( 'cancel_loop', $this_page_id ); ?>
+				<?php foreach ($policies as $policy) : ?>
+					<div class="cancel block">
+						<span class="cancel condition"><?php echo $policy['cancel_condition'];?> </span>
+						<span class="cancel policy"><?php echo $policy['cancel_policy'];?></span>
+					</div>
+					<?php endforeach; ?>
+			</div>
+			<h2 class="transport header"></h2>
+			<div class="transport container">
+				<a href=<?php echo get_site_url() . "/contact-us";?>>
+					<div class="transport link-to">
+					</div>
+				</a>
+			</div> <!--transport container-->
+		</div> <!--accordion-->
 
 		<?php 
 			// Set Season 2 Inversely to Season 1
