@@ -22,12 +22,12 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="mobile-search-expanded">
-					<i class="fa fa-search" aria-hidden="true"></i>
+					<i class="fa fa-search mobile" aria-hidden="true"></i>
 					<?php get_search_form();?>
 				</div>
 				<div class="mobile-menu">
 					<div class="mobile-search">
-						<i class="fa fa-search" aria-hidden="true"></i>
+						<i class="fa fa-search mobile" aria-hidden="true"></i>
 					</div>
 					<div class="mobile-logo"><a href="<?php echo esc_url( home_url('/') ); ?>">Evans Lake</a></div>
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -45,11 +45,16 @@
 						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 					</div><!-- .site-branding -->
 
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					<div class="search-bar">
+					<div class="desktop-search-expanded">
+						<i class="fa fa-search desktop" aria-hidden="true"></i>
 						<?php get_search_form();?>
 					</div>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						<div class="search-bar">
+							<i class="fa fa-search desktop" aria-hidden="true"></i>
+							<?php get_search_form();?>
+						</div>
 					</nav><!-- #site-navigation -->
 					
 				</div>
