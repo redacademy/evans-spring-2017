@@ -110,7 +110,7 @@ get_sidebar(); ?>
 					<?php	if ( 
 							($reg_session['reg_summer_session'] && $season == "summer") ||
 							(!$reg_session['reg_summer_session'] && $season =="winter") ) : ?>
-						<div class="<?php echo $season; ?> table-row">
+						<div class="table-row">
 							<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
 							<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
 							<span class="length"><?php echo $reg_session['reg_length'];?></span>
@@ -120,7 +120,7 @@ get_sidebar(); ?>
 					<?php endif; ?>
 				<?php endforeach; ?>
 
-				<div class="<?php echo $season; ?> table-footer">
+				<div class="table-footer">
 					<?php if (CFS()->get('warn_' . $season)) : ?>
 						<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 						<span class="warn-message"><?php echo CFS()->get( 'warn_message' ); ?></span>
@@ -191,7 +191,7 @@ get_sidebar(); ?>
 					<?php	if ( 
 							($reg_session['reg_summer_session'] && $season == "summer") ||
 							(!$reg_session['reg_summer_session'] && $season =="winter") ) : ?>
-						<div class="<?php echo $season; ?> table-row">
+						<div class="table-row">
 							<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
 							<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
 							<span class="length"><?php echo $reg_session['reg_length'];?></span>
