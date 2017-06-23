@@ -142,7 +142,7 @@ function evans_lake_scripts() {
 	}
 
 	// Enqueue Jquery UI on Accordion Pages
-	if (is_page_template( array( 'page-site-accommodation.php', 'page-templates/camp-programs.php', 'page-camp-faq.php', 'page-school-youth-groups.php', 'page-private-groups.php', 'page-weddings.php' ) ) ) {
+	if (is_front_page() || is_page_template( array( 'page-site-accommodation.php', 'page-templates/camp-programs.php', 'page-camp-faq.php', 'page-school-youth-groups.php', 'page-private-groups.php', 'page-weddings.php' ) ) ) {
 		wp_enqueue_script( 
 			'jquery-ui', 
 			'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
