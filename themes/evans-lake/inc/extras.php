@@ -21,6 +21,25 @@ function evans_lake_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'evans_lake_body_classes' );
 
+function evans_lake_logo_login() {
+	echo '<style type="text/css">                                                                   
+         #login h1 a { background: url('.get_stylesheet_directory_uri().'/assets/images/evans-lake.svg) center no-repeat;
+         background-size: 50% auto; height: 80px; width: 300px;}
+     		</style>';
+}
+
+add_action('login_head', 'evans_lake_logo_login');
+
+function evans_lake_logo_url( $url ) {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'evans_lake_logo_url' );
+
+function evans_lake_login_title() {
+	return "Evans Lake Forest Education Society";
+}
+add_filter( 'login_headertitle', 'evans_lake_login_title');
+
 function evans_lake_submenu_limit( $items, $args ) {
 
     if ( empty( $args->submenu ) ) {
