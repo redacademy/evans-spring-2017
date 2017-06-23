@@ -97,3 +97,36 @@ box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
 		box-shadow: none;
 	}
 }
+  
+// Accordion
+
+h3 {
+  position: relative;
+  width:100%;
+}
+.ui-icon.iconOpen {
+ background: url(../../assets/images/arrow-up.png) no-repeat; 
+ background-size: 20px;
+ position: absolute;
+  right:0;  
+  width:20px;
+  height: 20px;
+  display: block;
+}
+.ui-icon.iconClosed {
+  background: url(../../assets/images/arrow-down.png) no-repeat; 
+  background-size: 20px;
+ position: absolute;
+  right:0; 
+  width:20px;
+  height: 20px;
+  display: block;  
+}
+
+// #accordion {
+//   h3::after {
+//   content: url(../../assets/images/arrow-down.png);
+//   position: absolute;
+//   right:0;
+//   }
+// }
