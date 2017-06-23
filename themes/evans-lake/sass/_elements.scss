@@ -1,6 +1,102 @@
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+/* Custom Elements */
+/* Generic Tab Syles
+see _page-our-camp.scss for an example of specifics */
+
+.tab-head-container {
+  align-content: center;
+  background: $color__blue-light;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.tab-head {
+  border-right: 1px solid white;
+  color: white;
+  display: inline-block;
+  flex: 1 1 30%;
+  text-align: center;
+  padding: 1rem;
+	
+.tab-body-container{
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  position: relative;
+}
+.tab-body {
+  left: -1000rem;
+  margin: 0 auto;
+  max-width: 500px;
+  position: absolute;
+  width: 90%;
+  &.selected{
+    left: 0;
+    position: relative;
+  }
+}
+// Misc Elements
+.box-pop-out {
+box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
+}
+.bot-brd-blu {
+  border-bottom: 1px solid $color__blue;
+}
+.orange-button {
+  align-self: flex-start;
+  background-color: $color__orange;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none;
+
+	&:hover {
+		background-color: #ff8600;
+		box-shadow: none;
+	}
+}
+  
+// Accordion
+h3 {
+  position: relative;
+  width:100%;
+}
+.ui-icon.iconOpen {
+ background: url(../../assets/images/arrow-up.png) no-repeat; 
+ background-size: 20px;
+ position: absolute;
+  right:0;  
+  width:20px;
+  height: 20px;
+  display: block;
+}
+.ui-icon.iconClosed {
+  background: url(../../assets/images/arrow-down.png) no-repeat; 
+  background-size: 20px;
+ position: absolute;
+  right:0; 
+  width:20px;
+  height: 20px;
+  display: block;  
+}
+
+// #accordion {
+//   h3::after {
+//   content: url(../../assets/images/arrow-down.png);
+//   position: absolute;
+//   right:0;
+//   }
+// }
+
+// Clearfixes
+.sd-sharing-enabled{
+  clear: both;
+}
 
 html {
 	box-sizing: border-box;
@@ -69,64 +165,3 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
-
-// Clearfixes
-.sd-sharing-enabled{
-  clear: both;
-}
-
-// Custom Elements
-.box-pop-out {
-box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
-}
-
-.orange-button {
-  align-self: flex-start;
-  background-color: $color__orange;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none;
-
-	&:hover {
-		background-color: #ff8600;
-		box-shadow: none;
-	}
-}
-  
-// Accordion
-
-h3 {
-  position: relative;
-  width:100%;
-}
-.ui-icon.iconOpen {
- background: url(../../assets/images/arrow-up.png) no-repeat; 
- background-size: 20px;
- position: absolute;
-  right:0;  
-  width:20px;
-  height: 20px;
-  display: block;
-}
-.ui-icon.iconClosed {
-  background: url(../../assets/images/arrow-down.png) no-repeat; 
-  background-size: 20px;
- position: absolute;
-  right:0; 
-  width:20px;
-  height: 20px;
-  display: block;  
-}
-
-// #accordion {
-//   h3::after {
-//   content: url(../../assets/images/arrow-down.png);
-//   position: absolute;
-//   right:0;
-//   }
-// }

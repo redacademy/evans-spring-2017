@@ -1,18 +1,6 @@
-// Camp Program Selection Tabs
-.tab-head-container {
-  align-content: center;
-  background: $color__blue-light;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+// Camp Program Selection Tab Implementation
+
 .tab-head {
-  border-right: 1px solid white;
-  color: white;
-  display: inline-block;
-  flex: 1 1 30%;
-  text-align: center;
-  padding: 1rem;
   &.teen-camp-13-16, &.leadership-14-16{
     border-right: none;
   }
@@ -24,22 +12,6 @@
   }
   &:nth-child(n+4){
     flex: 1 1 40%;
-  }
-}
-.tab-body-container{
-  margin-bottom: 3rem;
-  padding: 3rem 0;
-  position: relative;
-}
-.tab-body {
-  left: -1000rem;
-  margin: 0 auto;
-  max-width: 500px;
-  position: absolute;
-  width: 90%;
-  &.selected{
-    left: 0;
-    position: relative;
   }
 }
 
