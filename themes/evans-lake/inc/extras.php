@@ -159,3 +159,13 @@ function evans_lake_remove_editor_init() {
 	}
 }
 add_action( 'init', 'evans_lake_remove_editor_init' );
+
+function evans_lake_hero_img_update (){
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		$hero_style = ".hero-image {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: center, center}";
+	if (is_front_page()){
+		$hero_style = ".home-hero {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: center, center}";
+	}
+		wp_add_inline_style( 'evans-lake-style', $hero_style );
+}
+add_action( 'wp_enqueue_scripts', 'evans_lake_hero_img_update' );

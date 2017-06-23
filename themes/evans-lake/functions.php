@@ -70,13 +70,13 @@ add_action( 'widgets_init', 'evans_lake_widgets_init' );
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
-function evans_lake_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
+function evans_lake_style( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
 	}
 	return $stylesheet_uri;
 }
-add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
+add_filter( 'stylesheet_uri', 'evans_lake_style', 10, 2 );
 
 /**
  * Enqueue scripts and styles.
