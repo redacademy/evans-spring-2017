@@ -107,6 +107,20 @@ function evans_lake_scripts() {
 		true
 	);
 
+	// Enqueue Jquery UI for Accordion for menu on all pages 
+	wp_enqueue_script( 
+		'jquery-ui', 
+		'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+		array('jquery'));
+	wp_enqueue_script(
+		'toggle-accordion',
+		get_template_directory_uri() . '/build/js/toggle-accordion.min.js',
+		array('jquery'),
+		false,
+		true
+	);		
+
+	// Enqueue Font Awesome for menu icons always
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
 
 	// Enqueue Front Page Scripts
@@ -139,21 +153,6 @@ function evans_lake_scripts() {
 			'',
 			true
 		);
-	}
-
-	// Enqueue Jquery UI on Accordion Pages
-	if (is_front_page() || is_page_template( array( 'page-site-accommodation.php', 'page-templates/camp-programs.php', 'page-camp-faq.php', 'page-school-youth-groups.php', 'page-private-groups.php', 'page-weddings.php' ) ) ) {
-		wp_enqueue_script( 
-			'jquery-ui', 
-			'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-			array('jquery'));
-		wp_enqueue_script(
-			'toggle-accordion',
-			get_template_directory_uri() . '/build/js/toggle-accordion.min.js',
-			array('jquery'),
-			false,
-			true
-		);		
 	}
 
 	if (is_page_template('our-team.php')){
