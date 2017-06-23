@@ -6,7 +6,7 @@
 .home-hero {
   align-items: center;
   background-size: cover;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,14 +19,11 @@
 
   .fa-angle-down {
     background-color: transparent;
-    border-radius: 50%;
     color: #fff;
     cursor: pointer;
     font-size: 3.5rem;
-    left: 50%;
-    padding: 0 .5rem;
     position: absolute;
-    top: 70%;
+    bottom: 15%;
     transform: translateX(-50%);
 
     @include desktop {
@@ -182,11 +179,12 @@
    .carousel-cell.activities {
      border-left: 1.5rem solid #fff;
      border-right: 1.5rem solid #fff;
+     margin: 0;
      width: 100%;
 
      @include desktop {
       border: none;
-      margin-left: .4rem;
+      margin: .4rem;
       width: 24%;
      }
    }
@@ -200,7 +198,7 @@
 // }
 
 .main-carousel {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   .flickity-prev-next-button {
     box-shadow: none;
@@ -255,11 +253,11 @@
     }
   }
 
-  // .flickity-page-dots {
-  //   display: block;
+  .flickity-page-dots {
+    display: block;
 
-  //   @include desktop {
-  //     display: none;
-  //   }
-  // }
+    @include desktop {
+      display: none;
+    }
+  }
 }
