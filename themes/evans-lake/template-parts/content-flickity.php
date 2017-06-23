@@ -8,6 +8,8 @@
 ?>
 
 <h1 class="carousel-title">Activities</h1>
+
+<a href="<?php echo esc_url( home_url('/venue-booking/activities/') ); ?>">View All</a>
 <div class="main-carousel activities container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
   <?php

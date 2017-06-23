@@ -62,11 +62,7 @@ get_sidebar(); ?>
 	?>
 			<!--Setup Content Area-->
 	<main id="main" class="site-main" role="main">
-		<div class="intro-content">
-			<?php 
-				evans_lake_breadcrumbs(); 
-			?>
-		</div>
+		<?php evans_lake_breadcrumbs();	?>
 
 			<!--Iteratively Display Daytime Activities-->
 		<h1 class="bot-brd-blu">Activities</h1>			

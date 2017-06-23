@@ -1364,9 +1364,10 @@ p {
 .cancel.container {
   margin: 0 0 5rem 0; }
 
-.activity-hero {
+.page-template .activity-hero {
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  width: 100%; }
 
 .bot-brd-blu {
   border-bottom: 1px solid #1B5D97; }
@@ -1375,7 +1376,7 @@ p {
   margin: 0 1rem; }
 
 .activity-content {
-  margin: 1rem; }
+  margin-bottom: 2rem; }
 
 @media (min-width: 815px) {
   .page-template-activities .hero {
