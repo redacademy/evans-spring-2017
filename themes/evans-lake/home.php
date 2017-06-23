@@ -16,10 +16,6 @@ get_sidebar(); ?>
 <div id="primary" class="content-area container">
 	<main id="main" class="site-main" role="main">
 
-<div class="box-pop-out">
-	Content
-</div>
-
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="single-container box-pop-out">
 				<?php get_template_part( 'template-parts/content', 'single' ); ?>			
