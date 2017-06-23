@@ -106,7 +106,7 @@ function evans_lake_breadcrumbs() {
 	}
 }
 
-function remove_editor_init() {
+function evans_lake_remove_editor_init() {
 	// If not in the admin, return.
 	if ( ! is_admin() ) {
 			return;
@@ -139,4 +139,4 @@ function remove_editor_init() {
 		}
 	}
 }
-add_action( 'init', 'remove_editor_init' );
+add_action( 'init', 'evans_lake_remove_editor_init' );
