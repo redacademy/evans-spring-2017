@@ -155,7 +155,7 @@ function evans_lake_scripts() {
 		);
 	}
 
-	if (is_page_template('our-team.php')){
+	if (is_page('our-team')){
 		wp_enqueue_script(
 			'popup-bio',
 			get_template_directory_uri() . '/build/js/popup-bio.min.js',
