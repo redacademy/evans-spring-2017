@@ -26,7 +26,9 @@
 		?>
 
 		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
+		<div class="featured-image" style="background-image: url ('<?php the_post_thumbnail_url( ); ?>')">
+			<?php echo "Featured Image Div";?>
+		</div>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
 
