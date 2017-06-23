@@ -271,11 +271,11 @@ a {
 	.site-branding {
 		height: 50px;
 		margin-top: .5rem;
-		width: 130px;
+		width: 92px;
 		
 		.logo {
 			background:
-				url('../../assets/images/evans-lake-logo.png') no-repeat;
+				url('../../assets/images/evans-lake-logo-white.svg') no-repeat;
 			background-size: auto 50px;
 			height: 50px;
 		}
@@ -318,6 +318,10 @@ a {
 			color: #fff;
 			padding: .2rem 1.75rem;
 			cursor: pointer;
+
+			a:hover {
+				color: $color__blue;
+			}
 
 			span {
 				display: none;

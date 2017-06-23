@@ -91,4 +91,9 @@ box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none;
+
+	&:hover {
+		background-color: #ff8600;
+		box-shadow: none;
+	}
 }
