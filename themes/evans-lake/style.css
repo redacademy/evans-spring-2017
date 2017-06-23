@@ -348,7 +348,7 @@ hr {
   margin-bottom: 1.5rem; }
 
 ul, ol {
-  margin: 0 0 1.5rem 3rem; }
+  margin: 0 0 1.5rem 0; }
 
 ul {
   list-style: disc; }
@@ -769,6 +769,9 @@ a {
       height: 32px;
       width: 100%;
       z-index: 99999; }
+
+.carousel-title {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1401,18 +1404,21 @@ p {
     color: #fff;
     cursor: pointer;
     font-size: 3.5rem;
-    left: 43%;
+    left: 50%;
     padding: 0 .5rem;
     position: absolute;
-    top: 77%; }
+    top: 70%;
+    transform: translateX(-50%); }
     @media (min-width: 815px) {
       .home-hero .fa-angle-down {
-        left: 48%;
-        top: 95%; } }
+        left: 50%;
+        top: 92%;
+        transform: translateX(-50%); } }
 
 .site-description-section {
   box-shadow: 0 2px 35px rgba(0, 0, 0, 0.2);
   padding: 2rem 0;
+  margin-bottom: 2rem;
   position: relative; }
   @media (min-width: 815px) {
     .site-description-section {
@@ -1506,24 +1512,55 @@ p {
     border-radius: 0 0 15px 15px;
     padding: 1rem 2rem;
     text-align: center; }
+  .flickity-slider .carousel-cell .activities-thumbnail {
+    height: 225px; }
+  .flickity-slider .carousel-cell .activities-title {
+    color: #fff;
+    font-weight: normal;
+    line-height: 225px;
+    text-align: center;
+    vertical-align: middle; }
+
+.flickity-slider .carousel-cell.activities {
+  border-left: 1.5rem solid #fff;
+  border-right: 1.5rem solid #fff;
+  width: 100%; }
+  @media (min-width: 815px) {
+    .flickity-slider .carousel-cell.activities {
+      border: none;
+      margin-left: .4rem;
+      width: 24%; } }
 
 .main-carousel {
   margin-bottom: 2rem; }
   .main-carousel .flickity-prev-next-button {
     box-shadow: none;
     color: transparent; }
-  .main-carousel button.flickity-prev-next-button.previous {
-    left: -50px; }
-    @media (min-width: 815px) {
-      .main-carousel button.flickity-prev-next-button.previous {
-        display: none; } }
-  .main-carousel button.flickity-prev-next-button.next {
-    right: -50px; }
-    @media (min-width: 815px) {
-      .main-carousel button.flickity-prev-next-button.next {
-        display: none; } }
+  .main-carousel .flickity-prev-next-button.previous {
+    display: none; }
+  .main-carousel .flickity-prev-next-button.next {
+    display: none; }
   .main-carousel .flickity-page-dots {
     display: none; }
+
+.main-carousel.activities .flickity-prev-next-button .arrow {
+  fill: #1B5D97; }
+
+.main-carousel.activities .flickity-prev-next-button.previous {
+  background: transparent;
+  display: block;
+  left: -8px; }
+  @media (min-width: 815px) {
+    .main-carousel.activities .flickity-prev-next-button.previous {
+      left: -50px; } }
+
+.main-carousel.activities .flickity-prev-next-button.next {
+  background: transparent;
+  display: block;
+  right: -8px; }
+  @media (min-width: 815px) {
+    .main-carousel.activities .flickity-prev-next-button.next {
+      right: -50px; } }
 
 .single-container {
   margin: 2rem 0;

@@ -23,14 +23,16 @@
     color: #fff;
     cursor: pointer;
     font-size: 3.5rem;
-    left: 43%;
+    left: 50%;
     padding: 0 .5rem;
     position: absolute;
-    top: 77%;
+    top: 70%;
+    transform: translateX(-50%);
 
     @include desktop {
-      left: 48%;
-      top: 95%;
+      left: 50%;
+      top: 92%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -38,6 +40,7 @@
 .site-description-section {
   box-shadow: 0 2px 35px rgba(0, 0, 0, .2);
   padding: 2rem 0;
+  margin-bottom: 2rem;
   position: relative;
 
   @include desktop {
@@ -155,14 +158,38 @@
     .events-thumbnail {
       height: 250px;
     }
-
+    
     .events-post {
       background-color: #e1e1e1;
       border-radius: 0 0 15px 15px;
       padding: 1rem 2rem;
       text-align: center;
     }
+
+    .activities-thumbnail {
+      height: 225px;
+    }
+
+    .activities-title {
+      color: #fff;
+      font-weight: normal;
+      line-height: 225px;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
+
+   .carousel-cell.activities {
+     border-left: 1.5rem solid #fff;
+     border-right: 1.5rem solid #fff;
+     width: 100%;
+
+     @include desktop {
+      border: none;
+      margin-left: .4rem;
+      width: 24%;
+     }
+   }
 }
 
 // .blog {
@@ -180,23 +207,51 @@
     color: transparent;
   }
 
-  button.flickity-prev-next-button.previous {
-    left: -50px;
+  .flickity-prev-next-button.previous {
+    // left: -50px;
+    display: none;
 
-    @include desktop{
-      display: none;
-    }
+    // @include desktop{
+    //   display: none;
+    // }
   }
 
-  button.flickity-prev-next-button.next {
-    right: -50px;
+  .flickity-prev-next-button.next {
+    // right: -50px;
+    display: none;
 
-    @include desktop{
-      display: none;
-    }
+    // @include desktop{
+    //   display: none;
+    // }
   }
 
   .flickity-page-dots {
     display: none;
+  }
+}
+
+.main-carousel.activities {
+  .flickity-prev-next-button .arrow {
+    fill: $color__blue;
+  }
+
+  .flickity-prev-next-button.previous {
+    background: transparent;
+    display: block;
+    left: -8px;
+
+    @include desktop {
+      left: -50px;
+    }
+  }
+
+  .flickity-prev-next-button.next {
+    background: transparent;
+    display: block;
+    right: -8px;
+
+    @include desktop {
+      right: -50px;
+    }
   }
 }
