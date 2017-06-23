@@ -261,3 +261,21 @@
     }
   }
 }
+
+.view-all {
+  text-align: right;
+  padding: 0 1.5rem;
+  text-decoration: underline;
+
+  a:visited {
+    color: $color__blue;
+  }
+
+  a:hover {
+    color: $color__blue-light;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}

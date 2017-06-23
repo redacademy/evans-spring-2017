@@ -9,7 +9,7 @@
 
 <h1 class="carousel-title">Activities</h1>
 
-<a href="<?php echo esc_url( home_url('/venue-booking/activities/') ); ?>">View All</a>
+<div class="view-all container"><a href="<?php echo esc_url( home_url('/venue-booking/activities/') ); ?>">View All</a></div>
 <div class="main-carousel activities container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
   <?php
@@ -36,6 +36,8 @@
 </div>
 
 <h1 class="carousel-title">News & Events</h1>
+
+<div class="view-all container"><a href="<?php echo esc_url( home_url('/get-involved/news-and-events/') ); ?>">View All</a></div>
 <div class="main-carousel container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
   <?php $args = array( 'posts_per_page' => 3,); ?>

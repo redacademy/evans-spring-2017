@@ -1572,6 +1572,18 @@ p {
     .main-carousel.activities .flickity-page-dots {
       display: none; } }
 
+.view-all {
+  text-align: right;
+  padding: 0 1.5rem;
+  text-decoration: underline; }
+  .view-all a:visited {
+    color: #1B5D97; }
+  .view-all a:hover {
+    color: #429DCB; }
+  @media (min-width: 815px) {
+    .view-all {
+      padding: 0; } }
+
 .single-container {
   margin: 2rem 0;
   padding: 2rem; }
