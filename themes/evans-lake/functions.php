@@ -74,7 +74,6 @@ function evans_lake_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
 	}
-
 	return $stylesheet_uri;
 }
 add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
@@ -83,19 +82,9 @@ add_filter( 'stylesheet_uri', 'evans_lake_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function evans_lake_scripts() {
-	// Load Styles
+	// Enqueue always
 	wp_enqueue_style( 'evans-lake-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
-	wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/colorbox/colorbox.css' );
-	
-
-	// Load CDN Scripts
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
-	wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
-  wp_enqueue_script( 'jquery-ui', 'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js');
-
-	// Load Evans Lake Scripts without Dependencies
 	wp_enqueue_script( 
 		'evans-lake-skip-link-focus-fix',
 		get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js',
@@ -103,7 +92,6 @@ function evans_lake_scripts() {
 		'20130115',
 		true
 	);
-	// Load Evans Lake Scripts with Dependencies
 	wp_enqueue_script(
 		'evans-lake-toggle-menu',
 		get_template_directory_uri() . '/build/js/toggle-menu.min.js',
@@ -118,27 +106,69 @@ function evans_lake_scripts() {
 		false,
 		true
 	);
-	wp_enqueue_script(
+
+	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
+
+	// Enqueue Front Page Scripts
+	if (is_page_template('front-page.php')){
+		wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+		wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
+		wp_enqueue_script(
 		'evans-lake-arrow-scroll',
 		get_template_directory_uri() . '/build/js/arrow-scroll.min.js',
 		array('jquery'),
 		false,
 		true
 	);
-	wp_enqueue_script(
-		'toggle-faq',
-		get_template_directory_uri() . '/build/js/toggle-faq.min.js',
-		array('jquery'),
-		false,
-		true
-	);
-	wp_enqueue_script(
-		'popup-bio',
-		get_template_directory_uri() . '/build/js/popup-bio.min.js',
-		array('jquery'),
-		false,
-		true
-	);
+	}
+
+	// Enqueue Colorbox for photo galleries
+	if (is_page_template('page-templates/photo-gallery.php')){
+		wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/lib/colorbox.css' );
+		wp_enqueue_script(
+			'colorbox',
+			get_template_directory_uri() . '/build/js/jquery.colorbox.min.js',
+			array ('jquery'),
+			'',
+			true
+		);
+		wp_enqueue_script(
+			'themeslug-script',
+			get_template_directory_uri() . '/build/js/colorbox.min.js',
+			array ('colorbox'),
+			'',
+			true
+		);
+	}
+
+	// Enqueue Jquery UI on Accordion Pages
+	if (is_page_template( array( 'page-site-accommodation.php', 'page-templates/camp-programs.php', 'page-camp-faq.php', 'page-school-youth-groups.php', 'page-private-groups.php', 'page-weddings.php' ) ) ) {
+		wp_enqueue_script( 
+			'jquery-ui', 
+			'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+			array('jquery'));
+		wp_enqueue_script(
+			'toggle-accordion',
+			get_template_directory_uri() . '/build/js/toggle-accordion.min.js',
+			array('jquery'),
+			false,
+			true
+		);		
+	}
+
+	if (is_page_template('our-team')){
+		wp_enqueue_script(
+			'popup-bio',
+			get_template_directory_uri() . '/build/js/popup-bio.min.js',
+			array('jquery'),
+			false,
+			true
+		);
+	}
+
+if (is_page_template( array(
+		'page-templates/camp-programs.php',	'page-school-youth-groups.php', 'page-weddings.php'
+)))
 	wp_enqueue_script( 
 		'toggle-tabs',
 		get_template_directory_uri() . '/build/js/toggle-tabs.min.js',
@@ -146,25 +176,11 @@ function evans_lake_scripts() {
 		'20170620',
 		true
 	);
-	wp_enqueue_script(
-		'colorbox',
-		get_template_directory_uri() . '/build/js/jquery.colorbox.min.js',
-		array ('jquery'),
-		'',
-		true
-	);
-	wp_enqueue_script(
-		'themeslug-script',
-		get_template_directory_uri() . '/build/js/colorbox.min.js',
-		array ('colorbox'),
-		'',
-		true
-	);
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'evans_lake_scripts' );
 
