@@ -1690,6 +1690,10 @@ h3 {
   height: 20px;
   display: block; }
 
+.map-element h2 {
+  text-align: center;
+  display: inline-block; }
+
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.

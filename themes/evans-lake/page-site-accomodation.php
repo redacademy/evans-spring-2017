@@ -26,8 +26,6 @@ get_sidebar(); ?>
     
     <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'template-parts/content', 'page' ); ?>
-      <img src="<?php echo( get_template_directory_uri() . '/assets/images/map.png'); ?>"> 
-      <a href="<?php echo(get_template_directory_uri() . '/assets/images/SiteMap.png'); ?>">View Map <br> of<br>the site</a>
       <h2>Accomodations</h2>
       <?php echo CFS()->get('bcca_accreditation');?>
       <h2>Site FAQ</h2>
