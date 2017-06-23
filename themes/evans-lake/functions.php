@@ -127,7 +127,7 @@ function evans_lake_scripts() {
 		wp_enqueue_style( 'colorbox', get_template_directory_uri() . '/lib/colorbox.css' );
 		wp_enqueue_script(
 			'colorbox',
-			get_template_directory_uri() . '/build/js/jquery.colorbox.min.js',
+			get_template_directory_uri() . '/lib/jquery.colorbox.min.js',
 			array ('jquery'),
 			'',
 			true
@@ -156,7 +156,7 @@ function evans_lake_scripts() {
 		);		
 	}
 
-	if (is_page_template('our-team')){
+	if (is_page_template('our-team.php')){
 		wp_enqueue_script(
 			'popup-bio',
 			get_template_directory_uri() . '/build/js/popup-bio.min.js',
