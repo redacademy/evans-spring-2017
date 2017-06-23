@@ -110,7 +110,7 @@ function evans_lake_scripts() {
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
 
 	// Enqueue Front Page Scripts
-	if (is_page_template('front-page.php')){
+	if (is_page('front-page.php')){
 		wp_enqueue_style( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 		wp_enqueue_script( 'flickity-cdn', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js' );
 		wp_enqueue_script(
