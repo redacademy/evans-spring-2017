@@ -16,7 +16,7 @@
     }
   });
 
-    $('.content-area').click(function() {
+    $('.site-content').click(function() {
       if(document.documentElement.clientWidth < 815) {
 
         $('.mobile-search-expanded').hide();
