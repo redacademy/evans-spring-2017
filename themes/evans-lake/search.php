@@ -5,15 +5,27 @@
  * @package Evans_Lake_Theme
  */
 
-get_header(); ?>
+get_header();
+get_sidebar(); ?>
 
-	<section id="primary" class="content-area">
+	<img class="hero-search" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
+
+	<div id="primary" class="content-area container">
+
+	<div class="sub-navigation">
+		<?php wp_nav_menu( array( 
+			'theme_location' => 'primary', 
+			'menu_id' => 'primary-menu',
+			'submenu' => get_the_title($post->post_parent)
+		) ); ?>
+	</div>
+
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h3 class="search-title"><?php printf( esc_html( 'Showing results for: %s' ), '<span class="search-query">' . get_search_query() . '</span>' ); ?></h3>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -32,7 +44,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
