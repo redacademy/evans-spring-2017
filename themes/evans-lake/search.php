@@ -8,7 +8,9 @@
 get_header();
 get_sidebar(); ?>
 
-	<img class="hero-search" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
+	<div class="search-hero"></div>
+		<img class="hero-search" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
+	
 
 	<div id="primary" class="content-area container">
 
