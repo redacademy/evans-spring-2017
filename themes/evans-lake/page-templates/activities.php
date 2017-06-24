@@ -67,7 +67,7 @@ get_sidebar(); ?>
 			<!--Iteratively Display Daytime Activities-->
 		<h1 class="bot-brd-blu">Activities</h1>			
 		<?php foreach ($day_activities as $activity) : ?>
-			<div class="activity-container">
+			<div class="activity-container" id= "activity-<?php echo $activity->ID;?>">
 				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
 					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
 					</div>
