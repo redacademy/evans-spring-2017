@@ -320,6 +320,91 @@ h3 {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+/* Custom Elements */
+/* Generic Tab Syles
+see _page-our-camp.scss for an example of specifics */
+.tab-head-container {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #429DCB;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.tab-head {
+  border-right: 1px solid white;
+  color: white;
+  display: inline-block;
+  -ms-flex: 1 1 30%;
+      flex: 1 1 30%;
+  text-align: center;
+  padding: 1rem; }
+
+.tab-body-container {
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  position: relative; }
+
+.tab-body {
+  left: -1000rem;
+  margin: 0 auto;
+  max-width: 500px;
+  position: absolute;
+  width: 90%; }
+  .tab-body.selected {
+    left: 0;
+    position: relative; }
+
+.box-pop-out {
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
+
+.bot-brd-blu {
+  border-bottom: 1px solid #1B5D97; }
+
+.orange-button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #F56D00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none; }
+  .orange-button:hover {
+    background-color: #ff8600;
+    box-shadow: none; }
+
+h3 {
+  position: relative;
+  width: 100%; }
+
+.ui-icon.iconOpen {
+  background: url(../../assets/images/arrow-up.png) no-repeat;
+  background-size: 20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.ui-icon.iconClosed {
+  background: url(../../assets/images/arrow-down.png) no-repeat;
+  background-size: 20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.sd-sharing-enabled {
+  clear: both; }
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -376,28 +461,6 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
-
-.sd-sharing-enabled {
-  clear: both; }
-
-.box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
-
-.orange-button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: #F56D00;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none; }
-  .orange-button:hover {
-    background-color: #ff8600;
-    box-shadow: none; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -843,6 +906,7 @@ a {
   padding-top: 4rem;
   color: white;
   line-height: 1.4;
+  margin-top: 2rem;
   background-size: cover;
   padding: 2.5rem 2rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0, rgba(0, 0, 0, 0.25)), url("../../assets/images/footer-gradient.png");
@@ -932,6 +996,10 @@ h3 {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
+.map-element h2 {
+  text-align: center;
+  display: inline-block; }
+
 body {
   width: 100%; }
 
@@ -1261,52 +1329,20 @@ p {
           -ms-grid-row-align: center;
           align-self: center; } }
   .summer:hover {
-    background-color: #ff8600;
     box-shadow: none; }
 
-.tab-head-container {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background: #429DCB;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+.tab-head.teen-camp-13-16, .tab-head.leadership-14-16 {
+  border-right: none; }
 
-.tab-head {
-  border-right: 1px solid white;
-  color: white;
-  display: inline-block;
-  -ms-flex: 1 1 30%;
-      flex: 1 1 30%;
-  text-align: center;
-  padding: 1rem; }
-  .tab-head.teen-camp-13-16, .tab-head.leadership-14-16 {
-    border-right: none; }
-  .tab-head.oak-13-16, .tab-head.leadership-14-16 {
-    border-top: 1px solid white; }
-  .tab-head.selected {
-    background: #1B5D97; }
-  .tab-head:nth-child(n+4) {
-    -ms-flex: 1 1 40%;
-        flex: 1 1 40%; }
+.tab-head.oak-13-16, .tab-head.leadership-14-16 {
+  border-top: 1px solid white; }
 
-.tab-body-container {
-  margin-bottom: 3rem;
-  padding: 3rem 0;
-  position: relative; }
+.tab-head.selected {
+  background: #1B5D97; }
 
-.tab-body {
-  left: -1000rem;
-  margin: 0 auto;
-  max-width: 500px;
-  position: absolute;
-  width: 90%; }
-  .tab-body.selected {
-    left: 0;
-    position: relative; }
+.tab-head:nth-child(n+4) {
+  -ms-flex: 1 1 40%;
+      flex: 1 1 40%; }
 
 .table-header, .table-row, .table-footer {
   display: -ms-flexbox;
@@ -1368,9 +1404,6 @@ p {
   background-size: cover;
   background-position: center;
   width: 100%; }
-
-.bot-brd-blu {
-  border-bottom: 1px solid #1B5D97; }
 
 .intro-content {
   margin: 0 1rem; }
@@ -1680,32 +1713,6 @@ object {
 
 .gallery-caption {
   display: block; }
-
-h3 {
-  position: relative;
-  width: 100%; }
-
-.ui-icon.iconOpen {
-  background: url(../../assets/images/arrow-up.png) no-repeat;
-  background-size: 20px;
-  position: absolute;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  display: block; }
-
-.ui-icon.iconClosed {
-  background: url(../../assets/images/arrow-down.png) no-repeat;
-  background-size: 20px;
-  position: absolute;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  display: block; }
-
-.map-element h2 {
-  text-align: center;
-  display: inline-block; }
 
 /*
     Colorbox Core Style:
