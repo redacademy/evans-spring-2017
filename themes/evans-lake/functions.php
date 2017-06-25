@@ -165,6 +165,16 @@ function evans_lake_scripts() {
 		);
 	}
 
+	if (is_page('front-page')){
+		wp_enqueue_script(
+			'toggle-tabs-front',
+			get_template_directory_uri() . '/build/js/toggle-tabs-front.min.js',
+			array('jquery'),
+			false,
+			true
+		);
+	}
+
 if (is_page_template( array(
 		'page-templates/camp-programs.php',	'page-school-youth-groups.php', 'page-weddings.php'
 )))
