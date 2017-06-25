@@ -35,7 +35,6 @@ get_sidebar(); ?>
 					  <div><?php echo $FAQ['summer_faq_answer']; ?></div>
 					<?php endforeach; ?>
         </div>
-
 				
           <h2> Packing</h2>
 				<div class="accordion">	
@@ -43,7 +42,7 @@ get_sidebar(); ?>
 					$ARGs = CFS()->get('packing_faqs');
 					foreach ( $ARGs as $ARG) : ?>
 					<h3><?php echo $ARG['packing_faq_question']; ?></h3>
-					<div><?php echo $ARG['packing_faq_answer']; ?></div>
+					<div class="box-pop-out packing-faq-question"><?php echo $ARG['packing_faq_answer']; ?></div>
 					<?php endforeach; ?>
         </div>
 
