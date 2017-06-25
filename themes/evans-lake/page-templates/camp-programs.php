@@ -29,7 +29,9 @@ get_sidebar(); ?>
 
 	<main id="main" class="site-main" role="main">
 			<?php // Content Area right pane next to submenu ?>
-		<button class="orange-button reg-now">Register Now</button>
+		<a href="https://evanslake.campbrainregistration.com/"
+			<button class="orange-button reg-now">Register Now</button>
+		</a>
 
 		<?php evans_lake_breadcrumbs(); ?>
 
@@ -129,7 +131,9 @@ get_sidebar(); ?>
 			</div> <!--.season1.table-container-->
 		</div> <!--.season1-registration-table-->
 
-		<button class="orange-button reg-now">Register Now</button>
+		<a href="https://evanslake.campbrainregistration.com/"
+			<button class="orange-button reg-now">Register Now</button>
+		</a>
 
 		<h2 class="add-on header"><?php CFS()->get( 'add_text' ); ?></h2>
 		<div class="accordion">
