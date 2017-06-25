@@ -41,22 +41,18 @@ get_sidebar(); ?>
             <span class="position">Position</span>
             <span class="type">Type</span>
             <span class="work-period">Work Period</span>
-            <span class="closing-date">Closing Date</span>>						
+            <span class="closing-date">Closing Date</span>						
           </div>
 
           <?php foreach ($job_category['job_loop'] as $job) : ?>
             <div class="table-row <?php	if ($job['job_closed']) { echo "job-closed"; }; ?>">
               <?php if ( $job['job_pdf'] ) : ?>
-                <a href="<?php echo $job['job_pdf']; ?>">
-                  <span class="position">
+                <a class="position" href="<?php echo $job['job_pdf']; ?>">
                     <?php echo $job['job_position']; ?>
-                  </span>
                 </a>
               <?php elseif ( $job['job_link'] ) : ?>
-                <a href="<?php echo $job['job_link']; ?>">
-                  <span class="position">
-                    <?php echo $job['job_position']; ?>
-                  </span>
+                <a class="position" href="<?php echo $job['job_link']; ?>">
+                  <?php echo $job['job_position']; ?>
                 </a>
               <?php else : ?>
                 <span class="position">
@@ -79,6 +75,7 @@ get_sidebar(); ?>
               </span>						
             </div>
           <?php endforeach; ?>
+
         </div> <!--table container-->
       <?php endforeach; ?>       
     </div> <!--registration container-->
