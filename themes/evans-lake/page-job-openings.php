@@ -29,14 +29,14 @@ get_sidebar(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 		<?php endwhile; // End of the loop. ?>
-    <?php evans_lake_hero_image_update (); ?>
-		<div class="registration-table box-pop-out">
+
+
+		<div class="jobs-table">
       <?php 
       $all_job_categories = CFS()->get( 'job_main_loop', $post->ID );
-      print_r ($all_job_categories);
       foreach ($all_job_categories as $job_category) : ?>
         <h2><?php echo $job_category['job_main_title'];?></h2>
-        <div class="table-container">
+        <div class="table-container box-pop-out">
           <div class="table-header">
             <span class="position">Position</span>
             <span class="type">Type</span>
@@ -44,18 +44,25 @@ get_sidebar(); ?>
             <span class="closing-date">Closing Date</span>>						
           </div>
 
-          <?php foreach ($job_category as $job) : ?>
+          <?php foreach ($job_category['job_loop'] as $job) : ?>
             <div class="table-row <?php	if ($job['job_closed']) { echo "job-closed"; }; ?>">
-              <a href="<?php 
-                if ( $job['job_pdf'] ) {
-                  echo $job['job_pdf'];
-                } elseif ( $job['job_link'] ) {
-                  echo $job['job_link'];
-                } ?>">
+              <?php if ( $job['job_pdf'] ) : ?>
+                <a href="<?php echo $job['job_pdf']; ?>">
+                  <span class="position">
+                    <?php echo $job['job_position']; ?>
+                  </span>
+                </a>
+              <?php elseif ( $job['job_link'] ) : ?>
+                <a href="<?php echo $job['job_link']; ?>">
+                  <span class="position">
+                    <?php echo $job['job_position']; ?>
+                  </span>
+                </a>
+              <?php else : ?>
                 <span class="position">
                   <?php echo $job['job_position']; ?>
                 </span>
-              </a>
+              <?php endif; ?>
               <span class="type">
                 <?php echo $job['job_type']; ?>
               </span>
