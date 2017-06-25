@@ -110,12 +110,12 @@ get_sidebar(); ?>
 					<?php	if ( 
 							($reg_session['reg_summer_session'] && $season == "summer") ||
 							(!$reg_session['reg_summer_session'] && $season =="winter") ) : ?>
-						<div class="table-row">
+						<div class="table-row <?php if ($reg_session['reg_full']) {echo "reg-full";}?>">
 							<span class="camp-number"><?php echo $reg_session['reg_camp_no'];?></span>
 							<span class="date-range"><?php echo $reg_session['reg_date_range'];?></span>
 							<span class="length"><?php echo $reg_session['reg_length'];?></span>
 							<span class="camp-program"><?php echo $reg_session['reg_program'];?></span>
-							<span class="fee"><?php echo $reg_session['reg_fee'];?></span>						
+							<span class="fee"><?php if ($reg_session['reg_full']) {echo "Full";} else {echo $reg_session['reg_fee'];}?></span>						
 						</div>
 					<?php endif; ?>
 				<?php endforeach; ?>
