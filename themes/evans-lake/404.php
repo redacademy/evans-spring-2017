@@ -9,21 +9,27 @@
 
 get_header(); ?>
 
+	<div class="hero-gradient">
+		<h1 class="hero-title">404</h1>
+	</div>
+	<img class="hero-search" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
-				</header><!-- .page-header -->
-
+			<section class="error-404 not-found container">
 				<div class="page-content">
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
+					<header class="page-header">
+						<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
+					</header><!-- .page-header -->
 
-					<?php get_search_form(); ?>
+					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
+				</div><!-- .page-content -->
+					
+				<div class="widgetized-area">
 					<?php if ( evans_lake_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php echo esc_html( 'Most Used Categories' ); ?></h2>
@@ -45,8 +51,7 @@ get_header(); ?>
 						$archive_content = '<p>' . sprintf( esc_html( 'Try looking in the monthly archives. %1$s' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
-
-				</div><!-- .page-content -->
+				</div>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
