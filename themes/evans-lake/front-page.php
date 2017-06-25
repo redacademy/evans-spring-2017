@@ -30,6 +30,31 @@ get_header(); ?>
 			</div>
 		</section>
 
+
+
+		<!--<div class="tabbed-view-container box-pop-out">-->
+			<div class="tab-head-container container">
+				<?php $tabs = CFS()->get( 'tabs_loop' ); ?>
+				<?php foreach ( $tabs as $tab) : ?>
+
+				<?php $tab_index = str_replace(' ', '-', $tab['tab_title']); ?>
+					<div class="tab-head <?php echo $tab_index ;?>" id="<?php echo $tab_index ;?>">
+						<?php echo $tab['tab_title']; ?>
+					</div>
+				<?php endforeach; // End of the loop. ?>
+			</div> <!--.tab-head-container-->
+
+			<div class="tab-body-container container">
+				<?php foreach ($tabs as $tab) : ?>
+					<?php $tab_index = str_replace(' ', '-', $tab['tab_title']); ?>
+					<div class="tab-body <?php echo $tab_index ;?>" id="<?php echo $tab_index . "-body" ;?>">
+						<img class="tab-image" src="<?php echo $tab['tab_image']; ?>">
+						<?php echo $tab['tab_content']; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
+
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
