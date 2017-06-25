@@ -29,6 +29,8 @@ get_sidebar(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 		<?php endwhile; // End of the loop. ?>
+		
+    <?php evans_lake_hero_image_update (); ?>
 
 	</main><!-- #main -->
 

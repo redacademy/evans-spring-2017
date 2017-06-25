@@ -168,4 +168,3 @@ function evans_lake_hero_img_update (){
 	}
 		wp_add_inline_style( 'evans-lake-style', $hero_style );
 }
-add_action( 'wp_enqueue_scripts', 'evans_lake_hero_img_update' );

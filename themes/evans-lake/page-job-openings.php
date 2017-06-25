@@ -29,10 +29,12 @@ get_sidebar(); ?>
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 		<?php endwhile; // End of the loop. ?>
-
+    <?php evans_lake_hero_image_update (); ?>
 		<div class="registration-table box-pop-out">
-      <?php $all_job_categories = CFS()->get( 'job_main_loop' ); ?>
-      <?php foreach ($all_job_categories as $job_category) : ?>
+      <?php 
+      $all_job_categories = CFS()->get( 'job_main_loop', $post->ID );
+      print_r ($all_job_categories);
+      foreach ($all_job_categories as $job_category) : ?>
         <h2><?php echo $job_category['job_main_title'];?></h2>
         <div class="table-container">
           <div class="table-header">
@@ -42,7 +44,7 @@ get_sidebar(); ?>
             <span class="closing-date">Closing Date</span>>						
           </div>
 
-          <?php foreach ($job_category as $job) ?>
+          <?php foreach ($job_category as $job) : ?>
             <div class="table-row <?php	if ($job['job_closed']) { echo "job-closed"; }; ?>">
               <a href="<?php 
                 if ( $job['job_pdf'] ) {
@@ -51,18 +53,23 @@ get_sidebar(); ?>
                   echo $job['job_link'];
                 } ?>">
                 <span class="position">
-                  <?php $job['job_position']; ?>
+                  <?php echo $job['job_position']; ?>
                 </span>
               </a>
               <span class="type">
-                <?php $job['job_type']; ?>
+                <?php echo $job['job_type']; ?>
               </span>
               <span class="work-period">
-                <?php $job['job_period']; ?>
+                <?php echo $job['job_period']; ?>
               </span>
               <span class="closing-date">
-                <?php $job['job_closing']; ?>
-              </span>>						
+                <?php	
+                if ($job['job_closed']) { 
+                  echo "job-closed"; 
+                } else {
+                  echo $job['job_closing'];
+                }; ?>
+              </span>						
             </div>
           <?php endforeach; ?>
         </div> <!--table container-->
