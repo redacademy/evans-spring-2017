@@ -134,6 +134,13 @@ function evans_lake_scripts() {
 			false,
 			true
 		);
+		wp_enqueue_script(
+			'toggle-tabs-front',
+			get_template_directory_uri() . '/build/js/toggle-tabs-front.min.js',
+			array('jquery'),
+			false,
+			true
+		);
 	}
 
 	// Enqueue Colorbox for photo galleries
@@ -165,26 +172,15 @@ function evans_lake_scripts() {
 		);
 	}
 
-	if (is_page('front-page')){
-		wp_enqueue_script(
-			'toggle-tabs-front',
-			get_template_directory_uri() . '/build/js/toggle-tabs-front.min.js',
-			array('jquery'),
-			false,
+	if (is_page_template( array('page-templates/camp-programs.php',	'page-school-youth-groups.php', 'page-weddings.php'))) {
+		wp_enqueue_script( 
+			'toggle-tabs',
+			get_template_directory_uri() . '/build/js/toggle-tabs.min.js',
+			array ('jquery'),
+			'20170620',
 			true
 		);
 	}
-
-if (is_page_template( array(
-		'page-templates/camp-programs.php',	'page-school-youth-groups.php', 'page-weddings.php'
-)))
-	wp_enqueue_script( 
-		'toggle-tabs',
-		get_template_directory_uri() . '/build/js/toggle-tabs.min.js',
-		array ('jquery'),
-		'20170620',
-		true
-	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
