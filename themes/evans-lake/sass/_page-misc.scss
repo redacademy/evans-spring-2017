@@ -29,12 +29,13 @@
 // page-job-openings.php
 .jobs-table, .blog {
   h2 {
-    margin-bottom: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
   }
   .table-container {
     justify-content: space-between;
     margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   .table-header {
     padding-left: 0;
@@ -44,8 +45,7 @@
     text-align: center;
     width: 20%;
   }
-
-  .job-closed{
-    color: lightgrey;
-  }
+}
+.job-closed, .event-closed{
+  color: lightgrey;
 }

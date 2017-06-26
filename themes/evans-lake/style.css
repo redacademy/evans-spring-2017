@@ -1519,13 +1519,14 @@ p {
   margin-top: 1.5rem; }
 
 .jobs-table h2, .blog h2 {
-  margin-bottom: 0; }
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem; }
 
 .jobs-table .table-container, .blog .table-container {
   -ms-flex-pack: justify;
       justify-content: space-between;
   margin-bottom: 2rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem; }
 
 .jobs-table .table-header, .blog .table-header {
   padding-left: 0;
@@ -1535,7 +1536,7 @@ p {
   text-align: center;
   width: 20%; }
 
-.jobs-table .job-closed, .blog .job-closed {
+.job-closed, .event-closed {
   color: lightgrey; }
 
 .page-template .activity-hero {
