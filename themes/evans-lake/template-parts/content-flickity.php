@@ -40,16 +40,20 @@
 <div class="view-all container"><a href="<?php echo esc_url( home_url('/get-involved/news-and-events/') ); ?>">View All</a></div>
 <div class="main-carousel container" data-flickity='{ "cellAlign": "left", "contain": true }'>
 
-  <?php $args = array( 'posts_per_page' => 3,); ?>
+  <?php
+    $args = array(
+      'posts_per_page' => 3,
+      'order'=> 'ASC'
+    );
+  ?>
   <?php $posts = get_posts( $args ); ?>
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <div class="carousel-cell">
-      <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-      <div class="events-thumbnail" style="background-image: url('<?php echo $thumb['0'];?>'); background-size: cover; background-position: center;">
-      </div>
+      <div class="events-thumbnail"><?php the_post_thumbnail( 'full' ); ?></div>
       <a href="<?php the_permalink(); ?>">
         <div class="events-post">
           <h2 class="events-title"><?php the_title(); ?></h2>
+          <p class="events-date"><?php	echo CFS()->get( 'event_date' ); ?></p>
         </div>
       </a>
     </div>
