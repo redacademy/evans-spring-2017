@@ -11,7 +11,6 @@ get_header();
 get_sidebar(); ?>
 
 <div class="hero">
-<div class="hero">
 	<!--Background styled in extras.php/evans_lake_hero_image_update()-->
 	<div class="hero-image">
 	</div>

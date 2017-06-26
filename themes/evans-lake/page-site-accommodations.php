@@ -54,6 +54,7 @@ get_sidebar(); ?>
       <?php };?>
     </div>
 
+    <img class="site-bottom-banner" href="<?php echo CFS()->get( 'site_faq_photo' , 26 );?>">
 
   </main><!-- #main -->
 </div><!-- #primary -->
