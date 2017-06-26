@@ -27,7 +27,7 @@
 }
 
 // page-job-openings.php
-.jobs-table {
+.jobs-table, .blog {
   h2 {
     margin-bottom: 0;
   }
@@ -40,7 +40,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .position, .type, .work-period, .closing-date {
+  .position, .type, .work-period, .closing-date, .date, .event, .location {
     text-align: center;
     width: 20%;
   }

@@ -463,28 +463,6 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-.sd-sharing-enabled {
-  clear: both; }
-
-.box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
-
-.orange-button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: #F56D00;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none; }
-  .orange-button:hover {
-    background-color: #ff8600;
-    box-shadow: none; }
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -937,8 +915,12 @@ a {
   line-height: 1.4;
   margin-top: 2rem;
   background-size: cover;
-  padding: 2.5rem 2rem;
-  width: 100%; }
+  padding: 2.5rem 1rem 4rem;
+  width: 100%;
+  position: relative; }
+  @media (min-width: 815px) {
+    .site-footer {
+      padding: 2.5rem 1rem 1rem; } }
   .site-footer .footer {
     display: block; }
     @media (min-width: 815px) {
@@ -948,8 +930,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
         -ms-flex-align: start;
-            align-items: flex-start;
-        padding: 2.5rem 2rem; } }
+            align-items: flex-start; } }
   .site-footer h3 {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem;
@@ -1505,24 +1486,24 @@ p {
   margin-bottom: 0;
   margin-top: 1.5rem; }
 
-.jobs-table h2 {
+.jobs-table h2, .blog h2 {
   margin-bottom: 0; }
 
-.jobs-table .table-container {
+.jobs-table .table-container, .blog .table-container {
   -ms-flex-pack: justify;
       justify-content: space-between;
   margin-bottom: 2rem;
   padding-bottom: 2rem; }
 
-.jobs-table .table-header {
+.jobs-table .table-header, .blog .table-header {
   padding-left: 0;
   padding-right: 0; }
 
-.jobs-table .position, .jobs-table .type, .jobs-table .work-period, .jobs-table .closing-date {
+.jobs-table .position, .jobs-table .type, .jobs-table .work-period, .jobs-table .closing-date, .jobs-table .date, .jobs-table .event, .jobs-table .location, .blog .position, .blog .type, .blog .work-period, .blog .closing-date, .blog .date, .blog .event, .blog .location {
   text-align: center;
   width: 20%; }
 
-.jobs-table .job-closed {
+.jobs-table .job-closed, .blog .job-closed {
   color: lightgrey; }
 
 .page-template .activity-hero {
@@ -1846,6 +1827,10 @@ p {
 .single-container {
   margin: 2rem 0;
   padding: 2rem; }
+
+.blog .table-container {
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .search .site-main {
   padding: 0; }
