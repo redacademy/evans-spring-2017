@@ -463,6 +463,28 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.sd-sharing-enabled {
+  clear: both; }
+
+.box-pop-out {
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
+
+.orange-button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #F56D00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none; }
+  .orange-button:hover {
+    background-color: #ff8600;
+    box-shadow: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -907,8 +929,8 @@ a {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0, rgba(0, 0, 0, 0.25)), url("../../assets/images/footer-gradient.png");
-  background-position: center 20%;
+  background-image: url("../../assets/images/footer-desktop.png");
+  background-position: bottom;
   background-size: cover;
   color: white;
   font-family: "josefin_sans", sans-serif;
