@@ -31,7 +31,7 @@ get_header(); ?>
 		</section>
 
 		<div class="front-tab-head-container container">
-			<?php $tabs = CFS()->get( 'tabs_loop' ); ?>
+			<?php $tabs = CFS()->get( 'tabs' ); ?>
 			<?php foreach ( $tabs as $tab) : ?>
 
 			<?php $tab_index = str_replace(' ', '-', $tab['tab_title']); ?>
