@@ -15,6 +15,7 @@ see _page-our-camp.scss for an example of specifics */
 .tab-head {
   border-right: 1px solid white;
   color: white;
+  cursor: pointer;
   display: inline-block;
   flex: 1 1 30%;
   text-align: center;
@@ -85,14 +86,6 @@ h3 {
   height: 20px;
   display: block;  
 }
-
-// #accordion {
-//   h3::after {
-//   content: url(../../assets/images/arrow-down.png);
-//   position: absolute;
-//   right:0;
-//   }
-// }
 
 // Clearfixes
 .sd-sharing-enabled{
@@ -166,34 +159,3 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
-<<<<<<< HEAD
-=======
-
-// Clearfixes
-.sd-sharing-enabled{
-  clear: both;
-}
-
-// Custom Elements
-.box-pop-out {
-	box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
-}
-
-.orange-button {
-  align-self: flex-start;
-  background-color: $color__orange;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none;
-
-	&:hover {
-		background-color: #ff8600;
-		box-shadow: none;
-	}
-}
->>>>>>> Various minor fixes
