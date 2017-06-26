@@ -619,11 +619,13 @@ a {
     height: 100%;
     background-color: #fff;
     color: #429DCB;
-    padding: 1rem 0;
+    padding: 1rem 1rem 1rem 2.5rem;
     width: 85vw;
     position: fixed;
     right: 0;
     top: 0; }
+    .menu-toggle .mobile-menu-toggle .menu-item {
+      padding: .5rem 0; }
   .menu-toggle .mobile-menu-toggle .menu, .menu-toggle .sub-menu {
     display: initial;
     text-align: left;
@@ -731,9 +733,10 @@ a {
       margin: 1.25rem;
       padding-bottom: 1.25rem; }
       .site-header .menu .menu-item .sub-menu .menu-item {
-        padding-bottom: 0.5rem; }
-        .site-header .menu .menu-item .sub-menu .menu-item:first-child {
-          padding-top: .5rem; }
+        padding: 0;
+        margin-bottom: .5rem; }
+      .site-header .menu .menu-item .sub-menu .menu-item:last-child {
+        margin-bottom: 1.25rem; }
       .site-header .menu .menu-item a, .site-header .menu .menu-item a:visited {
         color: #429DCB; }
         @media (min-width: 815px) {
@@ -755,7 +758,8 @@ a {
     color: #429DCB; }
     @media (min-width: 815px) {
       .site-header .sub-menu .menu-item a, .site-header .sub-menu .menu-item a:visited {
-        color: #1B5D97; } }
+        color: #1B5D97;
+        line-height: 1.5rem; } }
   .site-header .sub-menu .menu-item a:hover {
     color: #F56D00; }
   .site-header .search-form fieldset {
@@ -1580,7 +1584,7 @@ p {
   @media (min-width: 815px) {
     .site-description-section {
       box-shadow: none;
-      height: 85vh;
+      height: 82vh;
       padding: 0; } }
 
 .description-image {
@@ -1789,7 +1793,8 @@ p {
   @media (min-width: 815px) {
     .front-tab-body-container {
       padding: 2rem 0;
-      border-radius: 0 0 15px 15px; } }
+      border-radius: 0 0 15px 15px;
+      margin-bottom: 4.5rem; } }
 
 .front-tab-body {
   left: -1000rem;
@@ -2086,6 +2091,36 @@ object {
 .gallery-caption {
   display: block; }
 
+<<<<<<< HEAD
+=======
+h3 {
+  position: relative;
+  width: 100%; }
+
+.ui-icon.iconOpen {
+  background: url(../../assets/images/arrow-up.png) no-repeat;
+  background-size: 20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.ui-icon.iconClosed {
+  background: url(../../assets/images/arrow-down.png) no-repeat;
+  background-size: 20px;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.map-element h2 {
+  text-align: center;
+  display: inline-block; }
+
+>>>>>>> Remove Orientation Packages and Waivers menu item overflow
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
