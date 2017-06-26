@@ -119,6 +119,13 @@ function evans_lake_scripts() {
 		false,
 		true
 	);		
+	wp_enqueue_script(
+		'wedding-js',
+		get_template_directory_uri() . '/build/js/toggle-wedding.min.js',
+		array('jquery'),
+		false,
+		true
+	);	
 
 	// Enqueue Font Awesome for menu icons always
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/affc2627e0.js', array(),'4.7.0');
