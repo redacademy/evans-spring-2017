@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 
     // Tabs
     $( function() {
-      $( "#tabs" ).tabs();
+      $( '#tabs' ).tabs();
     } );
 
 }); 

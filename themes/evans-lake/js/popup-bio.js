@@ -2,7 +2,7 @@
 
   $('.orange-button').on('click', function(event){
     event.preventDefault();
-    var bioId = "#" + event.target.id + "-bio"; 
+    var bioId = '#' + event.target.id + '-bio'; 
     var $bio = $('.bio');
 
     $('body').append('<div class="overlay"></div>');

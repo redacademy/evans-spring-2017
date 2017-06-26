@@ -1,6 +1,6 @@
 (function($){
 
-  if ($('body').hasClass ("page-template-camp-programs")) {
+  if ($('body').hasClass ('page-template-camp-programs')) {
     // Set Default Tab
     $('.youth-camp-8-12').addClass('selected');
     
@@ -8,8 +8,8 @@
     $('.tab-head').on('click', function(event){
       event.preventDefault();
       // Reduce number of jQuery queries using variables
-      var tabHeadId = "#" + event.target.id,
-          tabBodyId = "#" + event.target.id + "-body",
+      var tabHeadId = '#' + event.target.id,
+          tabBodyId = '#' + event.target.id + '-body',
           $tabBodies = $('.tab-body'),
           $tabHeads = $('.tab-head');
 
