@@ -3,31 +3,54 @@
 --------------------------------------------------------------*/
 
 .site-footer {
-  width: 100%; // height: 500px;
-  // background: url('../../assets/images/footer-gradient.png') center 20% no-repeat;
-  padding-top: 4rem;
-  color: white;
-  line-height: 1.4;
-  margin-top: 2rem;
-  background-size: cover;
-  padding: 2.5rem 2rem;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 0, rgba(0, 0, 0, .25)), url('../../assets/images/footer-gradient.png');
   background-position: center 20%;
+  background-size: cover;
+  color: white;
+  font-family: $font__heading;
+  line-height: 1.4;
+<<<<<<< HEAD
+  margin-top: 2rem;
+  background-size: cover;
+=======
+>>>>>>> Change footer markup and style
+  padding: 2.5rem 2rem;
+  width: 100%;
+
+  .footer {
+    display: block;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
   h3 {
+    font-family: $font__heading;
+    font-size: 1.2rem;
     text-align: left;
   }
 }
 
 .contact-us {
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    justify-content: space-around;
+  }
+
   ul {
     display: inline-block;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
-     :first-of-type {
-      margin-right: 1rem;
-    }
   }
+  
   a {
     color: #fff;
   }
@@ -36,65 +59,103 @@
 .get-notified-email {
   #your-email {
     width: 100%;
-    margin: 1rem 0;
+    margin-bottom: .5rem;
   }
+
+  input[type=email] {
+    border: none;
+    border-radius: 15px;
+    padding-left: 15px;
+    height: 40px;
+    box-shadow: inset 0 0 10px #e1e1e1;
+  }
+
   input[type=radio] {
-    margin-right: .5rem;
+    float: left;
+    margin-bottom: 3rem;
+    margin-right: .75rem;
+    padding-top: 1rem;
+    height: 30px;
   }
 }
 
 .get-notified-email {
   .get-notified-button {
     background: #f56d00;
-    border-radius: 1.2rem;
-    color: #fff;
-    padding: .5rem 1.75rem;
-    cursor: pointer;
-    text-shadow: none;
-    box-shadow: none;
     border: none;
+    border-radius: 1.2rem;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
     float: right;
+    font-family: $font__heading;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    padding: .5rem 1.75rem;
+    text-shadow: none;
   }
-  h3 {
-    margin-bottom: 0;
+  p {
+    font-size: .9rem;
+    line-height: 1.1rem;
+    margin-bottom: .5rem;
   }
 }
 
 .social-media {
+  h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
   ul {
     list-style: none;
+    padding: 0;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
   }
   li {
     display: inline-block;
-    padding: 0 .2rem;
+    margin-bottom: .4rem;
+    margin-right: .4rem;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 815px) {
   .social-media {
     display: inline-block;
-    width: 30%;
+    flex: 0 1 18%;
     ul {
       margin: 0;
       padding: 0;
     }
   }
   .contact-us {
-    display: inline-block;
-    width: 30%;
+    flex: 0 1 42%;
+    display: flex;
+    justify-content: space-around;
     height: 200px;
+    margin-right: 1rem;
   }
   hr {
     display: none;
   }
   .get-notified-email {
+    flex: 0 1 35%;
     display: inline-block;
     border-left: 1px solid #fff;
-    padding-left: 2rem;
-    width: 30%;
+    padding-left: 3rem;
   }
 }
 
 h3 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin: 0 0 .5rem;
   text-align: left;
 }
