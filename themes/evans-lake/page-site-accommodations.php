@@ -48,7 +48,7 @@ get_sidebar(); ?>
       <?php 
       $acc_loop = CFS()->get('acc_loop');
       foreach ($acc_loop as $acc) { ?>
-        <div class="img" style="background-image: url('<?php echo $acc['acc_img'];?>');"></div>
+        <img class="site-img" src="<?php echo $acc['acc_img'];?>">
         <h2 class="title"><?php echo $acc['acc_title'];?></h2>
         <div class="content"><?php echo $acc['acc_content'];?></div>
       <?php };?>
