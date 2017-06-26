@@ -38,17 +38,32 @@ get_sidebar(); ?>
 		 <div class="tabbed-view-container">
        <div class="tab-head-container">
 				  <?php 
+          $menu_item = 0;
+
           $menu_courses = CFS()->get('menu_loop');
-          foreach ( $menu_courses as $menu_course) : ?>
-            <div class="tab-head">
-						<h3><?php echo $menu_course['menu_tab_head']; ?></h3>
+          foreach ( $menu_courses as $menu_course) : 
+          $menu_item += 1;
+          
+          ?>
+            <div class="tab-head menu-item-<?php echo $menu_item; ?>" id="menu-item-<?php echo $menu_item; ?>">
+						<?php echo $menu_course['menu_tab_head']; ?>
 					  </div>
-          <?php endforeach; // End of the loop. ?>
+          <?php 
+          
+          endforeach; // End of the loop. ?>
        </div> <!--.tab-head-container-->
 				
 			 <div class="tab-body-container">
-         <?php foreach ( $menu_contents as $menu_content) : ?>
-        <div class="tab-body"><?php echo $menu_course['menu_body']; ?>
+         <?php 
+         $menu_body_container = 0;
+         $menu_contents = CFS()->get('menu_loop');
+         foreach ( $menu_contents as $menu_content) : 
+         $menu_body_container +=1;
+         ?>
+        
+        <div class="tab-body menu-item-<?php echo $menu_body_container; ?>" 
+             id="menu-item-<?php echo $menu_body_container . "-body"; ?>">
+          <?php echo $menu_content['menu_tab_body']; ?>
         </div> 
          <?php endforeach; // End of the loop. ?>
       </div><!--.tab-body-container-->

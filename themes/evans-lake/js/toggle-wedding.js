@@ -1,15 +1,15 @@
-(function($){
-
-  if ($('body').hasClass ('page-template-camp-programs')) {
+jQuery(document).ready(function($) {
+  if ($('body').hasClass ("page-id-38")) {
     // Set Default Tab
-    $('.youth-camp-8-12').addClass('selected');
-      
+    $('.menu-item-1').addClass('selected');
+  
     // Add Event Handler to all Tabs
     $('.tab-head').on('click', function(event){
       event.preventDefault();
+      console.log('click');
       // Reduce number of jQuery queries using variables
-      var tabHeadId = '#' + event.target.id,
-          tabBodyId = '#' + event.target.id + '-body',
+      var tabHeadId = "#" + event.target.id,
+          tabBodyId = "#" + event.target.id + "-body",
           $tabBodies = $('.tab-body'),
           $tabHeads = $('.tab-head');
 
@@ -23,6 +23,4 @@
     });
   }
 
-})(jQuery);
- 
-
+}); 
