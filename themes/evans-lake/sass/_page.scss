@@ -7,7 +7,7 @@ named after the specific page to avoid merge conflicts. */
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
 
-.page, .blog {
+.page, .blog, .search, .error404 {
 
   .breadcrumbs {
     font-family: $font__heading;
@@ -122,8 +122,6 @@ named after the specific page to avoid merge conflicts. */
   
   .hero-title {
     display: none;
-    line-height: 5rem;
-    text-align: center;
 
     @include desktop {
       color: $color__background-body;
@@ -131,7 +129,9 @@ named after the specific page to avoid merge conflicts. */
       font-size: 4rem;
       left: 50%;
       letter-spacing: .3rem;
+      line-height: 5rem;
       position: absolute;
+      text-align: center;
       top: 40%;
       transform: translate(-50%, -50%);
       z-index: 2;

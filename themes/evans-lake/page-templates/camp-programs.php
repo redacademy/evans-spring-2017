@@ -76,8 +76,8 @@ get_sidebar(); ?>
 					<div class="tab-body accordion <?php echo $program->post_name ;?>" id="<?php echo $program->ID . "-body"; ?>">
 						<?php	$program_contents = CFS()->get( 'text_block', $program->ID ); ?>
 						<?php	foreach ($program_contents as $program_content) : ?>		
-								<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
-								<span class="tab-body-content"><?php echo $program_content['cprog_content']; ?></span>
+							<h2 class="tab-body-title"><?php echo $program_content['cprog_title']; ?></h2>
+							<span class="tab-body-content"><?php echo $program_content['cprog_content']; ?></span>
 						<?php endforeach; // End program_contents loop. ?>
 					</div>
 				<?php endforeach; // End camp_programs loop. ?>		
