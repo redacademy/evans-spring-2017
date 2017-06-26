@@ -166,7 +166,7 @@ function evans_lake_hero_image_update (){
 		$hero_style = ".home-hero {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: center, center}";
 	}	elseif (is_home()){
 		$thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
-		$hero_style = ".hero-image {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: center, center}";
+		$hero_style = ".hero-image {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: bottom, bottom}";
 	} else {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 		$hero_style = ".hero-image {background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('" . $thumb['0'] . "'); background-size: cover,cover; background-position: center, center}";
