@@ -2120,7 +2120,25 @@ h3 {
   text-align: center;
   display: inline-block; }
 
+<<<<<<< HEAD
 >>>>>>> Remove Orientation Packages and Waivers menu item overflow
+=======
+.orange-button {
+  margin: 1rem;
+  display: inline-block; }
+
+.wedding-title h2 {
+  margin-top: 1rem; }
+
+.fact-sheet {
+  margin-bottom: 2rem; }
+  .fact-sheet a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-left: 2rem; }
+
+>>>>>>> Modify the wedding page
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
