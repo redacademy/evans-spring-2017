@@ -29,20 +29,20 @@ get_sidebar(); ?>
 				<?php the_title(); ?>
 				<div class="accordion">
 					<?php 
-					$FAQs = CFS()->get('summer_faqs');
-					foreach ( $FAQs as $FAQ) : ?>
-					  <h3><?php echo $FAQ['summer_faq_question']; ?></h3>
-					  <div><?php echo $FAQ['summer_faq_answer']; ?></div>
+					$faqs = CFS()->get('summer_faqs');
+					foreach ( $faqs as $faq) : ?>
+					  <h3><?php echo $faq['summer_faq_question']; ?></h3>
+					  <div><?php echo $faq['summer_faq_answer']; ?></div>
 					<?php endforeach; ?>
         </div>
 				
-          <h2> Packing</h2>
+				<h2> Packing</h2>
 				<div class="accordion">	
 					<?php 
-					$ARGs = CFS()->get('packing_faqs');
-					foreach ( $ARGs as $ARG) : ?>
-					<h3><?php echo $ARG['packing_faq_question']; ?></h3>
-					<div class="box-pop-out packing-faq-question"><?php echo $ARG['packing_faq_answer']; ?></div>
+					$args = CFS()->get('packing_faqs');
+					foreach ( $args as $arg) : ?>
+						<h3><?php echo $arg['packing_faq_question']; ?></h3>
+						<div class="box-pop-out packing-faq-question"><?php echo $arg['packing_faq_answer']; ?></div>
 					<?php endforeach; ?>
         </div>
 
