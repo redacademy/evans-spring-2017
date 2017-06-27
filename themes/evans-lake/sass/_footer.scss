@@ -1,18 +1,23 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-// body {
-//   background-image: url('../../assets/images/footer-desktop.png');
-//   background-position: bottom;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-// }
+body {
+  background-image: url('../../assets/images/footer-gradient.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include desktop {
+    background-image: url('../../assets/images/footer-desktop.png');
+    background-position: bottom;
+  }
+}
 
 
 .site-footer {
-  background-image: url('../../assets/images/footer-desktop.png');
-  background-position: bottom;
-  background-size: cover;
+  // background-image: url('../../assets/images/footer-desktop.png');
+  // background-position: bottom;
+  // background-size: cover;
   color: white;
   font-family: $font__heading;
   line-height: 1.4;
