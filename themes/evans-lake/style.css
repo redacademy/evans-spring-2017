@@ -360,7 +360,8 @@ see _page-our-camp.scss for an example of specifics */
     position: relative; }
 
 .box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
+  border-radius: 1rem; }
 
 .bot-brd-blu {
   border-bottom: 1px solid #1B5D97; }

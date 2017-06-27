@@ -14,13 +14,6 @@ get_sidebar(); ?>
 	</div>
 </div>
 <div id="primary" class="content-area container">
-	<div class="sub-navigation">
-		<?php wp_nav_menu( array( 
-			'theme_location' => 'primary', 
-			'menu_id' => 'primary-menu',
-			'submenu' => get_the_title($post->post_parent)
-		) ); ?>
-	</div>
 
 	<main id="main" class="site-main" role="main">
 
@@ -36,7 +29,7 @@ get_sidebar(); ?>
     $offices = CFS()->get('contact_offices'); ?>
 
     <div class="accordion closed">
-      <h2>Get Directions</h2>
+      <h2 class="bot-brd-blu">Get Directions</h2>
       <div class="directions">
         <?php echo $directions; ?>
       </div>
