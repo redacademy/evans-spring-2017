@@ -219,11 +219,7 @@
 }
 
 .main-carousel {
-  margin-bottom: 4rem;
-
-  @include desktop {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 
   .flickity-prev-next-button {
     box-shadow: none;
@@ -320,6 +316,8 @@
 
   .flickity-page-dots {
     display: block;
+    position: initial;
+    margin-top: 1.5rem;
 
     @include desktop {
       display: none;

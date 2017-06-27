@@ -1856,10 +1856,7 @@ p {
       width: 24%; } }
 
 .main-carousel {
-  margin-bottom: 4rem; }
-  @media (min-width: 815px) {
-    .main-carousel {
-      margin-bottom: 3rem; } }
+  margin-bottom: 3rem; }
   .main-carousel .flickity-prev-next-button {
     box-shadow: none;
     color: transparent; }
@@ -1924,7 +1921,9 @@ p {
         left: 20%; } }
 
 .main-carousel.activities .flickity-page-dots {
-  display: block; }
+  display: block;
+  position: initial;
+  margin-top: 1.5rem; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-page-dots {
       display: none; } }
