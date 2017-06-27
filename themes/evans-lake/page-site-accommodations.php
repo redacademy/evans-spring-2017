@@ -29,20 +29,9 @@ get_sidebar(); ?>
       <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
     <?php endwhile; // End of the loop. ?>
-    <div class="bcca box-pop-out">
-      <h2>BCCA Accreditation</h2>
-      <?php echo CFS()->get('bcca_accreditation');?>
-    </div>
-    
-    <h2>Site FAQ</h2>
-    <div class="accordion">
-      <?php 
-      $FAQs = CFS()->get('site_faqs');
-      foreach ( $FAQs as $FAQ) : ?>
-      <h3><?php echo $FAQ['site_faq_question']; ?></h3>
-      <div><?php echo $FAQ['site_faq_answer']; ?></div>
-      <?php endforeach; ?>
-    </div>
+   
+    <h2> Accommodations </h2>
+    <?php echo CFS()->get('accommodation');?>
 
     <div class="accommodations">
       <?php 
@@ -52,6 +41,21 @@ get_sidebar(); ?>
         <h2 class="title"><?php echo $acc['acc_title'];?></h2>
         <div class="content"><?php echo $acc['acc_content'];?></div>
       <?php };?>
+    </div>
+
+     <div class="bcca box-pop-out">
+      <h2>BCCA Accreditation</h2>
+      <?php echo CFS()->get('bcca_accreditation');?>
+    </div>
+
+    <h2>Site FAQ</h2>
+    <div class="accordion">
+      <?php 
+      $FAQs = CFS()->get('site_faqs');
+      foreach ( $FAQs as $FAQ) : ?>
+      <h3><?php echo $FAQ['site_faq_question']; ?></h3>
+      <div><?php echo $FAQ['site_faq_answer']; ?></div>
+      <?php endforeach; ?>
     </div>
 
     <img class="site-bottom-banner" href="<?php echo CFS()->get( 'site_faq_photo' , 26 );?>">
