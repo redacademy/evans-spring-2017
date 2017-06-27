@@ -1750,6 +1750,8 @@ p {
   text-transform: uppercase; }
 
 .flickity-slider .carousel-cell {
+  border-left: 1.5rem solid #fff;
+  border-right: 1.5rem solid #fff;
   -ms-flex: 0 1 32%;
       flex: 0 1 32%;
   margin-left: 7px;
@@ -1758,6 +1760,7 @@ p {
   width: 100%; }
   @media (min-width: 815px) {
     .flickity-slider .carousel-cell {
+      border: none;
       width: 32%; } }
   .flickity-slider .carousel-cell h2, .flickity-slider .carousel-cell p {
     margin: 0; }
@@ -1766,15 +1769,21 @@ p {
   .flickity-slider .carousel-cell a:hover {
     color: #429DCB; }
   .flickity-slider .carousel-cell .events-thumbnail {
+    height: 200px;
     object-fit: cover;
-    width: 100%;
-    height: 250px; }
+    width: 100%; }
+    @media (min-width: 815px) {
+      .flickity-slider .carousel-cell .events-thumbnail {
+        height: 250px; } }
   .flickity-slider .carousel-cell .events-post {
     background-color: #fff;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0;
     box-shadow: 0 8px 15px 0 rgba(122, 122, 122, 0.1);
     padding: 1rem 2rem;
     text-align: center; }
+    @media (min-width: 815px) {
+      .flickity-slider .carousel-cell .events-post {
+        border-radius: 0 0 15px 15px; } }
   .flickity-slider .carousel-cell .events-date {
     color: #429DCB;
     font-family: "josefin_sans", sans-serif;
@@ -1805,10 +1814,34 @@ p {
   .main-carousel .flickity-prev-next-button {
     box-shadow: none;
     color: transparent; }
+    .main-carousel .flickity-prev-next-button .arrow {
+      fill: #1B5D97; }
   .main-carousel .flickity-prev-next-button.previous {
-    display: none; }
+    background: transparent;
+    display: block;
+    left: 0;
+    top: 45%; }
+    @media (min-width: 815px) {
+      .main-carousel .flickity-prev-next-button.previous {
+        left: -50px; } }
+    .main-carousel .flickity-prev-next-button.previous svg {
+      left: 3%; }
+      @media (min-width: 815px) {
+        .main-carousel .flickity-prev-next-button.previous svg {
+          left: 20%; } }
   .main-carousel .flickity-prev-next-button.next {
-    display: none; }
+    background: transparent;
+    display: block;
+    right: 0;
+    top: 45%; }
+    @media (min-width: 815px) {
+      .main-carousel .flickity-prev-next-button.next {
+        right: -50px; } }
+    .main-carousel .flickity-prev-next-button.next svg {
+      left: 37%; }
+      @media (min-width: 815px) {
+        .main-carousel .flickity-prev-next-button.next svg {
+          left: 20%; } }
   .main-carousel .flickity-page-dots {
     display: none; }
 
@@ -1846,6 +1879,11 @@ p {
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-page-dots {
       display: none; } }
+  .main-carousel.activities .flickity-page-dots .dot {
+    background: #1B5D97;
+    opacity: 1; }
+  .main-carousel.activities .flickity-page-dots .is-selected {
+    background: #F56D00; }
 
 .view-all {
   text-align: right;
