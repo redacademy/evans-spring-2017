@@ -54,12 +54,30 @@
   font-weight: bold;
 }
 .detail-content {
-
+  font-size: 1.1rem;
+}
+.offices {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.office:first-child {
+  margin-right: 1rem;
+}
+.page-id-70{
+  div.accordion {
+    margin-top: 2rem;
+  }
+  h2.accordion {
+    margin-bottom: 0rem;
+  }
+  .box-pop-out{
+    padding: 1rem;
+  }
 }
 
 // page-job-openings.php
   //jobs and contact-us h2
-.jobs, .page-id-70 {
+.jobs {
   h2 {
     margin: 0.5rem 0
   }

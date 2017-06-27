@@ -1605,7 +1605,27 @@ p {
   color: #1B5D97;
   font-weight: bold; }
 
-.jobs h2, .page-id-70 h2 {
+.detail-content {
+  font-size: 1.1rem; }
+
+.offices {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem; }
+
+.office:first-child {
+  margin-right: 1rem; }
+
+.page-id-70 div.accordion {
+  margin-top: 2rem; }
+
+.page-id-70 h2.accordion {
+  margin-bottom: 0rem; }
+
+.page-id-70 .box-pop-out {
+  padding: 1rem; }
+
+.jobs h2 {
   margin: 0.5rem 0; }
 
 .blog h2 {

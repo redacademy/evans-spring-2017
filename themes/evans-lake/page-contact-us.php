@@ -44,7 +44,7 @@ get_sidebar(); ?>
 
     <div class="offices">
       <?php foreach ($offices as $office) : ?>
-        <div class="office">
+        <div class="office box-pop-out">
           <h2 class="office-title"><?php echo $office['office_title'];?></h2>
           <?php foreach ($office['office_details'] as $detail) : ?>
             <span class="line-end">
@@ -56,7 +56,7 @@ get_sidebar(); ?>
       <?php endforeach; ?>
     </div>
 
-    <div class="contact-form">
+    <div class="contact-form box-pop-out">
       <?php echo $form; ?>
     </div>
 
