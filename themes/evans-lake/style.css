@@ -1525,6 +1525,74 @@ p {
   .summer:hover {
     box-shadow: none; }
 
+h3 {
+  position: relative;
+  width: 100%; }
+
+.ui-icon.iconOpen {
+  background: url(../../assets/images/arrow-up.png) no-repeat;
+  background-size: 20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.ui-icon.iconClosed {
+  background: url(../../assets/images/arrow-down.png) no-repeat;
+  background-size: 20px;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: block; }
+
+.map-element h2 {
+  text-align: center;
+  display: inline-block; }
+
+.orange-button {
+  margin: 1rem;
+  display: inline-block; }
+
+.fact-sheet {
+  margin-bottom: 2rem; }
+  .fact-sheet a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-left: 2rem; }
+
+.tab-body.selected {
+  left: 0;
+  position: relative; }
+
+.page-id-38 .accordion h2 {
+  border-bottom: 1px solid #1B5D97; }
+
+.entry-content h2 {
+  padding-top: 1rem; }
+
+.caption-course {
+  margin-bottom: .5rem; }
+
+.custom-menu-option {
+  margin-top: 2rem; }
+
+.custom-menu-photo {
+  width: 720px;
+  height: 180px; }
+
+.page-id-55 .accordion h3 {
+  border-bottom: 1px solid #666;
+  margin: 1rem;
+  padding-top: 1rem;
+  position: relative; }
+
+.page-id-55 .ui-accordion-header {
+  padding-bottom: .5rem; }
+
 .tab-head.teen-camp-13-16, .tab-head.leadership-14-16 {
   border-right: none; }
 
@@ -2536,73 +2604,3 @@ h2 {
     .donors .donor-textarea h3 {
       color: #000;
       margin: 0; }
-
-h3 {
-  position: relative;
-  width: 100%; }
-
-.ui-icon.iconOpen {
-  background: url(../../assets/images/arrow-up.png) no-repeat;
-  background-size: 20px;
-  position: absolute;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  display: block; }
-
-.ui-icon.iconClosed {
-  background: url(../../assets/images/arrow-down.png) no-repeat;
-  background-size: 20px;
-  background-position: center;
-  position: absolute;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  display: block; }
-
-.map-element h2 {
-  text-align: center;
-  display: inline-block; }
-
-.orange-button {
-  margin: 1rem;
-  display: inline-block; }
-
-.fact-sheet {
-  margin-bottom: 2rem; }
-  .fact-sheet a {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1rem;
-    margin-left: 2rem; }
-
-.tab-body.selected {
-  left: 0;
-  position: relative; }
-
-.page-id-38 .accordion h2 {
-  border-bottom: 1px solid #1B5D97; }
-
-.entry-content h2 {
-  padding-top: 1rem; }
-
-.caption-course {
-  margin-bottom: .5rem; }
-
-.custom-menu-option {
-  margin-top: 2rem; }
-
-.custom-menu-photo {
-  width: 720px;
-  height: 180px; }
-
-.accordion {
-  position: relative; }
-
-.page-id-55 .accordion h3 {
-  border-bottom: 1px solid #666;
-  margin: 1rem;
-  padding-top: 1rem; }
-
-.page-id-55 .ui-accordion-header {
-  padding-bottom: .5rem; }
