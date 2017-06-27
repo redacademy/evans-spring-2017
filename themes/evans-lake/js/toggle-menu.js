@@ -29,12 +29,12 @@
     }
   })
 
-  $( function() {
-    var icons={
+  $(function() {
+    var icons = {
       header: 'iconClosed',
       activeHeader: 'iconOpen'
     };
-    $( '.mobile-menu-toggle .menu' ).accordion({
+    $('.mobile-menu-toggle .menu').accordion({
       active: false,
       collapsible: true,
       heightStyle: 'content',

@@ -293,6 +293,10 @@ a {
 		font-size: 1.2rem;
 
 		.menu-item {
+			.ui-icon.iconClosed, .ui-icon.iconOpen {
+					background-position-x: 100%;
+					width: 100%;
+				}
 
 			@include desktop {
 				margin: 1.25rem;
@@ -361,7 +365,7 @@ a {
 				background: $color__orange;
 				border-radius: 1.2rem;
 				color: #fff;
-				padding: .2rem 1.75rem;
+				padding: .2rem 4rem;
 
 				@include desktop {
 					background: transparent;
@@ -382,6 +386,7 @@ a {
 	.sub-menu {
 		.menu-item a, .menu-item a:visited {
 			color: $color__blue-light;
+			padding-left: 1rem;
 			
 			@include desktop {
 				color: $color__blue;
@@ -510,7 +515,7 @@ a {
 	}
 
 	a {
-		padding-left: 1rem;
+		padding: 1rem 1rem 1rem 2rem;
 
 		@include desktop {
 			padding-left: 0;
@@ -525,6 +530,6 @@ a {
 	width: 100%;
 
 	a {
-		padding-left: 1rem;
+		padding-left: 2rem;
 	}
 }

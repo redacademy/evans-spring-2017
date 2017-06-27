@@ -463,6 +463,28 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.sd-sharing-enabled {
+  clear: both; }
+
+.box-pop-out {
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
+
+.orange-button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #F56D00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+  color: #fff;
+  font-size: .9rem;
+  margin-top: .5rem;
+  padding: .4rem 1.75rem .5rem;
+  text-shadow: none; }
+  .orange-button:hover {
+    background-color: #ff8600;
+    box-shadow: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -733,6 +755,9 @@ a {
     display: flex;
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem; }
+    .site-header .menu .menu-item .ui-icon.iconClosed, .site-header .menu .menu-item .ui-icon.iconOpen {
+      background-position-x: 100%;
+      width: 100%; }
     @media (min-width: 815px) {
       .site-header .menu .menu-item {
         margin: 1.25rem;
@@ -782,7 +807,7 @@ a {
         background: #F56D00;
         border-radius: 1.2rem;
         color: #fff;
-        padding: .2rem 1.75rem; }
+        padding: .2rem 4rem; }
         @media (min-width: 815px) {
           .site-header .menu > .menu-item:last-child a {
             background: transparent;
@@ -792,7 +817,8 @@ a {
       .site-header .menu > .menu-item:last-child span {
         display: none; }
   .site-header .sub-menu .menu-item a, .site-header .sub-menu .menu-item a:visited {
-    color: #429DCB; }
+    color: #429DCB;
+    padding-left: 1rem; }
     @media (min-width: 815px) {
       .site-header .sub-menu .menu-item a, .site-header .sub-menu .menu-item a:visited {
         color: #1B5D97;
@@ -888,7 +914,7 @@ a {
     .menu-item {
       padding: .5rem 0; } }
   .menu-item a {
-    padding-left: 1rem; }
+    padding: 1rem 1rem 1rem 2rem; }
     @media (min-width: 815px) {
       .menu-item a {
         padding-left: 0; } }
@@ -899,7 +925,7 @@ a {
   padding: 1rem 0 0;
   width: 100%; }
   .menu-item-selected a {
-    padding-left: 1rem; }
+    padding-left: 2rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
