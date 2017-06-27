@@ -405,13 +405,29 @@ h3 {
   display: block; }
 
 .contact-form {
-  background: white; }
+  background: white;
+  padding: 1.5rem; }
+
+@media (min-width: 815px) {
+  .contact-left {
+    margin-right: 1rem;
+    width: 50%; } }
+
+.contact-right {
+  padding-top: 4rem; }
 
 .wpcf7-form {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
   .wpcf7-form label {
     color: #1B5D97; }
+
+@media (min-width: 815px) {
+  .wpcf7-form {
+    -ms-flex-direction: row;
+        flex-direction: row; } }
 
 .sd-sharing-enabled {
   clear: both; }
@@ -1629,10 +1645,19 @@ p {
 .offices {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 815px) {
+    .offices {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+
+.office {
   margin-bottom: 2rem; }
 
-.office:first-child {
-  margin-right: 1rem; }
+@media (min-width: 815px) {
+  .office:first-child {
+    margin-right: 1rem; } }
 
 .page-id-70 div.accordion {
   margin-top: 2rem; }

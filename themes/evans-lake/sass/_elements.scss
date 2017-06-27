@@ -91,13 +91,30 @@ h3 {
 // Contact Form
 .contact-form {
   background: white;
+  padding: 1.5rem;
+}
+.contact-left {
+  @include desktop {
+    margin-right: 1rem;
+    width: 50%;
+  }
+}
+.contact-right {
+  padding-top: 4rem;
 }
 .wpcf7-form {
   display: flex;
+  flex-direction: column;
   label {
     color: $color__blue;
   }
 }
+.wpcf7-form{
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
 
 // Clearfixes
 .sd-sharing-enabled{
