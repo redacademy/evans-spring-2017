@@ -1779,18 +1779,28 @@ p {
 .main-carousel.activities .flickity-prev-next-button.previous {
   background: transparent;
   display: block;
-  left: -8px; }
+  left: 0; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.previous {
       left: -50px; } }
+  .main-carousel.activities .flickity-prev-next-button.previous svg {
+    left: 3%; }
+    @media (min-width: 815px) {
+      .main-carousel.activities .flickity-prev-next-button.previous svg {
+        left: 20%; } }
 
 .main-carousel.activities .flickity-prev-next-button.next {
   background: transparent;
   display: block;
-  right: -8px; }
+  right: 0; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.next {
       right: -50px; } }
+  .main-carousel.activities .flickity-prev-next-button.next svg {
+    left: 37%; }
+    @media (min-width: 815px) {
+      .main-carousel.activities .flickity-prev-next-button.next svg {
+        left: 20%; } }
 
 .main-carousel.activities .flickity-page-dots {
   display: block; }

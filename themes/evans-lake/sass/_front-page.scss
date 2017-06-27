@@ -249,20 +249,36 @@
   .flickity-prev-next-button.previous {
     background: transparent;
     display: block;
-    left: -8px;
+    left: 0;
 
     @include desktop {
       left: -50px;
+    }
+
+    svg {
+      left: 3%;
+
+      @include desktop {
+        left: 20%;
+      }
     }
   }
 
   .flickity-prev-next-button.next {
     background: transparent;
     display: block;
-    right: -8px;
+    right: 0;
 
     @include desktop {
       right: -50px;
+    }
+
+    svg {
+      left: 37%;
+
+      @include desktop {
+        left: 20%;
+      }
     }
   }
 
