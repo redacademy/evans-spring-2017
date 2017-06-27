@@ -1,12 +1,14 @@
 // page-camp-faq.php
-.packing-faq-question{
+.packing-faq-question {
   padding: 1.5rem;
 }
 
 // page-orientation-packages.php
-.opw-program.title, .cancel.header{
+.opw-program.title,
+.cancel.header {
   margin: 2rem 0 0 0;
 }
+
 .cancel.container {
   margin: 0 0 5rem 0;
 }
@@ -20,7 +22,8 @@
   margin-bottom: 2rem;
   height: 150px;
 }
-.banner-title{
+
+.banner-title {
   align-self: center;
   margin-bottom: 0;
   color: white;
@@ -31,10 +34,12 @@
   margin-bottom: 2rem;
   padding: 1.5rem;
 }
+
 .site-img {
   width: 250px;
 }
-.page-id-13{
+
+.page-id-13 {
   h2 {
     margin-bottom: 0;
     margin-top: 1.5rem;
@@ -42,17 +47,20 @@
 }
 
 // page-contact-us.php
-.subtext{
+.subtext {
   color: $color__border-abbr;
   font-size: 0.9rem;
 }
-.line-end{
+
+.line-end {
   display: block;
 }
+
 .detail-name {
   color: $color__blue;
   font-weight: bold;
 }
+
 .offices {
   display: flex;
   flex-direction: column;
@@ -60,16 +68,19 @@
     flex-direction: row;
   }
 }
+
 .office {
   margin-bottom: 2rem;
   padding: 1.5rem;
 }
+
 .office:first-child {
   @include desktop {
     margin-right: 1rem;
   }
 }
-.page-id-70{
+
+.page-id-70 {
   div.accordion {
     margin-top: 2rem;
   }
@@ -84,13 +95,16 @@
     margin: 0.5rem 0
   }
 }
+
 .blog {
   h2 {
     font-size: 2rem;
     margin: 1rem 0;
   }
 }
-.jobs-table, .blog {
+
+.jobs-table,
+.blog {
   .table-container {
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -100,11 +114,19 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .position, .type, .work-period, .closing-date, .date, .event, .location {
+  .position,
+  .type,
+  .work-period,
+  .closing-date,
+  .date,
+  .event,
+  .location {
     text-align: center;
     width: 20%;
   }
 }
-.job-closed, .event-closed{
+
+.job-closed,
+.event-closed {
   color: lightgrey;
 }

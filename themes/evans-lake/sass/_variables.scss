@@ -1,40 +1,38 @@
 // Structure
-
 $base__space-unit: 1.5rem;
-
 // Colors
-
 $color__green: #276f28;
 $color__green-light: #69AA5D;
 $color__orange: #F56D00;
 $color__blue: #1B5D97;
 $color__blue-light: #429DCB;
-
 $color__background-body: #fff;
 $color__text-main: #4A4A4A;
-
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
-
 $color__background-hr: #ccc;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
-
 $color__link: royalblue;
 $color__link-visited: purple;
 $color__link-hover: midnightblue;
-
 // Typography
-
-$font__main: 'lato', sans-serif;
-$font__heading: 'josefin_sans', sans-serif;
-$font__slogan: 'selima', serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__main: 'lato',
+sans-serif;
+$font__heading: 'josefin_sans',
+sans-serif;
+$font__slogan: 'selima',
+serif;
+$font__code: Monaco,
+Consolas,
+"Andale Mono",
+"DejaVu Sans Mono",
+monospace;
+$font__pre: "Courier 10 Pitch",
+Courier,
+monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
-
 // Desktop
-
 $desktop__width: 815px;

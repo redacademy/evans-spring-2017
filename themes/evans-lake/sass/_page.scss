@@ -2,13 +2,23 @@
 All special formatting should be moved to a specific .scss partial
 named after the specific page to avoid merge conflicts. */
 
+
 /*All heading styles are in _headings.scss*/
+
+
 /*All navigation styles are in _navigation.scss*/
+
+
 /*All sidebar styles are in _sidebar.scss*/
+
+
 /*All footer styles are in _footer.scss*/
 
-.page, .blog, .single, .search, .error404 {
-
+.page,
+.blog,
+.single,
+.search,
+.error404 {
   .breadcrumbs {
     font-family: $font__heading;
     font-size: .9rem;
@@ -16,113 +26,91 @@ named after the specific page to avoid merge conflicts. */
     margin: 0;
     padding: 0;
     overflow: hidden;
-
     a {
       color: #9B9B9B;
       text-decoration: none;
     }
-
     li {
       color: #9B9B9B;
       display: inline-block;
       vertical-align: middle;
       margin-right: .5rem;
     }
-
     .separator {
       font-size: 1rem;
       color: #9B9B9B;
     }
   }
-
   .content-area {
     display: flex;
   }
-
   .sub-navigation {
     display: none;
     padding-left: 1rem;
     padding-right: 1rem;
-
     @include desktop {
       display: initial;
       flex: 0 1 23%;
     }
-
     .menu {
       font-family: $font__heading;
       font-size: 1.2rem;
       margin: 0;
       padding: 0;
       list-style: none;
-
       li {
         margin-bottom: .75rem;
       }
-
       a {
         color: $color__text-main;
         text-decoration: none;
       }
-
       a:visited {
         color: $color__text-main;
       }
-
       a:hover {
         color: $color__blue-light;
       }
     }
   }
-
   .site-main {
     width: 100%;
     padding: 0 1rem;
-
     @include desktop {
       padding: 0;
     }
-
     .entry-title {
       font-size: 1.3rem;
       margin-top: 0.5rem;
-
       @include desktop {
         font-size: 2rem;
         letter-spacing: .1rem;
       }
     }
-
     @include desktop {
       flex: 0 1 75%;
       margin: 0 auto;
     }
   }
-
   .hero {
     height: 30vh;
     margin-bottom: 1rem;
     overflow: hidden;
     position: static;
     width: 100vw;
-
     @include desktop {
       height: 80vh;
       margin-bottom: 2rem;
     }
-
     .hero-image {
       height: 30vh;
-
       @include desktop {
         height: 80vh;
       }
     }
   }
-  
   .hero-title {
     display: none;
-
     @include desktop {
       color: $color__background-body;
       display: initial;
@@ -137,7 +125,6 @@ named after the specific page to avoid merge conflicts. */
       z-index: 2;
     }
   }
-
   .menu-evans-lake-menu-container {
     position: relative;
   }

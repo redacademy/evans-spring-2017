@@ -2,14 +2,15 @@
 # Content
 --------------------------------------------------------------*/
 
+
 /* Posts and pages */
 
 // Site & Accommodation styling
 .map-element {
-  h2 {
-    text-align: center;
-    display: inline-block;
-  }
+	h2 {
+		text-align: center;
+		display: inline-block;
+	}
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 	margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -49,6 +50,7 @@ body {
 	margin: 0 0 $base__space-unit;
 }
 
+
 /* Asides */
 
 .blog .format-aside .entry-title,
@@ -56,11 +58,13 @@ body {
 	display: none;
 }
 
+
 /* Comments */
 
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 	display: block;
 }

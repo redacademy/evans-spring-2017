@@ -1,45 +1,55 @@
 // Camp Program Selection Tab Implementation
-
 .tab-head {
-  &.teen-camp-13-16, &.leadership-14-16{
+  &.teen-camp-13-16,
+  &.leadership-14-16 {
     border-right: none;
   }
-  &.oak-13-16, &.leadership-14-16{
+  &.oak-13-16,
+  &.leadership-14-16 {
     border-top: 1px solid white;
   }
   &.selected {
     background: $color__blue;
   }
-  &:nth-child(n+4){
+  &:nth-child(n+4) {
     flex: 1 1 40%;
   }
 }
 
 // Seasonal Registration Tables
-  // Flex Table Layout
-.table-header, .table-row, .table-footer {
+// Flex Table Layout
+.table-header,
+.table-row,
+.table-footer {
   display: flex;
   justify-content: space-around;
 }
-.camp-number, .length, .fee{
+
+.camp-number,
+.length,
+.fee {
   text-align: center;
   width: 2rem;
 }
-.date-range{
+
+.date-range {
   text-align: center;
   width: 8rem;
 }
-.camp-program{
+
+.camp-program {
   min-width: 8rem;
   text-align: center;
   width: 20rem;
 }
 
 // Seasonal Tables Formatting
-.table-header, .table-footer{
+.table-header,
+.table-footer {
   background: $color__blue-light;
   color: white;
 }
+
 .table-header {
   margin-bottom: 2rem;
   padding: 2rem 0.5rem 0.5rem 0.5rem;
@@ -49,9 +59,11 @@
   color: #7A7A7A;
   margin-bottom: 0.5rem;
 }
-.table-row.reg-full{
+
+.table-row.reg-full {
   color: lightgrey;
 }
+
 .table-footer {
   justify-content: center;
   i {
@@ -59,7 +71,7 @@
   }
   padding: 1rem;
   margin: 2rem 0;
-  .table-2 &{
+  .table-2 & {
     margin-bottom: 5rem;
   }
 }
@@ -68,12 +80,15 @@
 .cancel.accordion {
   position: relative;
 }
-.cancel.container{
+
+.cancel.container {
   margin-top: 2rem;
 }
+
 .cancel.block {
   padding-bottom: 1rem;
 }
+
 .cancel.condition {
   font-weight: bold;
 }

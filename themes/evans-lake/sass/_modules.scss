@@ -2,14 +2,15 @@
 # Accessibility
 --------------------------------------------------------------*/
 
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-
 	&:focus {
 		background-color: $color__background-screen;
 		border-radius: 3px;
@@ -26,9 +27,11 @@
 		text-decoration: none;
 		top: 5px;
 		width: auto;
-		z-index: 100000; /* Above WP toolbar. */
+		z-index: 100000;
+		/* Above WP toolbar. */
 	}
 }
+
 
 /*--------------------------------------------------------------
 # Alignments
@@ -50,6 +53,7 @@
 	clear: both;
 	@include center-block;
 }
+
 
 /*--------------------------------------------------------------
 # Clearings

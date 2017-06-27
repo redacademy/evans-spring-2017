@@ -30,7 +30,6 @@ p {
     z-index: 999;
     overflow: auto;
     max-height: 90%;
-
     .fa-times {
       color: $color__text-main;
       width: 21px;
@@ -41,76 +40,65 @@ p {
       cursor: pointer;
       display: block;
     }
-
     .image {
       float: left;
     }
-
-    .name, .role {
+    .name,
+    .role {
       margin-bottom: 1rem;
     }
-
     p {
       clear: both;
     }
   }
-
   .image {
     background-position: center;
     background-size: cover;
     height: 135px;
     margin-bottom: .5rem;
     width: 135px;
-
     @include desktop {
       height: 150px;
       width: 150px;
     }
   }
-
   &.fulltime {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $color__blue;
     margin-bottom: 2rem;
-
     .content {
       padding-bottom: 1rem;
     }
-
     .role {
       margin-top: 0;
     }
-
-    .name, .role {
+    .name,
+    .role {
       display: block;
       font-size: 1.4rem;
       margin: 0;
       text-transform: uppercase;
     }
-
     .email {
       display: block;
       color: $color__blue-light;
     }
-
-    .tel-1, .tel-2, .year-started {
+    .tel-1,
+    .tel-2,
+    .year-started {
       display: block;
     }
   }
-
   &.fulltime:last-child {
     border: none;
     margin-bottom: 0;
   }
-
   &.summer {
     width: 135px;
-
     @include desktop {
       width: 150px;
     }
-
     .name {
       display: block;
     }
@@ -119,18 +107,15 @@ p {
 
 @include desktop {
   .staff-member {
-    
     &.fulltime {
       flex-direction: row;
-    
       .image {
         margin: 0 2rem 2rem 0;
       }
-    
-      .name, .role {
+      .name,
+      .role {
         display: inline-block;
       }
-    
       .role {
         text-transform: initial;
       }
@@ -141,21 +126,20 @@ p {
 .executive {
   line-height: 1.5rem;
   margin-bottom: 1rem;
-
   &:last-child {
     border-bottom: 1px solid $color__blue;
     padding-bottom: .5rem;
   }
-
-  .executive-columns .name, .staff-member .name {
+  .executive-columns .name,
+  .staff-member .name {
     width: 30%;
   }
-
-  .executive-columns .role, .staff-member .role {
+  .executive-columns .role,
+  .staff-member .role {
     width: 40%;
   }
-
-  .executive-columns .email, .staff-member .email {
+  .executive-columns .email,
+  .staff-member .email {
     width: 30%;
   }
 }
@@ -169,25 +153,25 @@ p {
   border-bottom: 1px solid $color__blue;
 }
 
-.executive-columns, .executive.staff-member {
+.executive-columns,
+.executive.staff-member {
   display: flex;
   justify-content: space-between;
 }
 
-.executive-columns h3, .executive.staff-member span {
+.executive-columns h3,
+.executive.staff-member span {
   color: $color__blue;
   display: inline-block;
   text-align: left;
-}    
+}
 
 .director.staff-container {
   color: $color__blue;
   display: inline-block;
-
   p {
     line-height: 2.5rem;
   }
-
   p {
     margin: 0;
   }
@@ -198,7 +182,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-
   &.summer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -210,11 +193,9 @@ p {
   box-shadow: 0 10px 35px rgba(0, 0, 0, .1);
   margin-bottom: 3rem;
   padding: 2rem;
-
   h2 {
     margin: 0 0 .5rem;
   }
-
   h3 {
     margin: 0;
   }
@@ -222,24 +203,19 @@ p {
 
 .summer {
   margin-bottom: 2rem;
-
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
   }
-
   h2 {
     margin: 0;
   }
-
   .role {
     font-style: italic;
   }
-  
   @include desktop {
     align-self: center;
   }
-
   &:hover {
     // background-color: #ff8600;
     box-shadow: none;

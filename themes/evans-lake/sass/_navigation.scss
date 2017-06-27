@@ -2,12 +2,12 @@
 # Navigation
 --------------------------------------------------------------*/
 
+
 /* Links */
 
 a {
 	color: $color__blue;
 	text-decoration: none;
-
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -25,6 +25,7 @@ a {
 	}
 }
 
+
 /* Menus */
 
 .main-navigation {
@@ -33,13 +34,11 @@ a {
 	display: flex;
 	justify-content: space-between;
 	max-width: 100%;
-
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
 		ul {
 			background-color: rgba(255, 255, 255, 0.9);
 			border-radius: 15px;
@@ -48,73 +47,60 @@ a {
 			top: 2.5rem;
 			left: -999rem;
 			z-index: 99999;
-
 			ul {
 				left: -999rem;
 				top: 0;
 			}
-
 			&::before {
 				content: "";
 				width: 0;
 				height: 0;
 				position: absolute;
 				border-left: .5rem solid transparent;
-				border-right: .5rem solid transparent;	
+				border-right: .5rem solid transparent;
 				border-bottom: 1rem solid rgba(255, 255, 255, 0.9);
 				top: -1rem;
 				left: 1.5rem;
 			}
-
 			li {
-				&:hover > ul,
-				&.focus > ul {
+				&:hover>ul,
+				&.focus>ul {
 					left: 100%;
 				}
 			}
-
 			a {
 				color: $color__blue;
 				line-height: 0;
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
+			:hover>a,
+			.focus>a {}
 			a:hover,
-			a.focus {
-			}
+			a.focus {}
 		}
-
-		li:hover > ul,
-		li.focus > ul {
+		li:hover>ul,
+		li.focus>ul {
 			left: auto;
 		}
 	}
-
 	li {
 		float: left;
 		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
+		&:hover>a,
+		&.focus>a {}
 	}
-	
 	a {
 		display: block;
 		text-decoration: none;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+	.current_page_item>a,
+	.current-menu-item>a,
+	.current_page_ancestor>a {}
 }
 
+
 /* Small menu. */
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -133,12 +119,10 @@ a {
 	padding: 0;
 	text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
 	z-index: 999;
-
 	&:hover {
 		border-color: none;
 		box-shadow: none;
 	}
-
 	.mobile-menu-toggle {
 		height: 100%;
 		background-color: #fff;
@@ -148,22 +132,18 @@ a {
 		position: fixed;
 		right: 0;
 		top: 0;
-
-		
 	}
-
-	.mobile-menu-toggle .menu, .sub-menu {
+	.mobile-menu-toggle .menu,
+	.sub-menu {
 		display: initial;
 		text-align: left;
 		margin: 0;
 		padding: 0;
 		list-style: none;
-
 		li {
 			margin: 0;
 			text-shadow: none;
 			width: 85vw;
-
 			@include desktop {
 				margin: 0;
 				text-shadow: none;
@@ -171,7 +151,6 @@ a {
 			}
 		}
 	}
-
 	.mobile-menu-toggle .sub-menu {
 		li {
 			left: 0;
@@ -190,23 +169,20 @@ a {
 	}
 	.main-navigation ul {
 		display: block;
-	}	
+	}
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 $base__space-unit;
 		overflow: hidden;
 	}
-
 	.nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	.nav-next {
 		float: right;
 		text-align: right;
@@ -214,13 +190,11 @@ a {
 	}
 }
 
-
 .site-header {
 	margin-bottom: 2rem;
 	position: absolute;
 	width: 100%;
 	z-index: 999;
-
 	.mobile-menu {
 		align-items: center;
 		display: flex;
@@ -228,178 +202,147 @@ a {
 		height: 50px;
 		background-color: rgba(153, 153, 153, 0.3);
 		padding: .4rem .9rem;
-
 		.mobile-logo {
 			font-family: $font__heading;
 			font-size: 1.1rem;
 			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-
 			a:visited {
 				color: #fff;
 			}
 		}
-
 		.fa-search {
 			font-size: 1.3rem;
 			text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
 		}
-
 		@include desktop {
 			display: none;
 		}
 	}
-
 	.desktop-menu {
 		display: none;
-
 		@include desktop {
 			display: flex;
 			justify-content: space-between;
 			line-height: 1.5rem;
 			margin: 0 auto;
 			width: 100%;
-
 			.search-bar .fa-search {
 				cursor: pointer;
 				font-size: 1.3rem;
 				margin: 1.25rem 0 1.25rem .5rem;
-    		padding: .15rem .45rem 1.1rem 0;
-    		// padding-top: .15rem;
+				padding: .15rem .45rem 1.1rem 0; // padding-top: .15rem;
 			}
-
 			.search-field {
 				display: none;
 			}
 		}
 	}
-
 	.site-branding {
 		height: 50px;
 		margin-top: .5rem;
 		width: 92px;
-		
 		.logo {
-			background:
-				url('../../assets/images/evans-lake-logo-white.svg') no-repeat;
+			background: url('../../assets/images/evans-lake-logo-white.svg') no-repeat;
 			background-size: auto 50px;
 			height: 50px;
 		}
 	}
-
 	.menu {
 		align-items: baseline;
 		display: flex;
 		font-family: $font__heading;
 		font-size: 1.2rem;
-
 		.menu-item {
-			.ui-icon.iconClosed, .ui-icon.iconOpen {
-					background-position-x: 100%;
-					width: 100%;
-				}
-
+			.ui-icon.iconClosed,
+			.ui-icon.iconOpen {
+				background-position-x: 100%;
+				width: 100%;
+			}
 			@include desktop {
 				margin: 1.25rem;
 				padding-left: 0;
 				padding-bottom: 1.25rem;
 				padding-top: 0;
 			}
-
 			.sub-menu .menu-item {
 				padding: 1rem;
-
 				@include desktop {
 					padding: 0;
 					margin-bottom: .5rem;
 				}
 			}
-
 			.menu-item:first-child {
 				margin-top: 1rem;
-
 				@include desktop {
 					margin-bottom: 0;
 				}
 			}
-
 			.menu-item:last-child {
 				margin-bottom: 0;
-
 				@include desktop {
 					margin-bottom: 1.25rem;
 				}
 			}
-
-			a, a:visited {
+			a,
+			a:visited {
 				color: $color__blue-light;
-			
 				@include desktop {
 					color: #fff;
 				}
 			}
-
 			a:hover {
 				color: $color__orange;
 			}
 		}
-
-		> .menu-item:last-child {
-				background: $color__blue;
+		>.menu-item:last-child {
+			background: $color__blue;
+			color: #fff;
+			padding: 1.5rem 1.75rem;
+			cursor: pointer;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			@include desktop {
+				background: $color__orange;
+				border-radius: 1.2rem;
 				color: #fff;
-				padding: 1.5rem 1.75rem;
-				cursor: pointer;
-				position: fixed;
+				padding: .2rem 1.75rem;
+				position: initial;
 				bottom: 0;
-				right: 0;
-
-				@include desktop {
-					background: $color__orange;
-					border-radius: 1.2rem;
-					color: #fff;
-					padding: .2rem 1.75rem;
-					position: initial;
-					bottom: 0;
-				}
-			
+			}
 			a {
 				background: $color__orange;
 				border-radius: 1.2rem;
 				color: #fff;
 				padding: .2rem 4rem;
-
 				@include desktop {
 					background: transparent;
 					padding: 0;
 				}
 			}
-
 			a:hover {
 				color: $color__blue;
 			}
-
 			span {
 				display: none;
 			}
 		}
 	}
-
 	.sub-menu {
-		.menu-item a, .menu-item a:visited {
+		.menu-item a,
+		.menu-item a:visited {
 			color: $color__blue-light;
 			padding-left: 1rem;
-			
 			@include desktop {
 				color: $color__blue;
 				line-height: 1.5rem;
 				padding-left: 0;
 			}
 		}
-
 		.menu-item a:hover {
 			color: $color__orange;
 		}
 	}
-
 	.search-form {
 		fieldset {
 			border: none;
@@ -424,7 +367,6 @@ a {
 	display: none;
 	height: 50px;
 	padding: .4rem .9rem;
-
 	.fa-search {
 		background-color: #fff;
 		border-radius: 10px 0 0 10px;
@@ -437,20 +379,16 @@ a {
 		z-index: 1;
 		padding: .55rem .45rem;
 	}
-
 	.search-form {
 		position: relative;
 		left: 1.5rem;
 		width: 98%;
-
 		input[type=search] {
 			padding-left: 15px;
 		}
-
 		input:focus {
 			outline-width: 0;
 		}
-
 		.search-field {
 			border: none;
 			border-radius: 0 10px 10px 0;
@@ -469,7 +407,6 @@ a {
 	width: 80%;
 	justify-content: flex-end;
 	background-color: #fff;
-
 	.fa-search {
 		border-radius: 0 10px 10px 0;
 		border-left: 1px solid #b4b4b4;
@@ -479,20 +416,16 @@ a {
 		left: .4rem;
 		padding: .55rem .45rem;
 	}
-
 	.search-form {
 		height: 38px;
 		left: 1.5rem;
 		width: 100%;
-
 		input[type=search] {
 			padding-left: 15px;
 		}
-
 		input:focus {
 			outline-width: 0;
 		}
-
 		.search-field {
 			border-radius: 10px 0 0 10px;
 			display: block;
@@ -510,14 +443,11 @@ a {
 
 .menu-item {
 	padding: 1rem 0;
-
 	@include desktop {
 		padding: .5rem 0;
 	}
-
 	a {
 		padding: 1rem 1rem 1rem 2rem;
-
 		@include desktop {
 			padding: 0;
 		}
@@ -529,7 +459,6 @@ a {
 	background: #aec7db;
 	padding: 1rem 0 0;
 	width: 100%;
-
 	a {
 		padding-left: 2rem;
 	}
