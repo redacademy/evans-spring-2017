@@ -11,6 +11,21 @@
   margin: 0 0 5rem 0;
 }
 
+// template-parts/parent-page.php
+.banner-image {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  height: 150px;
+}
+.banner-title{
+  align-self: center;
+  margin-bottom: 0;
+  color: white;
+}
+
 // page-site-accommodation.php
 .bcca {
   margin-bottom: 2rem;

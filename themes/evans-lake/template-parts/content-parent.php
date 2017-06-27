@@ -8,11 +8,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php evans_lake_breadcrumbs(); ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
