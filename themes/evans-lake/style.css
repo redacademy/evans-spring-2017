@@ -463,28 +463,6 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-.sd-sharing-enabled {
-  clear: both; }
-
-.box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
-
-.orange-button {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: #F56D00;
-  border: none;
-  border-radius: 15px;
-  box-shadow: none;
-  color: #fff;
-  font-size: .9rem;
-  margin-top: .5rem;
-  padding: .4rem 1.75rem .5rem;
-  text-shadow: none; }
-  .orange-button:hover {
-    background-color: #ff8600;
-    box-shadow: none; }
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -937,17 +915,12 @@ a {
   line-height: 1.4;
   margin-top: 2rem;
   background-size: cover;
-<<<<<<< HEAD
   padding: 2.5rem 1rem 4rem;
   width: 100%;
   position: relative; }
   @media (min-width: 815px) {
     .site-footer {
       padding: 2.5rem 1rem 1rem; } }
-=======
-  padding: 2.5rem 1rem;
-  width: 100%; }
->>>>>>> Add js file for Reception Menu Options in wedding page
   .site-footer .footer {
     display: block; }
     @media (min-width: 815px) {
@@ -957,12 +930,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
         -ms-flex-align: start;
-<<<<<<< HEAD
             align-items: flex-start; } }
-=======
-            align-items: flex-start;
-        padding: 2.5rem 2rem; } }
->>>>>>> Add js file for Reception Menu Options in wedding page
   .site-footer h3 {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem;
@@ -1250,6 +1218,9 @@ named after the specific page to avoid merge conflicts. */
 .page .menu-evans-lake-menu-container, .blog .menu-evans-lake-menu-container, .search .menu-evans-lake-menu-container, .error404 .menu-evans-lake-menu-container {
   position: relative; }
 
+.single .hero-image {
+  height: 40vh; }
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -1518,9 +1489,14 @@ p {
   margin-bottom: 0;
   margin-top: 1.5rem; }
 
-.jobs-table h2, .blog h2 {
+.jobs h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.75rem; }
+
+.blog h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .jobs-table .table-container, .blog .table-container {
   -ms-flex-pack: justify;
