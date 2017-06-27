@@ -17,10 +17,11 @@
       $(this).detach();
     });
   });
-
-  $('#primary-menu.menu-item').click(function(e) {
+  
+  
+  $('#primary-menu.menu-item:not(:last-child)').click(function(e) {
     e.preventDefault();
-
+      console.log('check');
     if ($(this).hasClass('menu-item-selected')) {
       $('.menu-item').removeClass('menu-item-selected');
     } else {
@@ -40,6 +41,9 @@
       heightStyle: 'content',
       icons: icons
     });
+
+    $('#ui-id-9').unbind('click');
+
   });
 
 })(jQuery);

@@ -1529,6 +1529,7 @@ p {
   .summer:hover {
     box-shadow: none; }
 
+<<<<<<< HEAD
 h3 {
   position: relative;
   width: 100%; }
@@ -1599,6 +1600,10 @@ h3 {
 
 .page-id-55 .ui-accordion-header {
   padding-bottom: .5rem; }
+=======
+.page-template .entry-content h2 {
+  padding-top: 0; }
+>>>>>>> Modify toggle-menu.js to fix link on Contact Us
 
 .tab-head.teen-camp-13-16, .tab-head.leadership-14-16 {
   border-right: none; }
