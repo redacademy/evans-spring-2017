@@ -24,24 +24,36 @@ get_sidebar(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-		<?php 
-      while ( have_posts() ) : the_post();
-        get_template_part( 'template-parts/content', 'page' );
-      endwhile; // End of the loop.
-      
-      $directions = CFS()->get('contact_directions');
-      $form = CFS()->get('contact_form');
-      $offices = CFS()->get('contact_offices');
-    ?>
-    <div class="accordion">
-      <h2>Directions</h2>
+		<?php while ( have_posts() ) : the_post(); ?>
+      <?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
+      <h2><?php the_title(); ?></h2>
+      <div class="entry-content">
+        <?php the_content(); ?>
+      </div><!-- .entry-content -->
+    <?php endwhile; // End of the loop.
+    $directions = CFS()->get('contact_directions');
+    $form = CFS()->get('contact_form');
+    $offices = CFS()->get('contact_offices'); ?>
+
+    <div class="accordion closed">
+      <h2>Get Directions</h2>
       <div class="directions">
         <?php echo $directions; ?>
       </div>
     </div>
 
-    <div class="">
-      <?php ?>
+    <div class="offices">
+      <?php foreach ($offices as $office) : ?>
+        <div class="office">
+          <h2 class="office-title"><?php echo $office['office_title'];?></h2>
+          <?php foreach ($office['office_details'] as $detail) : ?>
+            <span class="line-end">
+              <span class="detail-name"><?php echo $detail['office_name'];?></span>
+              <span class="detail-content"><?php echo $detail['office_detail'];?></span>
+            </span>
+          <?php endforeach; ?>
+        </div>
+      <?php endforeach; ?>
     </div>
 
     <div class="contact-form">

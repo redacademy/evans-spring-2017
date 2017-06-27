@@ -41,18 +41,33 @@
   }
 }
 
+// page-contact-us.php
+.subtext{
+  color: $color__border-abbr;
+  font-size: 0.9rem;
+}
+.line-end{
+  display: block;
+}
+.detail-name {
+  color: $color__blue;
+  font-weight: bold;
+}
+.detail-content {
+
+}
+
 // page-job-openings.php
-.jobs {
+  //jobs and contact-us h2
+.jobs, .page-id-70 {
   h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin: 0.5rem 0
   }
 }
 .blog {
   h2 {
     font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 }
 .jobs-table, .blog {
