@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
   // Accordion
   $( function() {
 
@@ -11,14 +10,20 @@ jQuery(document).ready(function($) {
       header: 'iconClosed',
       activeHeader: 'iconOpen'
     };
-      $( '.accordion' ).accordion({
-        collapsible: true,
-        heightStyle: 'content',
-        icons: icons,
-        active: optionExpanded
-      });
-    } );
+    $( '.accordion' ).accordion({
+      collapsible: true,
+      heightStyle: 'content',
+      icons: icons,
+      active: optionExpanded
+    });
 
+    $( '.accordion.closed' ).accordion({
+      collapsible: true,
+      heightStyle: 'content',
+      icons: icons,
+      active: false
+    });
+  });
     // Tabs
     $( function() {
       $( '#tabs' ).tabs();
