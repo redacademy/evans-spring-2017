@@ -1763,8 +1763,10 @@ p {
   border-right: 1.5rem solid #fff;
   -ms-flex: 0 1 32%;
       flex: 0 1 32%;
+  line-height: 0;
   margin-left: 7px;
   margin-right: 5px;
+  margin-bottom: 1rem;
   position: static;
   width: 100%; }
   @media (min-width: 815px) {
@@ -1772,6 +1774,7 @@ p {
       border: none;
       width: 32%; } }
   .flickity-slider .carousel-cell h2, .flickity-slider .carousel-cell p {
+    line-height: 2rem;
     margin: 0; }
   .flickity-slider .carousel-cell a, .flickity-slider .carousel-cell a:visited {
     color: #1B5D97; }
@@ -1819,7 +1822,10 @@ p {
       width: 24%; } }
 
 .main-carousel {
-  margin-bottom: 3rem; }
+  margin-bottom: 4rem; }
+  @media (min-width: 815px) {
+    .main-carousel {
+      margin-bottom: 3rem; } }
   .main-carousel .flickity-prev-next-button {
     box-shadow: none;
     color: transparent; }
@@ -1832,7 +1838,7 @@ p {
     top: 45%; }
     @media (min-width: 815px) {
       .main-carousel .flickity-prev-next-button.previous {
-        left: -50px; } }
+        display: none; } }
     .main-carousel .flickity-prev-next-button.previous svg {
       left: 3%; }
       @media (min-width: 815px) {
@@ -1845,7 +1851,7 @@ p {
     top: 45%; }
     @media (min-width: 815px) {
       .main-carousel .flickity-prev-next-button.next {
-        right: -50px; } }
+        display: none; } }
     .main-carousel .flickity-prev-next-button.next svg {
       left: 37%; }
       @media (min-width: 815px) {

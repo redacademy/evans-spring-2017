@@ -137,8 +137,10 @@
     border-left: 1.5rem solid #fff;
     border-right: 1.5rem solid #fff;
     flex: 0 1 32%;
+    line-height: 0;
     margin-left: 7px;
     margin-right: 5px;
+    margin-bottom: 1rem;
     position: static;
     width: 100%;
 
@@ -148,6 +150,7 @@
     }
 
     h2, p {
+      line-height: 2rem;
       margin: 0;
     }
 
@@ -216,7 +219,11 @@
 }
 
 .main-carousel {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+
+  @include desktop {
+    margin-bottom: 3rem;
+  }
 
   .flickity-prev-next-button {
     box-shadow: none;
@@ -234,7 +241,7 @@
     top: 45%;
 
     @include desktop {
-      left: -50px;
+      display: none;
     }
 
     svg {
@@ -253,7 +260,7 @@
     top: 45%;
 
     @include desktop {
-      right: -50px;
+      display: none;
     }
 
     svg {
