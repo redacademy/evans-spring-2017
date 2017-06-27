@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="hero-gradient">
 		<h1 class="hero-title">404</h1>
 	</div>
-	<img class="hero-search" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
+	<img class="hero-404" src="<?php echo( get_template_directory_uri() . '/assets/images/footer.jpg'); ?>">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

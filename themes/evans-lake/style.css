@@ -1878,17 +1878,24 @@ p {
 
 .search .hero-gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
-  height: 80vh;
+  height: 30vh;
   position: absolute;
   width: 100%;
   z-index: 1; }
+  @media (min-width: 815px) {
+    .search .hero-gradient {
+      height: 80vh; } }
 
 .search .hero-search {
-  height: 80vh;
-  margin-bottom: 2rem;
+  height: 30vh;
+  margin-bottom: 1rem;
   object-fit: cover;
   width: 100%;
   z-index: -10; }
+  @media (min-width: 815px) {
+    .search .hero-search {
+      height: 80vh;
+      margin-bottom: 2rem; } }
 
 .search article {
   box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.3);
@@ -1982,14 +1989,14 @@ p {
       text-align: center;
       z-index: 2; } }
 
-.error404 .hero-search {
+.error404 .hero-404 {
   height: 30vh;
   margin-bottom: 1rem;
   object-fit: cover;
   width: 100%;
   z-index: -10; }
   @media (min-width: 815px) {
-    .error404 .hero-search {
+    .error404 .hero-404 {
       height: 80vh;
       margin-bottom: 2rem; } }
 
