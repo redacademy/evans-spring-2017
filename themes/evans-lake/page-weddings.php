@@ -39,7 +39,7 @@ get_sidebar(); ?>
 
     <div class="accordion">
       <h2 id="wedding-accordion"><?php echo CFS()->get('optional_additions');?></h2>
-      <div><?php echo wp_kses_post(CFS()->get('optional_additions_answer'));?></div> 
+      <div><?php echo CFS()->get('optional_additions_answer');?></div> 
     </div>
 
      <?php echo CFS()->get( 'menu_title' ); ?>
