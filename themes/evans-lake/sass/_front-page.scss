@@ -24,7 +24,7 @@
     cursor: pointer;
     font-size: 3.5rem;
     position: absolute;
-    bottom: 15%;
+    bottom: 7%;
     transform: translateX(-50%);
 
     @include desktop {
@@ -157,15 +157,9 @@
     }
 
     .events-thumbnail {
+      object-fit: cover;
+      width: 100%;
       height: 250px;
-      overflow: hidden;
-      position: relative;
-
-      img {
-        height: 100%;
-        width: auto;
-        max-width: none;
-      }
     }
     
     .events-post {

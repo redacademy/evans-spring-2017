@@ -1638,7 +1638,7 @@ p {
     cursor: pointer;
     font-size: 3.5rem;
     position: absolute;
-    bottom: 15%;
+    bottom: 7%;
     transform: translateX(-50%); }
     @media (min-width: 815px) {
       .home-hero .fa-angle-down {
@@ -1740,13 +1740,9 @@ p {
   .flickity-slider .carousel-cell a:hover {
     color: #429DCB; }
   .flickity-slider .carousel-cell .events-thumbnail {
-    height: 250px;
-    overflow: hidden;
-    position: relative; }
-    .flickity-slider .carousel-cell .events-thumbnail img {
-      height: 100%;
-      width: auto;
-      max-width: none; }
+    object-fit: cover;
+    width: 100%;
+    height: 250px; }
   .flickity-slider .carousel-cell .events-post {
     background-color: #fff;
     border-radius: 0 0 15px 15px;

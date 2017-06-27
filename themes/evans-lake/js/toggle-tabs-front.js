@@ -36,18 +36,18 @@
     }
   })
 
-  // $(function() {
-  //   var icons = {
-  //     header: 'iconClosed',
-  //     activeHeader: 'iconOpen'
-  //   };
+  $(function() {
+    var icons = {
+      header: 'iconClosed',
+      activeHeader: 'iconOpen'
+    };
 
-  //   $( '.accordion' ).accordion({
-  //     active: false,
-  //     collapsible: true,
-  //     heightStyle: 'content',
-  //     icons: icons
-  //   });
+    $( '.accordion' ).accordion({
+      active: false,
+      collapsible: true,
+      heightStyle: 'content',
+      icons: icons
+    });
   });
 
 })(jQuery);
