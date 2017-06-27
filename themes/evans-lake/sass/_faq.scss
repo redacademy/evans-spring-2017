@@ -89,3 +89,15 @@ h3 {
 .accordion {
   position: relative;
 }
+.page-id-55 {
+  .accordion {
+   h3 {
+     border-bottom: 1px solid $color__border-abbr;
+     margin:1rem;
+     padding-top: 1rem;
+   }
+  }
+  .ui-accordion-header {
+    padding-bottom: .5rem;
+  }
+}

@@ -2576,3 +2576,11 @@ h3 {
 
 .accordion {
   position: relative; }
+
+.page-id-55 .accordion h3 {
+  border-bottom: 1px solid #666;
+  margin: 1rem;
+  padding-top: 1rem; }
+
+.page-id-55 .ui-accordion-header {
+  padding-bottom: .5rem; }

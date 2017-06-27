@@ -24,9 +24,9 @@ get_sidebar(); ?>
 	</div>
 
 	<main id="main" class="site-main" role="main">
-      <h2>Camp FAQ</h2>
+				
+      <h2> <?php the_title(); ?> </h2>
 		<?php while ( have_posts() ) : the_post(); ?>
-				<?php the_title(); ?>
 				<div class="accordion">
 					<?php 
 					$faqs = CFS()->get('summer_faqs');

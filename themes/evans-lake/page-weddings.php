@@ -39,7 +39,7 @@ get_sidebar(); ?>
 
     <div class="accordion">
       <h2 id="wedding-accordion"><?php echo CFS()->get('optional_additions');?></h2>
-      <div><?php echo CFS()->get('optional_additions_answer');?></div> 
+      <div><?php echo wp_kses_post(CFS()->get('optional_additions_answer'));?></div> 
     </div>
 
      <?php echo CFS()->get( 'menu_title' ); ?>
@@ -82,9 +82,9 @@ get_sidebar(); ?>
 
     <div class="accordion">
       <h2 class="custom-menu-option"><?php echo CFS()->get('custom_menu_option');?></h2>
-      <div><?php echo CFS()->get('custom_menu_option_answer');?></div> 
+      <div><?php echo wp_kses_post(CFS()->get('custom_menu_option_answer'));?></div> 
     </div>
-    <img class="custom-menu-photo" src="<?php echo CFS()->get( 'wedding_photo');?>">
+    <img class="custom-menu-photo" src="<?php echo esc_url(CFS()->get( 'wedding_photo'));?>">
     <?php endwhile; // End of the loop. ?>
 	</main><!-- #main -->
 
