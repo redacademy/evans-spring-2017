@@ -25,12 +25,25 @@ get_sidebar(); ?>
 	</div>
 
 	<main id="main" class="site-main" role="main">
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php evans_lake_breadcrumbs(); ?>
+			<div class="banners">
+				<?php $banners = CFS()->get('root_loop');?>
+				<?php echo "Print banners"; print_r ($banners); ?>
+				<?php foreach ($banners as $banner){ ?>
+					<div class="banner">
+						<h3 class="banner-title"><?php echo $banner['root_title'];?></h3>
+						<div class="banner-image" style="background-image: url('<?php echo $banner['root_banner'];?>');"></div>
+					</div>
+				<?php }; ?>
+			</div>
+
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'parent' ); ?>
 
 		<?php endwhile; // End of the loop. ?>
-    
+    </article>
     
 	</main><!-- #main -->
 
