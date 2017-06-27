@@ -448,9 +448,12 @@ body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
-blockquote, q {
+blockquote,
+q {
   quotes: "" ""; }
-  blockquote:before, blockquote:after, q:before, q:after {
+  blockquote:before, blockquote:after,
+  q:before,
+  q:after {
     content: ""; }
 
 hr {
@@ -459,7 +462,8 @@ hr {
   height: 1px;
   margin-bottom: 1.5rem; }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 1.5rem 0; }
 
 ul {
@@ -1652,6 +1656,9 @@ h3 {
     padding: 1rem 2rem 1rem 1rem; }
   .table-2 .table-footer {
     margin-bottom: 5rem; }
+
+.cancel.accordion {
+  position: relative; }
 
 .cancel.container {
   margin-top: 2rem; }

@@ -1,7 +1,11 @@
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+
+
 /* Custom Elements */
+
+
 /* Generic Tab Syles
 see _page-our-camp.scss for an example of specifics */
 
@@ -12,6 +16,7 @@ see _page-our-camp.scss for an example of specifics */
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .tab-head {
   border-right: 1px solid white;
   color: white;
@@ -22,30 +27,34 @@ see _page-our-camp.scss for an example of specifics */
   padding: 1rem;
 }
 
-.tab-body-container{
+.tab-body-container {
   margin-bottom: 3rem;
   padding: 3rem 0;
   position: relative;
 }
+
 .tab-body {
   left: -1000rem;
   margin: 0 auto;
   max-width: 500px;
   position: absolute;
   width: 90%;
-  &.selected{
+  &.selected {
     left: 0;
     position: relative;
   }
 }
+
 // Misc Elements
 .box-pop-out {
-box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
-border-radius: 0.5rem;
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
+  border-radius: 0.5rem;
 }
+
 .bot-brd-blu {
   border-bottom: 1px solid $color__blue;
 }
+
 .orange-button {
   align-self: flex-start;
   background-color: $color__orange;
@@ -57,35 +66,36 @@ border-radius: 0.5rem;
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none;
-
-	&:hover {
-		background-color: #ff8600;
-		box-shadow: none;
-	}
+  &:hover {
+    background-color: #ff8600;
+    box-shadow: none;
+  }
 }
-  
+
 // Accordion
 h3 {
   position: relative;
-  width:100%;
+  width: 100%;
 }
+
 .ui-icon.iconOpen {
- background: url(../../assets/images/arrow-up.png) no-repeat; 
- background-size: 20px;
- position: absolute;
-  right:0;  
-  width:20px;
+  background: url(../../assets/images/arrow-up.png) no-repeat;
+  background-size: 20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
   height: 20px;
   display: block;
 }
+
 .ui-icon.iconClosed {
-  background: url(../../assets/images/arrow-down.png) no-repeat; 
+  background: url(../../assets/images/arrow-down.png) no-repeat;
   background-size: 20px;
- position: absolute;
-  right:0; 
-  width:20px;
+  position: absolute;
+  right: 0;
+  width: 20px;
   height: 20px;
-  display: block;  
+  display: block;
 }
 
 // Contact Form
@@ -93,15 +103,18 @@ h3 {
   background: white;
   padding: 1.5rem;
 }
+
 .contact-left {
   @include desktop {
     margin-right: 1rem;
     width: 50%;
   }
 }
+
 .contact-right {
   padding-top: 4rem;
 }
+
 .wpcf7-form {
   display: flex;
   flex-direction: column;
@@ -109,97 +122,99 @@ h3 {
     color: $color__blue;
   }
 }
-.wpcf7-form{
+
+.wpcf7-form {
   @include desktop {
     flex-direction: row;
   }
 }
 
-
 // Clearfixes
-.sd-sharing-enabled{
+.sd-sharing-enabled {
   clear: both;
 }
 
 html {
-	box-sizing: border-box;
-	font-size: 16px;
-	@include font-size(1);
+  box-sizing: border-box;
+  font-size: 16px;
+  @include font-size(1);
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body;
+  /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
-	quotes: "" "";
-
-	&:before,
-	&:after {
-		content: "";
-	}
+blockquote,
+q {
+  quotes: "" "";
+  &:before,
+  &:after {
+    content: "";
+  }
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	height: 1px;
-	margin-bottom: $base__space-unit;
+  background-color: $color__background-hr;
+  border: 0;
+  height: 1px;
+  margin-bottom: $base__space-unit;
 }
 
-ul, ol {
-	margin: 0 0 $base__space-unit 0;
+ul,
+ol {
+  margin: 0 0 $base__space-unit 0;
 }
 
 ul {
-	list-style: disc;
+  list-style: disc;
 }
 
 ol {
-	list-style: decimal;
+  list-style: decimal;
 }
 
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: $base__space-unit;
+li>ul,
+li>ol {
+  margin-bottom: 0;
+  margin-left: $base__space-unit;
 }
 
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 dd {
-	margin: 0 $base__space-unit $base__space-unit;
+  margin: 0 $base__space-unit $base__space-unit;
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
 
 table {
-	margin: 0 0 $base__space-unit;
-	width: 100%;
+  margin: 0 0 $base__space-unit;
+  width: 100%;
 }
 
-
-
-
 // Clearfixes
-.sd-sharing-enabled{
+.sd-sharing-enabled {
   clear: both;
 }
 
 // Custom Elements
 .box-pop-out {
-	box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
+  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
 }
 
 .orange-button {
@@ -213,10 +228,8 @@ table {
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none;
-
-	&:hover {
-		background-color: #ff8600;
-		box-shadow: none;
-	}
+  &:hover {
+    background-color: #ff8600;
+    box-shadow: none;
+  }
 }
-

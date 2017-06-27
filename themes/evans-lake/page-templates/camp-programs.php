@@ -146,7 +146,7 @@ get_sidebar(); ?>
 			<?php endforeach; ?>
 		</div>
 
-		<div class="accordion">
+		<div class="cancel accordion">
 			<h2 class="cancel header">Cancellation Policy</h2>
 			<div class="cancel container">
 				<?php $policies = CFS()->get( 'cancel_loop', $this_page_id ); ?>
