@@ -61,6 +61,7 @@ h3 {
 
 .page-id-38 {
   .accordion {
+    position: relative;
    h2 {
      border-bottom: 1px solid $color__blue;
    }
@@ -88,11 +89,12 @@ h3 {
 }
 .page-id-55 {
   .accordion {
+    position: relative;
    h3 {
      border-bottom: 1px solid $color__border-abbr;
      margin:1rem;
      padding-top: 1rem;
-     position: relative;
+     
    }
   }
   .ui-accordion-header {

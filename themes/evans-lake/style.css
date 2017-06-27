@@ -1568,8 +1568,10 @@ h3 {
   left: 0;
   position: relative; }
 
-.page-id-38 .accordion h2 {
-  border-bottom: 1px solid #1B5D97; }
+.page-id-38 .accordion {
+  position: relative; }
+  .page-id-38 .accordion h2 {
+    border-bottom: 1px solid #1B5D97; }
 
 .entry-content h2 {
   padding-top: 1rem; }
@@ -1584,11 +1586,12 @@ h3 {
   width: 720px;
   height: 180px; }
 
-.page-id-55 .accordion h3 {
-  border-bottom: 1px solid #666;
-  margin: 1rem;
-  padding-top: 1rem;
+.page-id-55 .accordion {
   position: relative; }
+  .page-id-55 .accordion h3 {
+    border-bottom: 1px solid #666;
+    margin: 1rem;
+    padding-top: 1rem; }
 
 .page-id-55 .ui-accordion-header {
   padding-bottom: .5rem; }
