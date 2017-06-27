@@ -41,7 +41,7 @@ see _page-our-camp.scss for an example of specifics */
 // Misc Elements
 .box-pop-out {
 box-shadow: 0 8px 20px 0 rgba(122,122,122,0.5);
-border-radius: 1rem;
+border-radius: 0.5rem;
 }
 .bot-brd-blu {
   border-bottom: 1px solid $color__blue;
@@ -86,6 +86,14 @@ h3 {
   width:20px;
   height: 20px;
   display: block;  
+}
+
+// Contact Form
+.wpcf7-form {
+  display: flex;
+  label {
+    color: $color__blue;
+  }
 }
 
 // Clearfixes
