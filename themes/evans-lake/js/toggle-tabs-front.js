@@ -23,4 +23,18 @@
     });
   }
 
+  $('.mobile-menu-toggle .menu-item-308').addClass('menu-item-selected');
+
+  $('.mobile-menu-toggle .menu-item').click(function(e) {
+    e.preventDefault();
+
+    if($(this).hasClass('menu-item-selected')){
+      $('.menu-item').removeClass('menu-item-selected');
+    }
+    else{
+      $('.menu-item').removeClass('menu-item-selected');
+      $(this).addClass('menu-item-selected');
+    }
+  })
+
 })(jQuery);
