@@ -53,9 +53,6 @@
   color: $color__blue;
   font-weight: bold;
 }
-.detail-content {
-  font-size: 1.1rem;
-}
 .offices {
   display: flex;
   flex-direction: column;
@@ -65,6 +62,7 @@
 }
 .office {
   margin-bottom: 2rem;
+  padding: 1.5rem;
 }
 .office:first-child {
   @include desktop {
@@ -78,13 +76,9 @@
   h2.accordion {
     margin-bottom: 0rem;
   }
-  .box-pop-out{
-    padding: 1rem;
-  }
 }
 
 // page-job-openings.php
-  //jobs and contact-us h2
 .jobs {
   h2 {
     margin: 0.5rem 0

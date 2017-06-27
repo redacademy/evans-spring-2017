@@ -1639,9 +1639,6 @@ p {
   color: #1B5D97;
   font-weight: bold; }
 
-.detail-content {
-  font-size: 1.1rem; }
-
 .offices {
   display: -ms-flexbox;
   display: flex;
@@ -1653,7 +1650,8 @@ p {
           flex-direction: row; } }
 
 .office {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  padding: 1.5rem; }
 
 @media (min-width: 815px) {
   .office:first-child {
@@ -1664,9 +1662,6 @@ p {
 
 .page-id-70 h2.accordion {
   margin-bottom: 0rem; }
-
-.page-id-70 .box-pop-out {
-  padding: 1rem; }
 
 .jobs h2 {
   margin: 0.5rem 0; }
