@@ -404,6 +404,9 @@ h3 {
   height: 20px;
   display: block; }
 
+.contact-form {
+  background: white; }
+
 .wpcf7-form {
   display: -ms-flexbox;
   display: flex; }
