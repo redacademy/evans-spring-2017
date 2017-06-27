@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Root Page
+ * Template Name: Parent Page
  *
  * The template for displaying all parent/root pages.
  *
