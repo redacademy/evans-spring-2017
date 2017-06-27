@@ -143,7 +143,7 @@ a {
 		height: 100%;
 		background-color: #fff;
 		color: $color__blue-light;
-		padding: 1rem 1rem 1rem 2.5rem;
+		padding: .75rem 1rem 0 0;
 		width: 85vw;
 		position: fixed;
 		right: 0;
@@ -163,9 +163,14 @@ a {
 
 		li {
 			margin: 0;
-			// padding: .75rem 2rem;
 			text-shadow: none;
 			width: 85vw;
+
+			@include desktop {
+				margin: 0;
+				text-shadow: none;
+				width: 85vw;
+			}
 		}
 	}
 
@@ -291,15 +296,37 @@ a {
 
 		.menu-item {
 			margin: 1.25rem;
+			padding-left: 1.25rem;
 			padding-bottom: 1.25rem;
 
-			.sub-menu .menu-item {
-				padding: 0;
-				margin-bottom: .5rem;
+			@include desktop {
+				padding-left: 0;
+				padding-bottom: 1.25rem;
 			}
 
-			.sub-menu .menu-item:last-child {
-				margin-bottom: 1.25rem;
+			.sub-menu .menu-item {
+				padding: 1rem;
+
+				@include desktop {
+					padding: 0;
+					margin-bottom: .5rem;
+				}
+			}
+
+			.menu-item:first-child {
+				margin-top: 1rem;
+
+				@include desktop {
+					margin-bottom: 0;
+				}
+			}
+
+			.menu-item:last-child {
+				margin-bottom: 0;
+
+				@include desktop {
+					margin-bottom: 1.25rem;
+				}
 			}
 
 			a, a:visited {
@@ -316,11 +343,34 @@ a {
 		}
 
 		> .menu-item:last-child {
-			background: $color__orange;
-			border-radius: 1.2rem;
-			color: #fff;
-			padding: .2rem 1.75rem;
-			cursor: pointer;
+				background: $color__blue;
+				color: #fff;
+				padding: 1.5rem 1.75rem;
+				cursor: pointer;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+
+				@include desktop {
+					background: $color__orange;
+					border-radius: 1.2rem;
+					color: #fff;
+					padding: .2rem 1.75rem;
+					position: initial;
+					bottom: 0;
+				}
+			
+			a {
+				background: $color__orange;
+				border-radius: 1.2rem;
+				color: #fff;
+				padding: .2rem 1.75rem;
+
+				@include desktop {
+					background: transparent;
+					padding: 0;
+				}
+			}
 
 			a:hover {
 				color: $color__blue;

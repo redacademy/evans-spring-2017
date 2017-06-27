@@ -620,7 +620,7 @@ a {
     height: 100%;
     background-color: #fff;
     color: #429DCB;
-    padding: 1rem 1rem 1rem 2.5rem;
+    padding: .75rem 1rem 0 0;
     width: 85vw;
     position: fixed;
     right: 0;
@@ -637,6 +637,11 @@ a {
       margin: 0;
       text-shadow: none;
       width: 85vw; }
+      @media (min-width: 815px) {
+        .menu-toggle .mobile-menu-toggle .menu li, .menu-toggle .sub-menu li {
+          margin: 0;
+          text-shadow: none;
+          width: 85vw; } }
   .menu-toggle .mobile-menu-toggle .sub-menu li {
     left: 0;
     background-color: #e1e1e1;
@@ -732,12 +737,28 @@ a {
     font-size: 1.2rem; }
     .site-header .menu .menu-item {
       margin: 1.25rem;
+      padding-left: 1.25rem;
       padding-bottom: 1.25rem; }
+      @media (min-width: 815px) {
+        .site-header .menu .menu-item {
+          padding-left: 0;
+          padding-bottom: 1.25rem; } }
       .site-header .menu .menu-item .sub-menu .menu-item {
-        padding: 0;
-        margin-bottom: .5rem; }
-      .site-header .menu .menu-item .sub-menu .menu-item:last-child {
-        margin-bottom: 1.25rem; }
+        padding: 1rem; }
+        @media (min-width: 815px) {
+          .site-header .menu .menu-item .sub-menu .menu-item {
+            padding: 0;
+            margin-bottom: .5rem; } }
+      .site-header .menu .menu-item .menu-item:first-child {
+        margin-top: 1rem; }
+        @media (min-width: 815px) {
+          .site-header .menu .menu-item .menu-item:first-child {
+            margin-bottom: 0; } }
+      .site-header .menu .menu-item .menu-item:last-child {
+        margin-bottom: 0; }
+        @media (min-width: 815px) {
+          .site-header .menu .menu-item .menu-item:last-child {
+            margin-bottom: 1.25rem; } }
       .site-header .menu .menu-item a, .site-header .menu .menu-item a:visited {
         color: #429DCB; }
         @media (min-width: 815px) {
@@ -746,11 +767,30 @@ a {
       .site-header .menu .menu-item a:hover {
         color: #F56D00; }
     .site-header .menu > .menu-item:last-child {
-      background: #F56D00;
-      border-radius: 1.2rem;
+      background: #1B5D97;
       color: #fff;
-      padding: .2rem 1.75rem;
-      cursor: pointer; }
+      padding: 1.5rem 1.75rem;
+      cursor: pointer;
+      position: fixed;
+      bottom: 0;
+      right: 0; }
+      @media (min-width: 815px) {
+        .site-header .menu > .menu-item:last-child {
+          background: #F56D00;
+          border-radius: 1.2rem;
+          color: #fff;
+          padding: .2rem 1.75rem;
+          position: initial;
+          bottom: 0; } }
+      .site-header .menu > .menu-item:last-child a {
+        background: #F56D00;
+        border-radius: 1.2rem;
+        color: #fff;
+        padding: .2rem 1.75rem; }
+        @media (min-width: 815px) {
+          .site-header .menu > .menu-item:last-child a {
+            background: transparent;
+            padding: 0; } }
       .site-header .menu > .menu-item:last-child a:hover {
         color: #1B5D97; }
       .site-header .menu > .menu-item:last-child span {
@@ -1070,7 +1110,8 @@ h3 {
   display: inline-block; }
 
 body {
-  width: 100%; }
+  width: 100%;
+  min-width: 320px; }
 
 .container {
   margin: 0 auto;
@@ -1553,7 +1594,8 @@ p {
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  width: 100vw; }
+  width: 100vw;
+  min-width: 320px; }
   @media (min-width: 815px) {
     .home-hero {
       height: 100vh;
