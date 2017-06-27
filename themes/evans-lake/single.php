@@ -6,10 +6,21 @@
  */
 
 get_header(); ?>
-<?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
+<div class="hero">
+	<!--Background styled in extras.php/evans_lake_hero_image_update()-->
+	<div class="hero-image">
+	</div>
+</div>
+<div id="primary" class="content-area container">
+	<div class="sub-navigation">
+		<?php wp_nav_menu( array( 
+			'theme_location' => 'primary', 
+			'menu_id' => 'primary-menu',
+			'submenu' => get_the_title($post->post_parent)
+		) ); ?>
+	</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>

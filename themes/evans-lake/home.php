@@ -47,7 +47,7 @@ get_sidebar(); ?>
 		</div> <!--event container-->
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="single-container box-pop-out">
-				<?php get_template_part( 'template-parts/content', 'single' ); ?>			
+				<?php get_template_part( 'template-parts/content', 'home-single' ); ?>			
 			</div>
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
