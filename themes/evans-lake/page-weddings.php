@@ -33,8 +33,10 @@ get_sidebar(); ?>
      <div class="button-position">
       <button class="orange-button">Request Information</button>
     </div>  
+
     <h2>Rental Inclusions</h2>
     <div><?php echo CFS()->get('rental_inclusions');?></div>
+
     <div class="accordion">
       <h2 id="wedding-accordion"><?php echo CFS()->get('optional_additions');?></h2>
       <div><?php echo CFS()->get('optional_additions_answer');?></div> 
@@ -75,7 +77,14 @@ get_sidebar(); ?>
          <?php endforeach; // End of the loop. ?>
       </div><!--.tab-body-container-->
     </div>
+
     <div class="caption-course"><?php echo CFS()->get('courses_caption');?></div>
+
+    <div class="accordion">
+      <h2 class="custom-menu-option"><?php echo CFS()->get('custom_menu_option');?></h2>
+      <div><?php echo CFS()->get('custom_menu_option_answer');?></div> 
+    </div>
+    <img class="custom-menu-photo" src="<?php echo CFS()->get( 'wedding_photo');?>">
     <?php endwhile; // End of the loop. ?>
 	</main><!-- #main -->
 
