@@ -1116,93 +1116,93 @@ named after the specific page to avoid merge conflicts. */
 /*All navigation styles are in _navigation.scss*/
 /*All sidebar styles are in _sidebar.scss*/
 /*All footer styles are in _footer.scss*/
-.page .breadcrumbs, .blog .breadcrumbs, .search .breadcrumbs, .error404 .breadcrumbs {
+.page .breadcrumbs, .blog .breadcrumbs, .single .breadcrumbs, .search .breadcrumbs, .error404 .breadcrumbs {
   font-family: "josefin_sans", sans-serif;
   font-size: .9rem;
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden; }
-  .page .breadcrumbs a, .blog .breadcrumbs a, .search .breadcrumbs a, .error404 .breadcrumbs a {
+  .page .breadcrumbs a, .blog .breadcrumbs a, .single .breadcrumbs a, .search .breadcrumbs a, .error404 .breadcrumbs a {
     color: #9B9B9B;
     text-decoration: none; }
-  .page .breadcrumbs li, .blog .breadcrumbs li, .search .breadcrumbs li, .error404 .breadcrumbs li {
+  .page .breadcrumbs li, .blog .breadcrumbs li, .single .breadcrumbs li, .search .breadcrumbs li, .error404 .breadcrumbs li {
     color: #9B9B9B;
     display: inline-block;
     vertical-align: middle;
     margin-right: .5rem; }
-  .page .breadcrumbs .separator, .blog .breadcrumbs .separator, .search .breadcrumbs .separator, .error404 .breadcrumbs .separator {
+  .page .breadcrumbs .separator, .blog .breadcrumbs .separator, .single .breadcrumbs .separator, .search .breadcrumbs .separator, .error404 .breadcrumbs .separator {
     font-size: 1rem;
     color: #9B9B9B; }
 
-.page .content-area, .blog .content-area, .search .content-area, .error404 .content-area {
+.page .content-area, .blog .content-area, .single .content-area, .search .content-area, .error404 .content-area {
   display: -ms-flexbox;
   display: flex; }
 
-.page .sub-navigation, .blog .sub-navigation, .search .sub-navigation, .error404 .sub-navigation {
+.page .sub-navigation, .blog .sub-navigation, .single .sub-navigation, .search .sub-navigation, .error404 .sub-navigation {
   display: none;
   padding-left: 1rem;
   padding-right: 1rem; }
   @media (min-width: 815px) {
-    .page .sub-navigation, .blog .sub-navigation, .search .sub-navigation, .error404 .sub-navigation {
+    .page .sub-navigation, .blog .sub-navigation, .single .sub-navigation, .search .sub-navigation, .error404 .sub-navigation {
       display: initial;
       -ms-flex: 0 1 23%;
           flex: 0 1 23%; } }
-  .page .sub-navigation .menu, .blog .sub-navigation .menu, .search .sub-navigation .menu, .error404 .sub-navigation .menu {
+  .page .sub-navigation .menu, .blog .sub-navigation .menu, .single .sub-navigation .menu, .search .sub-navigation .menu, .error404 .sub-navigation .menu {
     font-family: "josefin_sans", sans-serif;
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
     list-style: none; }
-    .page .sub-navigation .menu li, .blog .sub-navigation .menu li, .search .sub-navigation .menu li, .error404 .sub-navigation .menu li {
+    .page .sub-navigation .menu li, .blog .sub-navigation .menu li, .single .sub-navigation .menu li, .search .sub-navigation .menu li, .error404 .sub-navigation .menu li {
       margin-bottom: .75rem; }
-    .page .sub-navigation .menu a, .blog .sub-navigation .menu a, .search .sub-navigation .menu a, .error404 .sub-navigation .menu a {
+    .page .sub-navigation .menu a, .blog .sub-navigation .menu a, .single .sub-navigation .menu a, .search .sub-navigation .menu a, .error404 .sub-navigation .menu a {
       color: #4A4A4A;
       text-decoration: none; }
-    .page .sub-navigation .menu a:visited, .blog .sub-navigation .menu a:visited, .search .sub-navigation .menu a:visited, .error404 .sub-navigation .menu a:visited {
+    .page .sub-navigation .menu a:visited, .blog .sub-navigation .menu a:visited, .single .sub-navigation .menu a:visited, .search .sub-navigation .menu a:visited, .error404 .sub-navigation .menu a:visited {
       color: #4A4A4A; }
-    .page .sub-navigation .menu a:hover, .blog .sub-navigation .menu a:hover, .search .sub-navigation .menu a:hover, .error404 .sub-navigation .menu a:hover {
+    .page .sub-navigation .menu a:hover, .blog .sub-navigation .menu a:hover, .single .sub-navigation .menu a:hover, .search .sub-navigation .menu a:hover, .error404 .sub-navigation .menu a:hover {
       color: #429DCB; }
 
-.page .site-main, .blog .site-main, .search .site-main, .error404 .site-main {
+.page .site-main, .blog .site-main, .single .site-main, .search .site-main, .error404 .site-main {
   width: 100%;
   padding: 0 1rem; }
   @media (min-width: 815px) {
-    .page .site-main, .blog .site-main, .search .site-main, .error404 .site-main {
+    .page .site-main, .blog .site-main, .single .site-main, .search .site-main, .error404 .site-main {
       padding: 0; } }
-  .page .site-main .entry-title, .blog .site-main .entry-title, .search .site-main .entry-title, .error404 .site-main .entry-title {
+  .page .site-main .entry-title, .blog .site-main .entry-title, .single .site-main .entry-title, .search .site-main .entry-title, .error404 .site-main .entry-title {
     font-size: 1.3rem;
     margin-top: 0.5rem; }
     @media (min-width: 815px) {
-      .page .site-main .entry-title, .blog .site-main .entry-title, .search .site-main .entry-title, .error404 .site-main .entry-title {
+      .page .site-main .entry-title, .blog .site-main .entry-title, .single .site-main .entry-title, .search .site-main .entry-title, .error404 .site-main .entry-title {
         font-size: 2rem;
         letter-spacing: .1rem; } }
   @media (min-width: 815px) {
-    .page .site-main, .blog .site-main, .search .site-main, .error404 .site-main {
+    .page .site-main, .blog .site-main, .single .site-main, .search .site-main, .error404 .site-main {
       -ms-flex: 0 1 75%;
           flex: 0 1 75%;
       margin: 0 auto; } }
 
-.page .hero, .blog .hero, .search .hero, .error404 .hero {
+.page .hero, .blog .hero, .single .hero, .search .hero, .error404 .hero {
   height: 30vh;
   margin-bottom: 1rem;
   overflow: hidden;
   position: static;
   width: 100vw; }
   @media (min-width: 815px) {
-    .page .hero, .blog .hero, .search .hero, .error404 .hero {
+    .page .hero, .blog .hero, .single .hero, .search .hero, .error404 .hero {
       height: 80vh;
       margin-bottom: 2rem; } }
-  .page .hero .hero-image, .blog .hero .hero-image, .search .hero .hero-image, .error404 .hero .hero-image {
+  .page .hero .hero-image, .blog .hero .hero-image, .single .hero .hero-image, .search .hero .hero-image, .error404 .hero .hero-image {
     height: 30vh; }
     @media (min-width: 815px) {
-      .page .hero .hero-image, .blog .hero .hero-image, .search .hero .hero-image, .error404 .hero .hero-image {
+      .page .hero .hero-image, .blog .hero .hero-image, .single .hero .hero-image, .search .hero .hero-image, .error404 .hero .hero-image {
         height: 80vh; } }
 
-.page .hero-title, .blog .hero-title, .search .hero-title, .error404 .hero-title {
+.page .hero-title, .blog .hero-title, .single .hero-title, .search .hero-title, .error404 .hero-title {
   display: none; }
   @media (min-width: 815px) {
-    .page .hero-title, .blog .hero-title, .search .hero-title, .error404 .hero-title {
+    .page .hero-title, .blog .hero-title, .single .hero-title, .search .hero-title, .error404 .hero-title {
       color: #fff;
       display: initial;
       font-size: 4rem;
@@ -1215,11 +1215,17 @@ named after the specific page to avoid merge conflicts. */
       transform: translate(-50%, -50%);
       z-index: 2; } }
 
-.page .menu-evans-lake-menu-container, .blog .menu-evans-lake-menu-container, .search .menu-evans-lake-menu-container, .error404 .menu-evans-lake-menu-container {
+.page .menu-evans-lake-menu-container, .blog .menu-evans-lake-menu-container, .single .menu-evans-lake-menu-container, .search .menu-evans-lake-menu-container, .error404 .menu-evans-lake-menu-container {
   position: relative; }
 
 .single .hero-image {
   height: 80vh; }
+
+.single .hero-title {
+  top: 60%; }
+
+.single .entry-meta {
+  margin-bottom: 2rem; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1848,9 +1854,8 @@ p {
   margin: 2rem 0;
   padding: 2rem; }
 
-.blog .table-container {
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+.blog .hero-title {
+  top: 45%; }
 
 .search .site-main {
   padding: 0; }

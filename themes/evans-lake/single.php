@@ -10,6 +10,7 @@ get_header(); ?>
 	<!--Background styled in extras.php/evans_lake_hero_image_update()-->
 	<div class="hero-image">
 	</div>
+	<h1 class="hero-title">News & Events</h1>
 </div>
 <div id="primary" class="content-area container">
 	<div class="sub-navigation">
