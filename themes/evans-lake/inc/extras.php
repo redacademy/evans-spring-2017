@@ -78,7 +78,7 @@ function evans_lake_breadcrumbs() {
 	// Settings
 	$separator         = '&gt;';
 	$breadcrumbs_class = 'breadcrumbs';
-	$home_title        = 'Homepage';
+	$home_title        = 'Home';
 
 	// Get the query & post information
 	global $post,$wp_query;
