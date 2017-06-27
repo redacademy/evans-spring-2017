@@ -1,15 +1,6 @@
 
 
 
-// #accordion {
-//   h3::after {
-//   content: url(../../assets/images/arrow-down.png);
-//   position: absolute;
-//   right:0;
-//   }
-// }
-  
-// accordian styling
 
 h3 {
   position: relative;
@@ -51,11 +42,7 @@ h3 {
   display: inline-block;
   
 }
-.wedding-title {
-  h2 {
-    margin-top:1rem;
-  }
-}
+
 .fact-sheet {
   margin-bottom: 2rem;
   a {
@@ -70,4 +57,22 @@ h3 {
 .tab-body.selected {
     left: 0;
     position: relative;
+}
+
+.page-id-38 {
+  .accordion {
+   h2 {
+     border-bottom: 1px solid $color__blue;
+   }
+  }
+}
+
+.entry-content {
+  h2 {
+    padding-top: 1rem;
+  }
+}
+
+.caption-course {
+  margin-bottom: .5rem;
 }

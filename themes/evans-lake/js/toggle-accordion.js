@@ -2,6 +2,11 @@ jQuery(document).ready(function($) {
 
   // Accordion
   $( function() {
+
+    if ($('body').hasClass('page-id-38')) {
+      var optionExpanded = false;
+    } 
+
     var icons={
       header: 'iconClosed',
       activeHeader: 'iconOpen'
@@ -9,7 +14,8 @@ jQuery(document).ready(function($) {
       $( '.accordion' ).accordion({
         collapsible: true,
         heightStyle: 'content',
-        icons: icons
+        icons: icons,
+        active: optionExpanded
       });
     } );
 
