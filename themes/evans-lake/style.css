@@ -1666,12 +1666,17 @@ p {
   .flickity-slider .carousel-cell a:hover {
     color: #429DCB; }
   .flickity-slider .carousel-cell .events-thumbnail {
-    height: 250px; }
+    height: 250px;
+    overflow: hidden;
+    position: relative; }
+    .flickity-slider .carousel-cell .events-thumbnail img {
+      height: 100%;
+      width: auto;
+      max-width: none; }
   .flickity-slider .carousel-cell .events-post {
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     box-shadow: 0 8px 15px 0 rgba(122, 122, 122, 0.1);
-    height: 130px;
     padding: 1rem 2rem;
     text-align: center; }
   .flickity-slider .carousel-cell .events-date {
@@ -1951,34 +1956,42 @@ p {
 
 .error404 .hero-gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
-  height: 80vh;
+  height: 30vh;
   position: absolute;
   width: 100%;
   z-index: 1; }
+  @media (min-width: 815px) {
+    .error404 .hero-gradient {
+      height: 80vh; } }
 
 .error404 .hero-title {
-  display: none; }
+  color: #F56D00;
+  display: initial;
+  font-size: 5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute; }
   @media (min-width: 815px) {
     .error404 .hero-title {
-      color: #F56D00;
-      display: initial;
       font-size: 15rem;
-      left: 50%;
       letter-spacing: .3rem;
       line-height: 5rem;
       margin: 0;
       position: absolute;
       text-align: center;
-      top: 50%;
-      transform: translate(-50%, -50%);
       z-index: 2; } }
 
 .error404 .hero-search {
-  height: 80vh;
-  margin-bottom: 2rem;
+  height: 30vh;
+  margin-bottom: 1rem;
   object-fit: cover;
   width: 100%;
   z-index: -10; }
+  @media (min-width: 815px) {
+    .error404 .hero-search {
+      height: 80vh;
+      margin-bottom: 2rem; } }
 
 .error404 .content-area {
   display: initial; }
@@ -1992,19 +2005,35 @@ p {
 .error404 .error-404 {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 815px) {
+    .error404 .error-404 {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: justify;
+          justify-content: space-between; } }
   .error404 .error-404 .page-content {
-    -ms-flex: 0 1 75%;
-        flex: 0 1 75%;
+    -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
     -ms-flex-order: 2;
         order: 2;
-    margin: 0 0 2rem; }
+    margin: 0 0 2rem;
+    -ms-flex-order: 1;
+        order: 1; }
+    @media (min-width: 815px) {
+      .error404 .error-404 .page-content {
+        -ms-flex-order: 2;
+            order: 2; } }
   .error404 .error-404 .widgetized-area {
     -ms-flex: 0 1 23%;
         flex: 0 1 23%;
-    -ms-flex-order: 1;
-        order: 1; }
+    -ms-flex-order: 2;
+        order: 2; }
+    @media (min-width: 815px) {
+      .error404 .error-404 .widgetized-area {
+        -ms-flex-order: 1;
+            order: 1; } }
   .error404 .error-404 .widget {
     margin-bottom: 2rem; }
 

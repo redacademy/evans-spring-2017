@@ -157,13 +157,20 @@
 
     .events-thumbnail {
       height: 250px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+      }
     }
     
     .events-post {
       background-color: #fff;
       border-radius: 0 0 15px 15px;
       box-shadow: 0 8px 15px 0 rgba(122,122,122,0.1);
-      height: 130px;
       padding: 1rem 2rem;
       text-align: center;
     }

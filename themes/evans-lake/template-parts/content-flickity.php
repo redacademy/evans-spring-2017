@@ -49,6 +49,7 @@
   <?php $posts = get_posts( $args ); ?>
   <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
     <div class="carousel-cell">
+      <!--<img class="events-thumbnail" src="<?php get_the_post_thumbnail_url(); ?>">-->
       <div class="events-thumbnail"><?php the_post_thumbnail( 'full' ); ?></div>
       <a href="<?php the_permalink(); ?>">
         <div class="events-post">

@@ -1,37 +1,47 @@
 .error404 {
   .hero-gradient {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%);
-    height: 80vh;
+    height: 30vh;
     position: absolute;
     width: 100%;
     z-index: 1;
+
+    @include desktop {
+      height: 80vh;
+    }
   }
 
   .hero-title {
-    display: none;
+    color: $color__orange;
+    display: initial;
+    font-size: 5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 
     @include desktop {
-      color: $color__orange;
-      display: initial;
       font-size: 15rem;
-      left: 50%;
       letter-spacing: .3rem;
       line-height: 5rem;
       margin: 0;
       position: absolute;
       text-align: center;
-      top: 50%;
-      transform: translate(-50%, -50%);
       z-index: 2;
     }
   }
 
   .hero-search {
-    height: 80vh;
-    margin-bottom: 2rem;
+    height: 30vh;
+    margin-bottom: 1rem;
     object-fit: cover;
     width: 100%;
     z-index: -10;
+
+    @include desktop {
+      height: 80vh;
+      margin-bottom: 2rem;
+    }
   }
 
   .content-area {
@@ -48,17 +58,31 @@
 
   .error-404 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .page-content {
-      flex: 0 1 75%;
+      flex: 0 1 100%;
       order: 2;
       margin: 0 0 2rem;
+      order: 1;
+
+      @include desktop {
+        order: 2;
+      }
     }
 
     .widgetized-area {
       flex: 0 1 23%;
-      order: 1;
+      order: 2;
+
+      @include desktop {
+        order: 1;
+      }
     }
 
     .widget {
