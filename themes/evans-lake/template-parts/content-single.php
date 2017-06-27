@@ -9,15 +9,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<div class="hero-image" style="background-image: url ('<?php the_post_thumbnail_url( ); ?>')">
-			</div>
-		<?php else : ?>
-			<div class="hero-image" style="background-image: url (''; ?>')">
-			</div>
-		<?php endif; ?>
+		<div class="hero-image"></div>
 		<a class="entry-title" href="<?php echo get_post_permalink(); ?>">
-			<?php the_title( '<h1>', '</h1>' ); ?>
+			<?php the_title( '<h2>', '</h2>' ); ?>
 		</a>
 		<div class="entry-meta">
 			<?php evans_lake_posted_on(); ?> / <?php evans_lake_comment_count(); ?> / <?php evans_lake_posted_by(); ?>

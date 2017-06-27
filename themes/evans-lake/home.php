@@ -11,13 +11,13 @@ get_sidebar(); ?>
 <div class="hero">
 	<!--Background styled in extras.php/evans_lake_hero_image_update()-->
 	<div class="hero-image"></div>
+	<h1 class="hero-title">News & Events</h1>
 </div>
 <div id="primary" class="content-area container">
 	<main id="main" class="site-main" role="main">
 
 		<div class="events-table">	
 			<?php	$events = CFS()->get( 'events', 549 ); ?>
-			<h2>News & Events</h2>
 			<div class="table-container box-pop-out">
 				<div class="table-header">
 					<span class="date">Date</span>
