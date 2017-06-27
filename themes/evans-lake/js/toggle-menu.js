@@ -18,7 +18,7 @@
     });
   });
 
-  $('.mobile-menu-toggle .menu-item').click(function(e) {
+  $('#primary-menu.menu-item').click(function(e) {
     e.preventDefault();
 
     if ($(this).hasClass('menu-item-selected')) {
