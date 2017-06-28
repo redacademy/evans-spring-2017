@@ -14,13 +14,6 @@ get_sidebar(); ?>
 	<h1 class="hero-title">News & Events</h1>
 </div>
 <div id="primary" class="content-area container">
-	<div class="sub-navigation">
-		<?php wp_nav_menu( array( 
-			'theme_location' => 'primary', 
-			'menu_id' => 'primary-menu',
-			'submenu' => get_the_title($post->post_parent)
-		) ); ?>
-	</div>
 
 	<main id="main" class="site-main" role="main">
 

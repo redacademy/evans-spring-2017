@@ -516,7 +516,7 @@ table {
 .box-pop-out {
   box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
 
-.orange-button {
+.orange-button, .submit {
   -ms-flex-item-align: start;
       align-self: flex-start;
   background-color: #F56D00;
@@ -528,7 +528,7 @@ table {
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none; }
-  .orange-button:hover {
+  .orange-button:hover, .submit:hover {
     background-color: #ff8600;
     box-shadow: none; }
 
