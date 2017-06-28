@@ -1968,7 +1968,7 @@ h3 {
     cursor: pointer;
     font-size: 3.5rem;
     position: absolute;
-    bottom: 7%;
+    bottom: 8%;
     transform: translateX(-50%); }
     @media (min-width: 815px) {
       .home-hero .fa-angle-down {
