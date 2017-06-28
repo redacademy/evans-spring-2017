@@ -338,6 +338,11 @@ h3 {
 # Elements
 --------------------------------------------------------------*/
 /* Custom Elements */
+td {
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: center; }
+
 /* Generic Tab Syles
 see _page-our-camp.scss for an example of specifics */
 .tab-head-container {
@@ -1361,13 +1366,6 @@ named after the specific page to avoid merge conflicts. */
 .error404 .site-main {
   width: 100%;
   padding: 0 1rem; }
-  @media (min-width: 815px) {
-    .page .site-main,
-    .blog .site-main,
-    .single .site-main,
-    .search .site-main,
-    .error404 .site-main {
-      padding: 0; } }
   .page .site-main .entry-title,
   .blog .site-main .entry-title,
   .single .site-main .entry-title,
@@ -1916,10 +1914,6 @@ h3 {
 .job-closed,
 .event-closed {
   color: lightgrey; }
-
-td {
-  border: 1px solid black;
-  text-align: center; }
 
 .page-template .activity-hero {
   background-size: cover;
