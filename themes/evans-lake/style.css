@@ -2252,13 +2252,13 @@ h3 {
   .front-tab-head.selected {
     background-position: center; }
     .front-tab-head.selected .tab-title {
-      background-color: #ff785a;
+      background-color: #F56D00;
       height: 5px;
       left: 50%;
       position: absolute;
       top: 75%;
       transform: translate(-50%);
-      width: 50%; }
+      width: 40%; }
 
 .front-tab-body-container {
   background-color: #fff;
