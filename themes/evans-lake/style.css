@@ -376,9 +376,13 @@ see _page-our-camp.scss for an example of specifics */
     left: 0;
     position: relative; }
 
-.box-pop-out {
+.box-pop-out, .footer-raise-fix {
+  background-color: white;
   box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
   border-radius: 0.5rem; }
+
+.box-padding {
+  padding: 1.5rem; }
 
 .bot-brd-blu {
   border-bottom: 1px solid #1B5D97; }
@@ -512,9 +516,6 @@ table {
 
 .sd-sharing-enabled {
   clear: both; }
-
-.box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
 
 .orange-button, #submit, .wpcf7-form-control.wpcf7-submit {
   -ms-flex-item-align: start;
@@ -1827,10 +1828,6 @@ h3 {
       align-self: center;
   margin-bottom: 0;
   color: white; }
-
-.entry-content.box-pop-out {
-  background-color: white;
-  padding: 1.5rem; }
 
 .bcca {
   margin-bottom: 2rem;

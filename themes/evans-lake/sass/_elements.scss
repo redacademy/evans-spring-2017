@@ -46,9 +46,14 @@ see _page-our-camp.scss for an example of specifics */
 }
 
 // Misc Elements
-.box-pop-out {
+.box-pop-out, .footer-raise-fix {
+  background-color: white;
   box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
   border-radius: 0.5rem;
+}
+
+.box-padding {
+  padding: 1.5rem;
 }
 
 .bot-brd-blu {
@@ -210,11 +215,6 @@ table {
 // Clearfixes
 .sd-sharing-enabled {
   clear: both;
-}
-
-// Custom Elements
-.box-pop-out {
-  box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5);
 }
 
 .orange-button, #submit, .wpcf7-form-control.wpcf7-submit {

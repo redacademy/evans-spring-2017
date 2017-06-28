@@ -41,16 +41,18 @@ get_sidebar(); ?>
       <?php endforeach; ?>
     </div>
 
-    <h2 class="cancel header">Cancellation Policy</h2>
-    <div class="cancel container">
-      <?php $policies = CFS()->get( 'cancel_loop', 35 ); ?>
-      <?php foreach ($policies as $policy) : ?>
-        <div class="cancel block">
-          <span class="cancel condition"><?php echo $policy['cancel_condition'];?> </span>
-          <span class="cancel policy"><?php echo $policy['cancel_policy'];?></span>
-        </div>
-        <?php endforeach; ?>
-    </div>
+    <div class="box-pop-out box-padding">
+      <h2 class="cancel header">Cancellation Policy</h2>
+      <div class="cancel container">
+        <?php $policies = CFS()->get( 'cancel_loop', 35 ); ?>
+        <?php foreach ($policies as $policy) : ?>
+          <div class="cancel block">
+            <span class="cancel condition"><?php echo $policy['cancel_condition'];?> </span>
+            <span class="cancel policy"><?php echo $policy['cancel_policy'];?></span>
+          </div>
+          <?php endforeach; ?>
+      </div>
+    </div>    
 
 	</main><!-- #main -->
 

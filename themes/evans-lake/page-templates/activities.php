@@ -62,7 +62,7 @@ get_sidebar(); ?>
 		}
 	?>
 			<!--Setup Content Area-->
-	<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main accordion" role="main">
 		<?php evans_lake_breadcrumbs();	?>
 
 			<!--Iteratively Display Daytime Activities-->
