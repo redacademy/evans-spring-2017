@@ -15,6 +15,7 @@ get_sidebar(); ?>
 <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 	<div class="hero-image" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('<?php echo $thumb['0'];?>'); background-size: cover,cover; background-position: center, center;">
 	</div>
+	<?php the_title( '<h1 class="hero-title">', '</h1>' ); ?>
 </div>
 <div id="primary" class="content-area container">
 	<div class="sub-navigation">
