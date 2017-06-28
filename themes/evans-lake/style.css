@@ -1826,6 +1826,10 @@ h3 {
   margin-bottom: 0;
   color: white; }
 
+.entry-content.box-pop-out {
+  background-color: white;
+  padding: 1.5rem; }
+
 .bcca {
   margin-bottom: 2rem;
   padding: 1.5rem; }
