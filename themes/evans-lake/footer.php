@@ -23,14 +23,14 @@
 					</div>
 					<div class="contact-us">
 						<ul>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Camp Programs</a></li>
-							<li><a href="#">Donation</a></li>
+							<li><a href="http://evans.cp.academy.red/contact-us/">Contact Us</a></li>
+							<li><a href="http://evans.cp.academy.red/camp/camp-programs/">Camp Programs</a></li>
+							<li><a href="http://evans.cp.academy.red/get-involved/donations/">Donation</a></li>
 						</ul>
 						<ul>
-							<li><a href="#">Maps & Directions</a></li>
-							<li><a href="#">Outdoor Education</a></li>
-							<li><a href="#">Job Opportunities</a></li>
+							<li><a href="http://evans.cp.academy.red/contact-us/">Maps & Directions</a></li>
+							<li><a href="http://evans.cp.academy.red/venue-booking/outdoor-education/">Outdoor Education</a></li>
+							<li><a href="http://evans.cp.academy.red/get-involved/job-openings/">Job Opportunities</a></li>
 						</ul>		
 					</div>
 					<hr>
