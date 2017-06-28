@@ -62,53 +62,62 @@ get_sidebar(); ?>
 		}
 	?>
 			<!--Setup Content Area-->
-	<main id="main" class="site-main accordion" role="main">
+	<main id="main" class="site-main" role="main">
 		<?php evans_lake_breadcrumbs();	?>
 
 			<!--Iteratively Display Daytime Activities-->
-		<h1 class="bot-brd-blu">Activities</h1>			
-		<?php foreach ($day_activities as $activity) : ?>
-			<div class="activity-container" id= "activity-<?php echo $activity->ID;?>">
-				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
-					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+		<div class="accordion container box-pop-out box-padding">
+
+			<h1 class="bot-brd-blu">Activities</h1>
+			<div class="day activities container">
+				<?php foreach ($day_activities as $activity) : ?>
+					<div class="activity-container" id= "activity-<?php echo $activity->ID;?>">
+						<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+							<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+							</div>
+						<?php endif; ?>
+						<div class="activity-content">
+							<h3><?php echo $activity->post_title; ?></h3>
+							<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
+						</div>
 					</div>
-				<?php endif; ?>
-				<div class="activity-content">
-					<h3><?php echo $activity->post_title; ?></h3>
-					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
-				</div>
+				<?php endforeach; ?>
 			</div>
-		<?php endforeach; ?>
 
-		<h1 class="bot-brd-blu">Camp Games</h1>			
-		<?php foreach ($game_activities as $activity) : ?>
-			<div class="activity-container">
-				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
-					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+			<h1 class="bot-brd-blu">Camp Games</h1>
+			<div class="games activities container">
+				<?php foreach ($game_activities as $activity) : ?>
+					<div class="activity-container">
+						<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+							<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+							</div>
+						<?php endif; ?>
+						<div class="activity-content">
+							<h3><?php echo $activity->post_title; ?></h3>
+							<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
+						</div>
 					</div>
-				<?php endif; ?>
-				<div class="activity-content">
-					<h3><?php echo $activity->post_title; ?></h3>
-					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
-				</div>
-			</div>
-		<?php endforeach; ?>
-
-		<h1 class="bot-brd-blu">Evening Activities</h1>
-		<?php foreach ($evening_activities as $activity) : ?>
-			<div class="activity-container">
-				<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
-					<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+				<?php endforeach; ?>
+			</div>			
+			
+			<h1 class="bot-brd-blu">Evening Activities</h1>
+			<div class="evening activities container">
+				<?php foreach ($evening_activities as $activity) : ?>
+					<div class="activity-container">
+						<?php if ( ( CFS()->get ( 'act_img', $activity->ID ) ) != '') : ?>
+							<div class="activity-hero hero" style="background-image: url('<?php echo CFS()->get( 'act_img', $activity->ID );?>');">
+							</div>
+						<?php endif; ?>
+						<div class="activity-content">
+							<h3><?php echo $activity->post_title; ?></h3>
+							<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
+						</div>
 					</div>
-				<?php endif; ?>
-				<div class="activity-content">
-					<h3><?php echo $activity->post_title; ?></h3>
-					<?php echo CFS()->get( 'act_desc', $activity->ID ); ?>
-				</div>
+				<?php endforeach; ?>
 			</div>
-		<?php endforeach; ?>
 
-
+		</div> <!--.accordion.container-->
+	
 	</main><!-- #main -->
 
 </div><!-- #primary -->

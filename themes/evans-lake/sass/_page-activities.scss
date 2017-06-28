@@ -13,11 +13,21 @@
 }
 
 .page-template-activities {
-  .hero {
+  .activity-hero {
     @include desktop {
       height: 40vh;
       margin-bottom: 2rem;
       width: initial;
     }
+  }
+  .accordion.container {
+    margin-top: 1rem;
+    position: relative;
+    h1 {
+      margin-top: 0;
+    }
+  }
+  .ui-icon.iconClosed, .ui-icon.iconOpen {
+    right: 1.5rem;
   }
 }
