@@ -1917,6 +1917,10 @@ h3 {
 .event-closed {
   color: lightgrey; }
 
+td {
+  border: 1px solid black;
+  text-align: center; }
+
 .page-template .activity-hero {
   background-size: cover;
   background-position: center;
