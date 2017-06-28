@@ -1,4 +1,6 @@
 (function($) {
+
+  // Mobile menu toggles on click
   $('.mobile-menu-toggle').hide();
 
   var customOverlay = '<div class="overlay menu-toggle-overlay"></div>';
@@ -18,7 +20,7 @@
     });
   });
   
-  
+  // Primary menu changes styling on click
   $('#primary-menu.menu-item:not(:last-child)').click(function(e) {
     e.preventDefault();
       console.log('check');
@@ -30,6 +32,8 @@
     }
   })
 
+
+  // Accordion on menu-items
   $(function() {
     var icons = {
       header: 'iconClosed',
@@ -41,9 +45,7 @@
       heightStyle: 'content',
       icons: icons
     });
-
     $('#ui-id-9').unbind('click');
-
   });
 
 })(jQuery);
