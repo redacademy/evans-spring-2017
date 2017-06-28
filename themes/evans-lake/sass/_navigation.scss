@@ -130,6 +130,7 @@ a {
 		padding: .75rem 1rem 0 0;
 		width: 85vw;
 		position: fixed;
+		overflow: scroll;
 		right: 0;
 		top: 0;
 	}
@@ -444,7 +445,8 @@ a {
 .menu-item {
 	padding: 1rem 0;
 	@include desktop {
-		padding:  0;
+		padding-bottom: 1rem;
+		padding-top: 0;
 	}
 	a {
 		padding: 1rem 1rem 1rem 2rem;

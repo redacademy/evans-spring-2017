@@ -692,6 +692,7 @@ a {
     padding: .75rem 1rem 0 0;
     width: 85vw;
     position: fixed;
+    overflow: scroll;
     right: 0;
     top: 0; }
   .menu-toggle .mobile-menu-toggle .menu,
@@ -968,7 +969,8 @@ a {
   padding: 1rem 0; }
   @media (min-width: 815px) {
     .menu-item {
-      padding: 0; } }
+      padding-bottom: 1rem;
+      padding-top: 0; } }
   .menu-item a {
     padding: 1rem 1rem 1rem 2rem; }
     @media (min-width: 815px) {
