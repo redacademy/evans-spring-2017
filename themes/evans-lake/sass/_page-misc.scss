@@ -4,13 +4,11 @@
 }
 
 // page-orientation-packages.php
-.opw-program.title,
-.cancel.header {
+.opw-program.title {
   margin: 2rem 0 0 0;
 }
-
-.cancel.container {
-  margin: 0 0 5rem 0;
+.cancel.wrapper {
+  margin: 2rem 0;
 }
 
 // template-parts/parent-page.php

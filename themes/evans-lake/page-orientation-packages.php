@@ -41,7 +41,7 @@ get_sidebar(); ?>
       <?php endforeach; ?>
     </div>
 
-    <div class="box-pop-out box-padding">
+    <div class="cancel wrapper box-pop-out box-padding">
       <h2 class="cancel header">Cancellation Policy</h2>
       <div class="cancel container">
         <?php $policies = CFS()->get( 'cancel_loop', 35 ); ?>
