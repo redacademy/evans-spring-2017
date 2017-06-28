@@ -516,7 +516,7 @@ table {
 .box-pop-out {
   box-shadow: 0 8px 20px 0 rgba(122, 122, 122, 0.5); }
 
-.orange-button, #submit {
+.orange-button, #submit, .wpcf7-form-control.wpcf7-submit {
   -ms-flex-item-align: start;
       align-self: flex-start;
   background-color: #F56D00;
@@ -528,7 +528,7 @@ table {
   margin-top: .5rem;
   padding: .4rem 1.75rem .5rem;
   text-shadow: none; }
-  .orange-button:hover, #submit:hover {
+  .orange-button:hover, #submit:hover, .wpcf7-form-control.wpcf7-submit:hover {
     background-color: #ff8600;
     box-shadow: none; }
 
@@ -1331,12 +1331,6 @@ named after the specific page to avoid merge conflicts. */
     margin: 0;
     padding: 0;
     list-style: none; }
-    .page .sub-navigation .menu li,
-    .blog .sub-navigation .menu li,
-    .single .sub-navigation .menu li,
-    .search .sub-navigation .menu li,
-    .error404 .sub-navigation .menu li {
-      margin-bottom: .75rem; }
     .page .sub-navigation .menu a,
     .blog .sub-navigation .menu a,
     .single .sub-navigation .menu a,
