@@ -37,6 +37,7 @@
   padding: 2rem 0;
   margin-bottom: 2rem;
   position: relative;
+
   @include desktop {
     box-shadow: none;
     height: 82vh;
@@ -47,12 +48,18 @@
 .description-image {
   margin: 0 auto;
   padding: 0 2rem;
+  height: 100%;
+  @include desktop {
+    height: 70vh;
+  }
+
   img {
     display: none;
-    height: 100%;
-    width: 100vw;
     @include desktop {
       display: initial;
+      height: 100%;
+      object-fit: cover;
+      width: 100vw;
     }
   }
 }
@@ -67,9 +74,9 @@
     line-height: 1.8rem;
     padding: 3rem 5rem;
     position: absolute;
-    left: 37.5%;
-    top: 30px;
-    width: 47%;
+    right: 10%;
+    top: 40px;
+    width: 675px;
   }
   h2 {
     font-size: 2rem;

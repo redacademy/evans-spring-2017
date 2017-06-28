@@ -1989,14 +1989,19 @@ h3 {
 
 .description-image {
   margin: 0 auto;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  height: 100%; }
+  @media (min-width: 815px) {
+    .description-image {
+      height: 70vh; } }
   .description-image img {
-    display: none;
-    height: 100%;
-    width: 100vw; }
+    display: none; }
     @media (min-width: 815px) {
       .description-image img {
-        display: initial; } }
+        display: initial;
+        height: 100%;
+        object-fit: cover;
+        width: 100vw; } }
 
 .description-text-area {
   padding: 0;
@@ -2009,9 +2014,9 @@ h3 {
       line-height: 1.8rem;
       padding: 3rem 5rem;
       position: absolute;
-      left: 37.5%;
-      top: 30px;
-      width: 47%; } }
+      right: 10%;
+      top: 40px;
+      width: 675px; } }
   .description-text-area h2 {
     font-size: 2rem;
     letter-spacing: .1rem;

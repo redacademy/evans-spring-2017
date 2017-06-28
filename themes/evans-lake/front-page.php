@@ -21,7 +21,7 @@ get_header(); ?>
 
 		<section class="site-description-section" id="s-descr">
 			<div class="description-image">
-				<img src="<?php	echo CFS()->get( 'site_image' ); ?>">
+				<img src="<?php	echo CFS()->get( 'site_image' ); ?>" class="description-image">
 				<div class="description-text-area">
 					<h2><?php	echo CFS()->get( 'site_title' ); ?></h2>
 					<p class="site-description-subtitle"><?php	echo CFS()->get( 'site_subtitle' ); ?></p>
