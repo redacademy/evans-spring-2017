@@ -24,7 +24,7 @@
   <?php if ( ( CFS()->get ( 'act_img' ) ) != '') : ?>
     <div class="carousel-cell activities">
       <div class="activities-thumbnail" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .35) 100%), url('<?php echo CFS()->get('act_img'); ?>'); background-size: cover, cover; background-position: center. center;">
-        <a href="<?php the_permalink(); ?>">
+        <a href="<?php echo get_site_url() . '/activities#activity-' . $post->ID; ?>">
           <h2 class="activities-title"><?php the_title(); ?></h2>
         </a>
       </div>
