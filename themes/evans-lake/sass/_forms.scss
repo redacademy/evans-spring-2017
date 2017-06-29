@@ -59,3 +59,9 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+.wpcf7-form-control-wrap {
+	input[type="text"] {
+		width: 100%;
+	}
+}

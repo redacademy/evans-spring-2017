@@ -1,6 +1,10 @@
 .home .site-main {
   width: 100%;
   padding: 0;
+  background: #fff;
+  @include desktop {
+    background: transparent;
+  }
 }
 
 .home-hero {
@@ -204,6 +208,8 @@
 
 .main-carousel {
   margin-bottom: 3rem;
+
+
   .flickity-prev-next-button {
     box-shadow: none;
     color: transparent;
@@ -254,6 +260,7 @@
     background: transparent;
     display: block;
     left: 0;
+    top: 50%;
     @include desktop {
       left: -35px;
     }
@@ -268,6 +275,7 @@
     background: transparent;
     display: block;
     right: 0;
+    top: 50%;
     @include desktop {
       right: -35px;
     }

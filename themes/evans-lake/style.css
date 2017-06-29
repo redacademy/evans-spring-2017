@@ -601,6 +601,9 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.wpcf7-form-control-wrap input[type="text"] {
+  width: 100%; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -1149,6 +1152,7 @@ body {
   text-align: center; }
   @media (min-width: 815px) {
     .social-media h3 {
+      text-shadow: none;
       text-align: left; } }
 
 .social-media ul {
@@ -1943,7 +1947,11 @@ h3 {
 
 .home .site-main {
   width: 100%;
-  padding: 0; }
+  padding: 0;
+  background: #fff; }
+  @media (min-width: 815px) {
+    .home .site-main {
+      background: transparent; } }
 
 .home-hero {
   -ms-flex-align: center;
@@ -2166,7 +2174,8 @@ h3 {
 .main-carousel.activities .flickity-prev-next-button.previous {
   background: transparent;
   display: block;
-  left: 0; }
+  left: 0;
+  top: 50%; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.previous {
       left: -35px; } }
@@ -2179,7 +2188,8 @@ h3 {
 .main-carousel.activities .flickity-prev-next-button.next {
   background: transparent;
   display: block;
-  right: 0; }
+  right: 0;
+  top: 50%; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.next {
       right: -35px; } }
