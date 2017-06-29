@@ -1718,7 +1718,9 @@ h3 {
 
 .custom-menu-photo {
   width: 720px;
-  height: 180px; }
+  height: 180px;
+  object-fit: cover;
+  object-position: top; }
 
 .page-id-55 .accordion, .page-id-13 .accordion {
   position: relative; }
