@@ -1968,12 +1968,13 @@ h3 {
     cursor: pointer;
     font-size: 3.5rem;
     position: absolute;
-    bottom: 8%;
+    bottom: 15%;
     transform: translateX(-50%); }
     @media (min-width: 815px) {
       .home-hero .fa-angle-down {
         left: 50%;
         top: 92%;
+        bottom: 8%;
         transform: translateX(-50%); } }
 
 .site-description-section {
@@ -2001,6 +2002,7 @@ h3 {
         display: initial;
         height: 100%;
         object-fit: cover;
+        object-position: 0;
         width: 100vw; } }
 
 .description-text-area {
@@ -2167,7 +2169,7 @@ h3 {
   left: 0; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.previous {
-      left: -50px; } }
+      left: -35px; } }
   .main-carousel.activities .flickity-prev-next-button.previous svg {
     left: 3%; }
     @media (min-width: 815px) {
@@ -2180,7 +2182,7 @@ h3 {
   right: 0; }
   @media (min-width: 815px) {
     .main-carousel.activities .flickity-prev-next-button.next {
-      right: -50px; } }
+      right: -35px; } }
   .main-carousel.activities .flickity-prev-next-button.next svg {
     left: 37%; }
     @media (min-width: 815px) {

@@ -61,6 +61,7 @@ get_sidebar(); ?>
           
           endforeach; // End of the loop. ?>
        </div> <!--.tab-head-container-->
+       </div>
 				
 			 <div class="tab-body-container caption-course">
          <?php 

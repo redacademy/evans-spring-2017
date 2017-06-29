@@ -5,21 +5,23 @@
 
   var customOverlay = '<div class="overlay menu-toggle-overlay"></div>';
 
-  $('.fa-bars').on('click', function(e){
-    e.preventDefault();
+  if ($(window).width() < 815 ) {
 
-    $('body').append(customOverlay);
+    $('.fa-bars').on('click', function(e){
+      e.preventDefault();
 
-    $('.overlay.menu-toggle-overlay').fadeIn('fast');
-    $('.mobile-menu-toggle').toggle();
+      $('body').append(customOverlay);
 
-    $('.overlay.menu-toggle-overlay').click(function() {
+      $('.overlay.menu-toggle-overlay').fadeIn('fast');
       $('.mobile-menu-toggle').toggle();
-      $(this).fadeOut('fast');
-      $(this).detach();
+
+      $('.overlay.menu-toggle-overlay').click(function() {
+        $('.mobile-menu-toggle').toggle();
+        $(this).fadeOut('fast');
+        $(this).detach();
+      });
     });
-  });
-  
+  }
   // Primary menu changes styling on click
   $('#primary-menu.menu-item:not(:last-child)').click(function(e) {
     e.preventDefault();
