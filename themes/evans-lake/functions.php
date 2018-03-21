@@ -110,7 +110,7 @@ function evans_lake_scripts() {
 	// Enqueue Jquery UI for Accordion for menu on all pages 
 	wp_enqueue_script( 
 		'jquery-ui', 
-		'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+		'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
 		array('jquery'));
 	wp_enqueue_script(
 		'toggle-accordion',
