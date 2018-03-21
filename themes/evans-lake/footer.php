@@ -14,23 +14,23 @@
 					<div class="social-media">
 						<h3>Connect with us</h3>
 						<ul>
-							<li><a href="https://www.facebook.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/facebook-icon-footer.png'); ?>"></a></li>
-							<li><a href="https://twitter.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/twitter-icon-footer.png'); ?>"></a></li>
-							<li><a href="https://www.flickr.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/flickr.png'); ?>"></a></li>
-							<li><a href="https://www.youtube.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/youtube.png'); ?>"></a></li>
-							<li><a href="https://www.instagram.com/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/instagram-icon-footer.png'); ?>"></a></li>
+							<li><a href="https://www.facebook.com/evanslake/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/facebook-icon-footer.png'); ?>"></a></li>
+							<li><a href="https://twitter.com/evanslake"><img src="<?php echo( get_template_directory_uri() . '/assets/images/twitter-icon-footer.png'); ?>"></a></li>
+							<li><a href="https://www.flickr.com/photos/evanslake/ "><img src="<?php echo( get_template_directory_uri() . '/assets/images/flickr.png'); ?>"></a></li>
+							<li><a href="https://www.youtube.com/channel/UC0sLPjsYd5fvI84iBFM4zAw?view_as=subscriber"><img src="<?php echo( get_template_directory_uri() . '/assets/images/youtube.png'); ?>"></a></li>
+							<li><a href="https://www.instagram.com/evanslake/"><img src="<?php echo( get_template_directory_uri() . '/assets/images/instagram-icon-footer.png'); ?>"></a></li>
 						</ul>	
 					</div>
 					<div class="contact-us">
 						<ul>
-							<li><a href="http://evans.cp.academy.red/contact-us/">Contact Us</a></li>
-							<li><a href="http://evans.cp.academy.red/camp/camp-programs/">Camp Programs</a></li>
-							<li><a href="http://evans.cp.academy.red/get-involved/donations/">Donation</a></li>
+							<li><a href="http://evanslake.com/contact-us/">Contact Us</a></li>
+							<li><a href="http://evanslake.com/camp/camp-programs/">Camp Programs</a></li>
+							<li><a href="http://evanslake.com/get-involved/donations/">Donation</a></li>
 						</ul>
 						<ul>
-							<li><a href="http://evans.cp.academy.red/contact-us/">Maps & Directions</a></li>
-							<li><a href="http://evans.cp.academy.red/venue-booking/outdoor-education/">Outdoor Education</a></li>
-							<li><a href="http://evans.cp.academy.red/get-involved/job-openings/">Job Opportunities</a></li>
+							<li><a href="http://evanslake.com/contact-us/">Maps & Directions</a></li>
+							<li><a href="http://evanslake.com/venue-booking/outdoor-education/">Outdoor Education</a></li>
+							<li><a href="http://evanslake.com/get-involved/job-openings/">Job Opportunities</a></li>
 						</ul>		
 					</div>
 					<hr>
